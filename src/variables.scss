@@ -1,0 +1,55 @@
+$colour-blue: #87CEEB; 
+$colour-dark-blue: #3DAEDC; 
+$colour-yellow: #FFEE93;
+$colour-brown: #DE8F6E;
+$colour-dark-brown: #461220;
+$colour-purple: #C09BD8; 
+$colour-dark-purple: #9F84BD;
+$colour-orange: #F9AB55;
+$colour-dark-orange: #F58A07;;
+$colour-sand: #FCF5C7; 
+$colour-dark-green: #8CAE80;
+$colour-green: #A1C893;
+$colour-light-green: #A8D394;
+$colour-sky: #E8FFFE;
+$dot-colour: #C4C4C4;
+
+$font-family: 'Montserrat';
+$font-size-card-title: 36px;
+$font-size-nav: 24px;
+$font-size-progress: 20px;
+$font-size-h1: 100px;
+
+$box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2), 0 4px 7px rgba(0, 0, 0, 0.27);
+$border-radius: 30px;
+
+%card {
+    max-height: 500px;
+    max-width: 360px;
+    border-radius: 30px;
+    box-shadow: $box-shadow;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  %innerCard {
+    max-height: 308px;
+    max-width: 267px;
+    margin: 0 auto;
+  }
+
+  %expandedCard {
+    max-height: 779px;
+    max-width: 1177px;
+    border-radius: 30px;
+    box-shadow: $box-shadow;
+  }
+
+  %innerExpandedCard {
+    max-height: 497px;
+    max-width: 818px;
+    border-radius: 30px;
+  }
+  
+  
