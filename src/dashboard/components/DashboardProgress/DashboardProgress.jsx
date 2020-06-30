@@ -15,7 +15,7 @@ class DashboardProgress extends Component {
           <br/>
           <p>Topic - - - - - 50%</p>
           <br/>
-          <p>Topic - - - - 50%</p>
+          <p>Topic - - - - 40%</p>
         </ul>
     </div>
 
