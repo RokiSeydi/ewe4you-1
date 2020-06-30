@@ -26,16 +26,21 @@ $border-radius: 30px;
 %card {
     max-height: 500px;
     max-width: 360px;
+    min-width: 360px;
+    min-height: 500px;
     border-radius: 30px;
     box-shadow: $box-shadow;
     background-color: white;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: flex-end;
   }
   %innerCard {
     max-height: 308px;
+    min-height: 308px;
     max-width: 267px;
+    min-width: 267px;
     margin: 0 auto;
   }
 
