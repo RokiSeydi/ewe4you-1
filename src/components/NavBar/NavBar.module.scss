@@ -1,3 +1,54 @@
-.fa {
-  font-size: 50px;
+@import "../../variables.scss";
+
+
+
+
+nav {
+  height: 40px;
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $colour-blue;
+  font-size: 25px;
+
   }
+  
+  img {
+    height: 40px;
+    width: auto;
+  }
+  
+  ul {
+    text-decoration: none;
+    list-style: none;
+  
+    li {
+      // text-decoration: none;
+      color: $colour-sky;
+      text-align: center;
+      list-style: none;
+
+      .links {
+        list-style: none;
+        display: inline-flex;
+        justify-content: space-evenly;
+      }
+    }
+
+    .myaccountlink {
+      font-size: 25px;
+    }
+  }
+
+
+  
+
+
+
+
+
+
+
+
+
