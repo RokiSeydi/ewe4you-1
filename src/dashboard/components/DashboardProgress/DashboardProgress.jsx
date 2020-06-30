@@ -7,9 +7,10 @@ class DashboardProgress extends Component {
     
     return (
 
-      <div class={styles.progress}>
+      <div className={styles.progress}>
         <h3>{this.props.strProgress}</h3>
         <p>{this.props.strPercentage}</p>
+
         <ul>
           <p>Topic - - - - - - - 70%</p>
           <br/>
