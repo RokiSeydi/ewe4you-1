@@ -1,0 +1,50 @@
+.background {
+    background-image: url("../../img/ewe4you.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    min-width: 100vw;
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        font-size: 70px;
+        margin: 19px;
+    }
+
+    h3 {
+        font-size: 20px;
+        margin: 5px;
+    }
+}
+
+@media only screen and (min-width: 850px) {
+    .background {
+        background-image: url("../../img/ewe4you.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: fixed;
+        min-width: 100vw;
+        min-height: 100vh;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+   
+        h1 {
+            font-size: 120px;
+            margin: 19px;
+        }
+
+        h3 {
+            font-size: 40px;
+            margin: 5px;
+        }
+    }
+      
+}
+   
+
