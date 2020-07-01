@@ -3,5 +3,5 @@ import { render } from '@testing-library/react';
 import LandingPage from './LandingPage';
 
 test('should render', () => {
-    expect(render( < App / > )).toBeTruthy();
+    expect(render( < LandingPage / > )).toBeTruthy();
 });
