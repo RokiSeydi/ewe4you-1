@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import Navbar from './Navbar';
+import NavBar from './NavBar';
 
 test('should render', () => {
-    expect(render( < Navbar / > )).toBeTruthy();
+    expect(render( < NavBar / > )).toBeTruthy();
 });
