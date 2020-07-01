@@ -19,6 +19,7 @@ nav {
   ul {
     text-decoration: none;
     list-style: none;
+    text-decoration: none;
     
   
     li {
@@ -27,12 +28,11 @@ nav {
       text-align: center;
       display: inline-flex;
       justify-content: space-between;
+      list-style: none;
       
-     
-     
       .links {
         list-style: none;
-        
+        text-decoration: none;
       }
     }
 
