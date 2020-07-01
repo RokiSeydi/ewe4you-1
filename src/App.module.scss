@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .Flexed {
   display: flex;
   justify-content: space-around;
@@ -13,3 +14,39 @@
 
 
 
+=======
+.backgroundDiv {
+    margin: 0;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dashboardView {
+    height: 80%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.updateSection {
+    height: 80%;
+    width: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.progressSection {
+    height: 80%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+>>>>>>> 5fe0fcac1f7839c14f72653ab06d4af2ab37c6b6
