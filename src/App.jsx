@@ -21,8 +21,10 @@ class App extends Component {
             <section className={styles.progressSection}>
               <DashboardProgress strProgress="Progress" strPercentage="100%" />
             </section>
+        
           </div>
         </div>
+        <LandingPage/>
       </>
     );
   }
