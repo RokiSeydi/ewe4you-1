@@ -9,35 +9,16 @@ class NavBar extends React.Component{
       return (
         <>
         <nav>
-          <img src={logo} alt="E" />
-          
-            <ul>
-              <li className={styles.links}>
-                <a href="./dashboard">
-                <FontAwesomeIcon icon="tachometer-alt"></FontAwesomeIcon>
-                  Dashboard</a>
-              </li>
-              <li>
-                <a href="./">
-                <FontAwesomeIcon icon="comments"></FontAwesomeIcon>
-                  Topics</a>
-              </li>
-              <li>
-                  <a href="./">
-                <FontAwesomeIcon icon="wrench"></FontAwesomeIcon>
-                  Toolbox</a>
-              </li>
-            </ul>
-          
-  
-          <div className={styles.myaccountlink}>
-            <a href="#">
-              <FontAwesomeIcon icon="user"></FontAwesomeIcon>
-              My Account</a>
+            <img src={logo} alt="sheep logo"/>
+          <div className={styles.links}>
+            <p><span><FontAwesomeIcon icon="tachometer-alt"></FontAwesomeIcon></span>Dashboard</p>
+            <p><span><FontAwesomeIcon icon="comments"></FontAwesomeIcon></span>Topics</p>
+            <p><span><FontAwesomeIcon icon="wrench"></FontAwesomeIcon></span>Toolbox</p>
+          </div>
+          <div className={styles.account}>
+            <p><span><FontAwesomeIcon icon="user"></FontAwesomeIcon></span>My Account</p>
           </div>
         </nav>
-
-
         </>
       );
   }

@@ -15,7 +15,6 @@ class App extends Component {
       <section>
         <NavBar />
       </section>
-      <div>This is my component.</div>
         <div className={styles.backgroundDiv}>
           <h1>Hi there! Welcome to your dashboard view</h1>
           <div className={styles.dashboardView}>
