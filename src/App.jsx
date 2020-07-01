@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import NavBar from "./components/NavBar";
 
 import library from './data/fa-library';
+import LandingPage from "./Components/LandingPage";
+//import styles from './App.module.scss';
 import styles from './App.module.scss';
 
 import DashboardUpdate from './dashboard/components/DashboardUpdate'
@@ -15,6 +17,7 @@ class App extends Component {
       <section>
         <NavBar />
       </section>
+        <LandingPage/>
         <div className={styles.backgroundDiv}>
           <h1>Hi there! Welcome to your dashboard view</h1>
           <div className={styles.dashboardView}>
@@ -34,4 +37,5 @@ class App extends Component {
 }
 
 export default App;
+      
 
