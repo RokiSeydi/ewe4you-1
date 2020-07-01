@@ -1,6 +1,7 @@
+
 import React, { Component } from "react";
 import styles from "./NavBar.module.scss";
-import logo from "../../img/ewe4you.jpg";
+import logo from "../../img/logo.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class NavBar extends React.Component{
@@ -8,7 +9,7 @@ class NavBar extends React.Component{
       return (
         <>
         <nav>
-          <img src={logo} alt="Ewe 4 Ewe logo" />
+          <img src={logo} alt="E" />
           
             <ul>
               <li className={styles.links}>
