@@ -1,31 +1,27 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
+
 import styles from "./App.module.scss";
 import TopicCard from "./Components/TopicCard";
 import image from "./img/ewe4you.jpg";
 import CardCarousel from "./Components/CardCarousel"
-=======
-import LandingPage from "./Components/LandingPage";
->>>>>>> 5fe0fcac1f7839c14f72653ab06d4af2ab37c6b6
-//import styles from './App.module.scss';
-import styles from './App.module.scss';
 
-import DashboardUpdate from './dashboard/components/DashboardUpdate'
-import DashboardProgress from './dashboard/components/DashboardProgress'
+import LandingPage from "./Components/LandingPage";
+
+
+
+import DashboardUpdate from './dashboard/components/DashboardUpdate';
+import DashboardProgress from './dashboard/components/DashboardProgress';
 
 class App extends Component {
   render() {
     return (
-<<<<<<< HEAD
-    <>
-    <div className={styles.Flexed}>
+
+    <React.Fragment >
+    <div className={styles.Flexed} >
       <CardCarousel />
     </div>
     {image}
-    </>
-
-=======
-      <>
+   
         <LandingPage/>
         <div className={styles.backgroundDiv}>
           <h1>Hi there! Welcome to your dashboard view</h1>
@@ -40,9 +36,11 @@ class App extends Component {
             </section>
           </div>
         </div>
-      </>
->>>>>>> 5fe0fcac1f7839c14f72653ab06d4af2ab37c6b6
-    );
+
+        </React.Fragment>
+    
+      
+    )
   }
 }
 
