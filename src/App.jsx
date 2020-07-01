@@ -10,6 +10,7 @@ class App extends Component {
   render() {
     return (
       <>
+        <LandingPage/>
         <div className={styles.backgroundDiv}>
           <h1>Hi there! Welcome to your dashboard view</h1>
           <div className={styles.dashboardView}>
@@ -21,10 +22,8 @@ class App extends Component {
             <section className={styles.progressSection}>
               <DashboardProgress strProgress="Progress" strPercentage="100%" />
             </section>
-        
           </div>
         </div>
-        <LandingPage/>
       </>
     );
   }
