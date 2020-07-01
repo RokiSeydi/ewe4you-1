@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styles from "./App.module.scss";
 import TopicCard from "./Components/TopicCard";
 import image from "./img/ewe4you.jpg";
+import CardCarousel from "./Components/CardCarousel"
 //import styles from './App.module.scss';
 
 class App extends Component {
@@ -9,15 +10,11 @@ class App extends Component {
     return (
     <>
     <div className={styles.Flexed}>
-      <TopicCard />
-      <TopicCard />
-      <TopicCard />
+      <CardCarousel />
     </div>
     {image}
     </>
-    
-  
-  
+
     );
   }
 }
