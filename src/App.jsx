@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 //import styles from './App.module.scss';
-import NavBar from "./components/NavBar";
+import NavBar from "./Components/NavBar";
 import library from './data/fa-library';
-import LandingPage from "./components/LandingPage";
+import LandingPage from "./Components/LandingPage";
 //import styles from './App.module.scss';
 import styles from './App.module.scss';
 
