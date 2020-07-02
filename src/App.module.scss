@@ -1,3 +1,14 @@
+.Flexed {
+    display: flex;
+    justify-content: space-around;
+    background-image: url(./img/ewe4you.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 8%;
+}
+
 .backgroundDiv {
     margin: 0;
     height: 100vh;
