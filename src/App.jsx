@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import library from './data/fa-library';
+import './data/fa-library';
 
 import styles from "./App.module.scss";
 //import TopicCard from "./Components/TopicCard";//
-import image from "./img/ewe4you.jpg";
 import CardCarousel from "./Components/CardCarousel"
 
 import LandingPage from "./Components/LandingPage";
@@ -13,6 +12,8 @@ import NavigationBar from "./Components/NavigationBar";
 
 import DashboardUpdate from './dashboard/components/DashboardUpdate';
 import DashboardProgress from './dashboard/components/DashboardProgress';
+
+
 
 class App extends Component {
   render() {
