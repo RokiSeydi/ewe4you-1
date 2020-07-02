@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import NavBar from "./Components/NavBar";
 import library from './data/fa-library';
 
 import styles from "./App.module.scss";
@@ -8,6 +7,7 @@ import image from "./img/ewe4you.jpg";
 import CardCarousel from "./Components/CardCarousel"
 
 import LandingPage from "./Components/LandingPage";
+import NavBar from "./Components/NavBar";
 
 
 
