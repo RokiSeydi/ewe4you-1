@@ -3,11 +3,14 @@ import LandingPage from "./Components/LandingPage";
 import TopicOverview from "./Components/TopicOverview";
 import styles from './App.module.scss';
 import topics from "./data/topics"
+import styles from './App.module.scss';
+import Routes from "./Routes/Routes";
 
-import DashboardUpdate from './dashboard/components/DashboardUpdate'
-import DashboardProgress from './dashboard/components/DashboardProgress'
+
+
 
 class App extends Component {
+  
   render() {
     return (
       <>
@@ -27,6 +30,8 @@ class App extends Component {
         </div>
         <section className={styles.topicOverview}>
           <TopicOverview topics= {topics[0]}/>
+        <section className={styles.content}>
+          <Routes />
         </section>
       </>
     );

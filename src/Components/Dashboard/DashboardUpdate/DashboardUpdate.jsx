@@ -3,7 +3,6 @@ import styles from "./DashboardUpdate.module.scss";
 
 class DashboardUpdate extends Component {
   render() {
-  console.log("this is running during the test");
 
     return (
       <div className={styles.mainDiv}>

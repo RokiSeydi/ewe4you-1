@@ -1,4 +1,4 @@
-yimport React, { Component } from "react";
+import React, { Component } from "react";
 import styles from "./DashboardProgress.module.scss";
 
 class DashboardProgress extends Component {
