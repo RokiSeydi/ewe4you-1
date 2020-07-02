@@ -7,7 +7,7 @@ import image from "./img/ewe4you.jpg";
 import CardCarousel from "./Components/CardCarousel"
 
 import LandingPage from "./Components/LandingPage";
-import NavBar from "./Components/NavBar/NavBar.jsx";
+import NavigationBar from "./Components/NavigationBar";
 
 
 
@@ -21,7 +21,7 @@ class App extends Component {
     <React.Fragment >
 
       <section>
-        <NavBar />
+        <NavigationBar />
       </section>
       
       <div className={styles.Flexed} >
