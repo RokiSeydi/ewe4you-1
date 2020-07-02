@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import styles from "./App.module.scss";
-import TopicCard from "./Components/TopicCard";
+//import TopicCard from "./Components/TopicCard";//
 import image from "./img/ewe4you.jpg";
 import CardCarousel from "./Components/CardCarousel"
 
