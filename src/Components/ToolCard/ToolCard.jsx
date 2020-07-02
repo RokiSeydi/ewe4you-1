@@ -7,8 +7,8 @@ class ToolCard extends TopicCard {
   render () {
    
     return (
-
-    )
+      
+    );
   }
 }
 
