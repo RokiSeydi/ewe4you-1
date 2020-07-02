@@ -4,7 +4,7 @@ import styles from "./NavBar.module.scss";
 import logo from "../../img/logo.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-class NavBar extends React.Component{
+class NavBar extends Component{
   render() {
       return (
         <>

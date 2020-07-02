@@ -1,0 +1,112 @@
+nav {
+  height: 60px;
+  max-width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: #87CEEB;
+  font-size: 25px;
+}
+
+.logo {
+  height: 60px;
+}
+
+img {
+  height: 40px;
+  width: auto;
+}
+
+ul {
+  text-decoration: none;
+  list-style: none;
+}
+
+ul li {
+  text-decoration: none;
+  color: #E8FFFE;
+  text-align: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  list-style: none;
+  margin: 1em;
+}
+
+ul li i {
+  color: green;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #E8FFFE;
+}
+
+ul li .links {
+  list-style: none;
+  text-decoration: none;
+  color: green;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #E8FFFE;
+}
+
+ul li .links {
+  list-style: none;
+  text-decoration: none;
+  color: green;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #E8FFFE;
+}
+
+ul li .links {
+  list-style: none;
+  text-decoration: none;
+  color: green;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #E8FFFE;
+}
+
+ul li .links {
+  list-style: none;
+  text-decoration: none;
+  color: green;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #E8FFFE;
+}
+
+ul li .links {
+  list-style: none;
+  text-decoration: none;
+  color: green;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #E8FFFE;
+}
+
+ul li .links {
+  list-style: none;
+  text-decoration: none;
+}
+/*# sourceMappingURL=NavBar.module.css.map */
