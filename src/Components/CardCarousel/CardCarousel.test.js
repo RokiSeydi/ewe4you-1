@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import App from './App';
+import CardCarousel from './CardCarousel';
 
 test('should render', () => {
-    expect(render( < App / > )).toBeTruthy();
+    expect(render( < CardCarousel / > )).toBeTruthy();
 });
