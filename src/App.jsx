@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import LandingPage from "./Components/LandingPage";
-//import styles from './App.module.scss';
+import TopicOverview from "./Components/TopicOverview";
 import styles from './App.module.scss';
+import topics from "./data/topics"
 
 import DashboardUpdate from './dashboard/components/DashboardUpdate'
 import DashboardProgress from './dashboard/components/DashboardProgress'
@@ -24,6 +25,9 @@ class App extends Component {
             </section>
           </div>
         </div>
+        <section className={styles.topicOverview}>
+          <TopicOverview topics= {topics[0]}/>
+        </section>
       </>
     );
   }
