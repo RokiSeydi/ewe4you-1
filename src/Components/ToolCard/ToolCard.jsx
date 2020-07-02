@@ -21,7 +21,7 @@ class ToolCard extends Component {
               <div className={styles.playsection}>
                 <p>Exercise to breath deeply for 60 seconds</p>
                 <span>
-                <FontAwesomeIcon icon="play-circle" />
+                <FontAwesomeIcon icon="play-circle"/>
                 </span>
                 <span>
                 <FontAwesomeIcon icon={['fab', 'play-circle']} />
