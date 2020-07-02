@@ -7,7 +7,7 @@ import image from "./img/ewe4you.jpg";
 import CardCarousel from "./Components/CardCarousel"
 
 import LandingPage from "./Components/LandingPage";
-import NavBar from "./Components/NavBar";
+import NavBar from "./Components/NavBar/NavBar.jsx";
 
 
 
