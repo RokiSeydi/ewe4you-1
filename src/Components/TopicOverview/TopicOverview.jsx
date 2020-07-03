@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styles from './TopicOverview.module.scss';
+import NavigationBar from "../NavigationBar/NavigationBar";
 
 class TopicOverview extends Component {
   render() {
@@ -11,6 +12,7 @@ class TopicOverview extends Component {
 
     return (
       <>
+        <NavigationBar/>
         <div className={styles.outer}>
               <h1>{title}</h1>  
           <div className={styles.inner}>
