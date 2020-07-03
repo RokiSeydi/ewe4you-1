@@ -6,6 +6,7 @@ import Carousel from 'react-elastic-carousel';
 
 
 
+
 class CardCarousel extends Component {
   
 getCard = () => {
@@ -18,12 +19,12 @@ getCard = () => {
  }
 }
 
-
   render () {
 
     return (
-      // <section className={styles.CardCarousel}>
-        <Carousel>
+      <>
+     
+      <Carousel>
         <section className={styles.sectionFlex}>
       {this.getCard()}
       {this.getCard()}
@@ -40,8 +41,7 @@ getCard = () => {
       {this.getCard()}
         </section>
       </Carousel>
-      // </section>
-     
+      </>
     )
   }
 }

@@ -5,6 +5,7 @@ import LandingPage from "../Components/LandingPage/LandingPage"
 import Dashboard from "../Components/Dashboard/Dashboard/Dashboard"
 import ToolPage from "../containers/ToolPage";
 import TopicPage from "../containers/TopicPage";
+import CardCarousel from "../Components/CardCarousel/CardCarousel"
 
 class Routes extends Component {
   render() {
@@ -15,6 +16,7 @@ class Routes extends Component {
         <Dashboard path="dashboard" />
         <ToolPage path="tools" />
         <TopicPage path="topics" />   
+        <CardCarousel path="CardCarousel"/>
       </Router>
     );
   }
