@@ -3,13 +3,15 @@ import styles from "./Dashboard.module.scss";
 
 import DashboardUpdate from "../DashboardUpdate/DashboardUpdate"
 import DashboardProgress from "../DashboardProgress/DashboardProgress"
+import NavigationBar from "../../NavigationBar/NavigationBar"
 
 class Dashboard extends Component {
 
   render() {
     
     return (
-
+      <>
+      <NavigationBar/>
       <div className={styles.backgroundDiv}>
       <h1>Hi there! Welcome to your dashboard view</h1>
       <div className={styles.dashboardView}>
@@ -23,7 +25,7 @@ class Dashboard extends Component {
         </section>
       </div>
     </div>
-
+    </>
     );
   }
 }
