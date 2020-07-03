@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import LandingPage from "./Components/LandingPage";
 import TopicOverview from "./Components/TopicOverview";
+import DashboardUpdate from "./Components/Dashboard/DashboardUpdate";
+import DashboardProgress from "./Components/Dashboard/DashboardProgress";
 import styles from './App.module.scss';
 import topics from "./data/topics"
-import styles from './App.module.scss';
 import Routes from "./Routes/Routes";
-
-
-
 
 class App extends Component {
   
@@ -30,6 +28,7 @@ class App extends Component {
         </div>
         <section className={styles.topicOverview}>
           <TopicOverview topics= {topics[0]}/>
+          </section>
         <section className={styles.content}>
           <Routes />
         </section>
