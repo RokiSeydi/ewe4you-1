@@ -7,8 +7,6 @@ class TopicOverview extends Component {
       title,
       image,
       text,
-      startUrl,
-      backUrl,
     } = this.props.topics;
 
     return (
