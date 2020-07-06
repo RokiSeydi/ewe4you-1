@@ -7,7 +7,6 @@ class App extends Component {
   render() {
   
     return (
-
       <>
         <section className={styles.content}>
           <Routes/>
@@ -16,6 +15,5 @@ class App extends Component {
     )
   } 
 }
-
 
 export default App;

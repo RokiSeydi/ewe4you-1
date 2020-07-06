@@ -23,24 +23,25 @@ getCard = () => {
 
     return (
       <>
-     
-      <Carousel>
-        <section className={styles.sectionFlex}>
-      {this.getCard()}
-      {this.getCard()}
-      {this.getCard()}
-        </section>
-        <section className={styles.sectionFlex}>
-      {this.getCard()}
-      {this.getCard()}
-      {this.getCard()}
-        </section>
-        <section className={styles.sectionFlex}>
-      {this.getCard()}
-      {this.getCard()}
-      {this.getCard()}
-        </section>
-      </Carousel>
+     <div className={styles.carouselConatiner}>
+        <Carousel>
+          <section className={styles.sectionFlex}>
+        {this.getCard()}
+        {this.getCard()}
+        {this.getCard()}
+          </section>
+          <section className={styles.sectionFlex}>
+        {this.getCard()}
+        {this.getCard()}
+        {this.getCard()}
+          </section>
+          <section className={styles.sectionFlex}>
+        {this.getCard()}
+        {this.getCard()}
+        {this.getCard()}
+          </section>
+        </Carousel>
+      </div>
       </>
     )
   }
