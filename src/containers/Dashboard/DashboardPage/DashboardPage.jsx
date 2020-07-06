@@ -3,7 +3,7 @@ import styles from "./DashboardPage.module.scss";
 
 import DashboardUpdate from "../DashboardUpdate/DashboardUpdate"
 import DashboardProgress from "../DashboardProgress/DashboardProgress"
-import NavigationBar from "../../../Components/NavigationBar/NavigationBar"
+import NavigationBar from "../../../components/NavigationBar/NavigationBar"
 
 class DashboardPage extends Component {
 
