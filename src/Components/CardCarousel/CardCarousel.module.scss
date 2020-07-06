@@ -1,24 +1,29 @@
-        .CardCarousel {
-            padding: 10px;
-        }
+        .cardcarousel {
+            width: 95vw;
         
-        .sectionFlex {
-            display: flex;
-            justify-content: space-between;
-            margin: 100px;
+        
+            .CardCarousel {
+                padding: 10px;
+            }
+            
             .sectionFlex {
                 display: flex;
                 justify-content: space-between;
                 margin: 100px;
-            }
-            .sectionFlex {
-                display: flex;
-                justify-content: space-between;
-                margin: 100px;
-            }
-            .sectionFlex {
-                display: flex;
-                justify-content: space-between;
-                margin: 100px;
-            }
+                .sectionFlex {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 100px;
+                }
+                .sectionFlex {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 100px;
+                }
+                .sectionFlex {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 100px;
+                }
         }
+    }
