@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import styles from "./ToolCard.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faTachometerAlt, faComments, faWrench, faUser, faPlayCircle } from '@fortawesome/free-solid-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons';
 
+library.add(faTachometerAlt, faComments, faWrench, faUser, fab, faPlayCircle)
 
 class ToolCard extends Component {
   contentLimit = (summary) => 
@@ -20,12 +24,11 @@ class ToolCard extends Component {
             </div>
               <div className={styles.playsection}>
                 <p>Exercise to breath deeply for 60 seconds</p>
-                <span>
+                <div>
                 <FontAwesomeIcon icon="play-circle"/>
-                </span>
-                <span>
+                
                 <FontAwesomeIcon icon={['fab', 'play-circle']} />
-                </span>
+                </div>
                 <p>Unlocked from weight loss topic</p>
               </div>
         </section>

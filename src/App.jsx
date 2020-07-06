@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styles from './App.module.scss';
 import Routes from "./Routes/Routes";
 
+
 class App extends Component {
   
   render() {

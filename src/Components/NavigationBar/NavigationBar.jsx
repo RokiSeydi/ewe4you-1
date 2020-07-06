@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 import styles from "./NavigationBar.module.scss";
 import logo from "../../img/logo.jpg";
+import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTachometerAlt, faComments, faWrench, faUser, faPlayCircle } from '@fortawesome/free-solid-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons';
+
+library.add(faTachometerAlt, faComments, faWrench, faUser, fab, faPlayCircle)
 
 class NavigationBar extends Component{
   render() {
