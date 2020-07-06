@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
 import styles from "./App.module.scss";
 import TopicCard from "./Components/TopicCard";
 import image from "./img/ewe4you.jpg";
@@ -38,4 +39,25 @@ class App extends Component {
 
 export default App;
       
+=======
+import styles from './App.module.scss';
+import Routes from "./Routes/Routes";
 
+class App extends Component {
+  
+  render() {
+  
+    return (
+
+      <>
+        <section className={styles.content}>
+          <Routes/>
+        </section>
+      </>
+    )
+  } 
+}
+
+>>>>>>> 185cabda2b6b88f030efd5b2bf5007bae96bd09d
+
+export default App;

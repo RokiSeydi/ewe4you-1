@@ -1,8 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import App from './App';
+import TopicPage from './TopicPage';
 
 test('should render', () => {
-    expect(render( < App /> )).toBeTruthy();
+    expect(render( < TopicPage / > )).toBeTruthy();
 });
-
