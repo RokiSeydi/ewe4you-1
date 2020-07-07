@@ -1,13 +1,21 @@
 @import "../../../src/variables.scss";
 
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .outer {
     height: 90%;
     width: 80%;
     background-color: $colour-orange;
     border-radius: $border-radius;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
 
     h1 {
@@ -20,10 +28,11 @@
     height: 90%;
     width: 90%;
     border-radius: $border-radius;
-    margin: 0 auto;
     background-color: $colour-dark-orange;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     img {
         height: 200px;

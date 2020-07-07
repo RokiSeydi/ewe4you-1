@@ -12,18 +12,20 @@ class TopicOverview extends Component {
 
     return (
       <>
-        <NavigationBar/>
-        <div className={styles.outer}>
-              <h1>{title}</h1>  
-          <div className={styles.inner}>
-            <div>
-              <img src={image} alt={title}/>
+        <div className ={styles.container}>
+          <div className={styles.outer}>
+                <h1>{title}</h1>  
+            <div className={styles.inner}>
+              <div>
+                <img src={image} alt={title}/>
+              </div>
+              <div>
+                <p>{text}</p>
+                <button>Start Topic</button>
+                <button>Go Back</button>
+              </div>
             </div>
-            <div>
-              <p>{text}</p>
-              <button>Start Topic</button>
-              <button>Go Back</button>
-            </div>
+                <br/>
           </div>
         </div>
       </>

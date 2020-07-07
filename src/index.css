@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
 
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0 ;
+  padding: 0 ;
   text-align: center;
   box-sizing: border-box;
 }
@@ -19,8 +19,8 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
-    min-width: 100vw;
-    min-height: 100vh;
+    /* min-width: 100vw;
+    min-height: 100vh; */
 }
 
 code {

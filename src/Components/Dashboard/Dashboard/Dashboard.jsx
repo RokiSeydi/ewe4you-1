@@ -10,7 +10,8 @@ class Dashboard extends Component {
   render() {
     
     return (
-      <>
+      <section className={styles.dashboard}>
+
       <NavigationBar/>
       <div className={styles.backgroundDiv}>
       <h1>Hi there! Welcome to your dashboard view</h1>
@@ -25,7 +26,7 @@ class Dashboard extends Component {
         </section>
       </div>
     </div>
-    </>
+    </section>
     );
   }
 }
