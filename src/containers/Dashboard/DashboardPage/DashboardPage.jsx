@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import styles from "./Dashboard.module.scss";
+import styles from "./DashboardPage.module.scss";
 
 import DashboardUpdate from "../DashboardUpdate/DashboardUpdate"
 import DashboardProgress from "../DashboardProgress/DashboardProgress"
-import NavigationBar from "../../NavigationBar/NavigationBar"
+import NavigationBar from "../../../components/NavigationBar/NavigationBar"
 
-class Dashboard extends Component {
+class DashboardPage extends Component {
 
   render() {
     
@@ -30,4 +30,4 @@ class Dashboard extends Component {
   }
 }
 
-export default Dashboard;
+export default DashboardPage;
