@@ -5,7 +5,6 @@ import DashboardPage from "../containers/Dashboard/DashboardPage/DashboardPage";
 import CardCarousel from "../components/CardCarousel/CardCarousel";
 import TopicOverview from "../components/TopicOverview/TopicOverview";
 import topics from "../data/topics";
-import tools from "../data/tools";
 import ToolPage from "../containers/ToolPage";
 import TopicPage from "../containers/TopicPage";
 
