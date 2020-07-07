@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Router } from "@reach/router";
 import LandingPage from "../components/LandingPage/LandingPage";
-import DashboardPage from "../containers/dashboard/DashboardPage/DashboardPage";
+import DashboardPage from "../containers/Dashboard/DashboardPage/DashboardPage";
 import CardCarousel from "../components/CardCarousel/CardCarousel";
 import TopicOverview from "../components/TopicOverview/TopicOverview";
 import topics from "../data/topics";
