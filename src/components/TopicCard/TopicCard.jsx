@@ -12,6 +12,7 @@ class TopicCard extends Component {
       innerColour,
       outerColour,
     } = this.props.topic;
+
     const innerStyle = {
       backgroundColor: innerColour
     };

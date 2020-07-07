@@ -4,6 +4,9 @@ import TopicCard from "../TopicCard"
 import ToolCard from "../ToolCard"
 import Carousel from 'react-elastic-carousel';
 import topics from "../../data/topics";
+import tools from "../../data/tools";
+
+
 
 class CardCarousel extends Component {
   state = {
@@ -13,7 +16,9 @@ class CardCarousel extends Component {
   getCards = () => {
     const { cardType } = this.props;
     if (cardType === 'tools') {
-      return <ToolCard />
+      return tools.map((tool, index) => {
+        return <ToolCard tool={tool} key={index}/>
+      })
     }
     if (cardType === 'topics') {
       return topics.map((topic, index) => {
