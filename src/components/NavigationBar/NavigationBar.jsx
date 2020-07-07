@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styles from "./NavigationBar.module.scss";
-import logo from "../../img/logo.jpg";
+import logo from "../../assets/logo.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from '@reach/router'
 

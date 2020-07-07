@@ -34,16 +34,18 @@ $nav-height: 60px;
 
 %card {
     max-height: 500px;
-    max-width: 360px;
-    min-width: 360px;
-    min-height: 500px;
+    max-width: 320px;
+    min-width: 300px;
+    min-height: 300px;
     border-radius: 30px;
     box-shadow: $box-shadow;
     background-color: white;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
+
+
   }
   %innerCard {
     max-height: 308px;

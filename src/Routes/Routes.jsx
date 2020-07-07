@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import { Router } from "@reach/router";
-
-import LandingPage from "../Components/LandingPage/LandingPage";
-import Dashboard from "../Components/Dashboard/Dashboard/Dashboard";
-import CardCarousel from "../Components/CardCarousel/CardCarousel";
-
+import LandingPage from "../components/LandingPage/LandingPage";
+import DashboardPage from "../containers/Dashboard/DashboardPage/DashboardPage";
+import CardCarousel from "../components/CardCarousel/CardCarousel";
+import TopicOverview from "../components/TopicOverview/TopicOverview";
 import topics from "../data/topics";
 
 import ToolPage from "../containers/ToolPage";
@@ -16,7 +15,7 @@ class Routes extends Component {
     return (
       <Router>
         <LandingPage path="/" />
-        <Dashboard path="dashboard" />
+        <DashboardPage path="dashboard" />
         <CardCarousel path="card-carousel"/> 
         <TopicOverviewContainer path="topic-overview" topics={topics[0]} />
         <ToolPage path="tools" />

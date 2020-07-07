@@ -1,28 +1,22 @@
 @import "../../variables.scss";
+
 .Topics {
     @extend %card;
     background-color: $colour-orange;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-right: 60px;
+    margin: 0 30px;
+    margin-bottom: 20px;
     .inner {
         @extend %innerCard;
         background-color: $colour-dark-orange;
         text-align: justify;
-        padding: 0px 10px;
+        padding: 10px 10px;
         border-radius: 10px;
-        min-height: unset;
-        p {
-            height: 200px;
-        }
+        margin-bottom: 10px;
     }
     .heading {
         font-size: $font-size-card-title;
-    }
-    div {
-        &.playsection {
-            margin-top: 20px;
-        }
     }
 }
