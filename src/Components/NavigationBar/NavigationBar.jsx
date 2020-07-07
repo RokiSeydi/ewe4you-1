@@ -12,7 +12,7 @@ library.add(faTachometerAlt, faComments, faWrench, faUser, fab, faPlayCircle)
 class NavigationBar extends Component{
 
 state = {
-  isOpen: true
+  isOpen: false
 }
 
 iconClick = () => {
@@ -23,6 +23,7 @@ iconClick = () => {
     const display = this.state.isOpen ?   
    
     (<nav>
+      <div className={styles.both}>
       <div className={styles.links}>
         <p><span><FontAwesomeIcon icon="tachometer-alt" /><Link to="/dashboard">Dashboard</Link></span></p>
         <p><span><FontAwesomeIcon icon="comments" /><Link to="/topic-overview">Topics</Link></span></p>
@@ -30,16 +31,17 @@ iconClick = () => {
       </div>
       <div className={styles.account}>
         <p><span><FontAwesomeIcon icon="user"/><Link to="/myaccount">My Account</Link></span></p>
+       </div>
       </div>
     </nav>
 
        ) : null;
 
       return (
-        <nav className={styles.navbar} > 
+        <section className={styles.navbar} > 
           <img onClick={this.iconClick} src={logo} alt="sheep logo"/>            
             {display}
-      </nav>
+      </section>
     );
   }
 }
