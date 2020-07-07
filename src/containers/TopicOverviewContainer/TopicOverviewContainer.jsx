@@ -8,6 +8,8 @@ class TopicOverviewContainer extends Component {
 
   render() { 
 
+  console.log(this.props.topics);
+
     return ( 
       <>
         <NavigationBar/>
