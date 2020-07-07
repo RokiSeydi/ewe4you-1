@@ -12,7 +12,7 @@ library.add(faTachometerAlt, faComments, faWrench, faUser, fab, faPlayCircle)
 class NavigationBar extends Component{
 
 state = {
-  isOpen: false
+  isOpen: true
 }
 
 iconClick = () => {
@@ -20,37 +20,26 @@ iconClick = () => {
 }
 
   render() {
-   const display = this.state.isOpen ?   
-  
-     ( <nav>    
-          <div className={styles.links}>
-            <p><span><FontAwesomeIcon icon="tachometer-alt"></FontAwesomeIcon><Link to="/dashboard">Dashboard</Link></span></p>
-            <p><span><FontAwesomeIcon icon="comments"></FontAwesomeIcon><Link to="/topic-overview">Topics</Link></span></p>
-            <p><span><FontAwesomeIcon icon="wrench"></FontAwesomeIcon><Link to="/tools">Toolbox</Link></span></p>
-          </div>
-          <div className={styles.account}>
-            <p><span><FontAwesomeIcon icon="user"></FontAwesomeIcon><Link to="/">My Account</Link></span></p>
-          </div> 
-       </nav>) 
-
-         : null;
+    const display = this.state.isOpen ?   
    
+    (<nav>
+      <div className={styles.links}>
+        <p><span><FontAwesomeIcon icon="tachometer-alt" /><Link to="/dashboard">Dashboard</Link></span></p>
+        <p><span><FontAwesomeIcon icon="comments" /><Link to="/topic-overview">Topics</Link></span></p>
+        <p><span><FontAwesomeIcon icon="wrench" /><Link to="/tools">Toolbox</Link></span></p>
+      </div>
+      <div className={styles.account}>
+        <p><span><FontAwesomeIcon icon="user"/><Link to="/myaccount">My Account</Link></span></p>
+      </div>
+    </nav>
+
+       ) : null;
+
       return (
-        <>
-        <nav> 
-            <img onClick={this.iconClick} src={logo} alt="sheep logo"/>            
-              {display}
-          {/* <div className={styles.links}>
-            <p><span><FontAwesomeIcon icon="tachometer-alt"></FontAwesomeIcon><Link to="/dashboard">Dashboard</Link></span></p>
-            <p><span><FontAwesomeIcon icon="comments"></FontAwesomeIcon><Link to="/topic-overview">Topics</Link></span></p>
-            <p><span><FontAwesomeIcon icon="wrench"></FontAwesomeIcon><Link to="/tools">Toolbox</Link></span></p>
-          </div>
-          <div className={styles.account}>
-            <p><span><FontAwesomeIcon icon="user"></FontAwesomeIcon><Link to="/">My Account</Link></span></p>
-          </div>
-       */}
+        <nav className={styles.navbar} > 
+          <img onClick={this.iconClick} src={logo} alt="sheep logo"/>            
+            {display}
       </nav>
-    </>
     );
   }
 }

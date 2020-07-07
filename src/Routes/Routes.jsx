@@ -7,6 +7,7 @@ import TopicOverview from "../Components/TopicOverview/TopicOverview";
 import topics from "../data/topics";
 import ToolPage from "../containers/ToolPage";
 import TopicPage from "../containers/TopicPage";
+import MyAccount from "../Components/MyAccount/MyAccount";
 
 
 class Routes extends Component {
@@ -18,7 +19,8 @@ class Routes extends Component {
         <CardCarousel path="card-carousel"/> 
         <TopicOverview path="topic-overview" topics={topics[0]} />
         <ToolPage path="tools" />
-        <TopicPage path="topics" />   
+        <TopicPage path="topics" />
+        <MyAccount path="myaccount" />   
       
       </Router>
     );
