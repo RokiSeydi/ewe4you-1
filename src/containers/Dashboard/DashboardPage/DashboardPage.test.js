@@ -1,7 +1,7 @@
 import React from "react";
-import  Dashboard from "./Dashboard";
+import  DashboardPage from "./DashboardPage";
 import { render } from '@testing-library/react';
 
 test('should render', () => {
-  expect(render(<Dashboard />)).toBeTruthy();
+  expect(render(<DashboardPage />)).toBeTruthy();
 });
