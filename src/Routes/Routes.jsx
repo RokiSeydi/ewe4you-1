@@ -7,6 +7,7 @@ import TopicOverview from "../components/TopicOverview/TopicOverview";
 import topics from "../data/topics";
 import ToolPage from "../containers/ToolPage";
 import TopicPage from "../containers/TopicPage";
+import PositiveAffirmations from "../components/PositiveAffirmations";
 
 
 class Routes extends Component {
@@ -18,7 +19,8 @@ class Routes extends Component {
         <CardCarousel path="card-carousel"/> 
         <TopicOverview path="topic-overview" topics={topics[0]} />
         <ToolPage path="tools" />
-        <TopicPage path="topics" />   
+        <TopicPage path="topics" /> 
+        <PositiveAffirmations path="PositiveAffirmations" />  
       
       </Router>
     );
