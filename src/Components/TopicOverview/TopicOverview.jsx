@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styles from './TopicOverview.module.scss';
-import NavigationBar from "../NavigationBar/NavigationBar";
+import { Link } from '@reach/router'
+
 
 class TopicOverview extends Component {
   render() {
@@ -21,9 +22,12 @@ class TopicOverview extends Component {
               </div>
               <div>
                 <p>{text}</p>
-                <button>Start Topic</button>
-                <button>Go Back</button>
-              </div>
+                  <button>Start Topic</button>
+                  
+                    <Link to="/topics">
+                      <button>Go Back</button>
+                    </Link>
+                </div>
             </div>
                 <br/>
           </div>

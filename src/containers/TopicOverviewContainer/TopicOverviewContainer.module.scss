@@ -1,7 +1,9 @@
+@import '../../variables.scss';
+
 .Flexed {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    height: 95vh;
+    height: calc(100vh - #{$nav-height});
 }

@@ -7,10 +7,10 @@ class TopicPage extends Component {
   render() { 
     return ( 
       <>
-       <NavigationBar/>
+      <NavigationBar/>
       <div className={styles.Flexed} >
-      <CardCarousel cardType={'topics'}/>
-    </div>
+        <CardCarousel cardType={'topics'}/>
+      </div>
     </>
      )
   }

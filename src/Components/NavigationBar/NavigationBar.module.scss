@@ -7,6 +7,16 @@ nav {
   flex-direction: row;
   align-items: center;
   background-color: $colour-blue;
+
+    a {
+      text-decoration: none;
+      color: white;
+
+      &:hover{
+        background-color: $colour-dark-blue;
+        border-radius: $border-radius;
+      }
+    }
   }
 
   img {
@@ -25,6 +35,7 @@ nav {
     p {
       padding:10px;
       font-size: 20px;
+      text-decoration: none;
     }
 
     p span {
@@ -32,7 +43,6 @@ nav {
       color: $colour-dark-blue;
       font-size: 20px;
     }
-
   }
 
   .account {
@@ -53,4 +63,6 @@ nav {
       font-size: 20px;
     }
   }
+
+
    
