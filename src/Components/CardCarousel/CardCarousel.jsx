@@ -8,39 +8,41 @@ class CardCarousel extends Component {
   state = {
     cards: 2
   }
-  
-getCard = () => {
-  const {cardType} = this.props;
- if (cardType === 'tools') {
- return <ToolCard />
- }
- if (cardType === 'topics') {
- return <TopicCard />
- }
+
+  getCard = () => {
+    const { cardType } = this.props;
+    if (cardType === 'tools') {
+      return <ToolCard />
+    }
+    if (cardType === 'topics') {
+      return <TopicCard />
+    }
+  }
+
+handleResize = () => {
+  if (window.innerWidth > 1200) {
+    this.setState({cards: 3})
+  } else if (window.innerWidth > 769 && window.innerWidth < 1200) {
+    this.setState({cards: 2})
+  } else if (window.innerWidth > 0 && window.innerWidth < 768) {
+    this.setState({cards: 1})
+  }
 }
 
 componentDidMount() {
-  if (window.innerWidth > 800) {
-    this.setState({cards: 3})
-  } else if (window.innerWidth < 800) {
-    this.setState({cards: 2})
-  } else if (window.innerWidth < 600) {
-    this.setState({cards: 1})
-  }
-  // window.addEventListener('resize', numberOfCard)
+   this.handleResize()
+   window.addEventListener("resize", this.handleResize);
 }
 
-  
-  
-  render () {
-    
-    
-    console.log(window.innerWidth);
-    console.log(this.state.cards);
-
-    return (
-      <div className={styles.cardcarousel}>
-        <Carousel itemsToShow={this.state.cards}>
+componentWillUnmount() {
+   window.removeEventListener("resize", this.handleResize);
+}
+render() {
+  console.log(window.innerWidth);
+  console.log(this.state)
+  return (
+    <div className={styles.cardcarousel}>
+      <Carousel itemsToShow={this.state.cards} >
         {this.getCard()}
         {this.getCard()}
         {this.getCard()}
@@ -48,12 +50,10 @@ componentDidMount() {
         {this.getCard()}
         {this.getCard()}
         {this.getCard()}
-        {this.getCard()}
-        {this.getCard()}
-        </Carousel>
-      </div>
-    )
-  }
+      </Carousel>
+    </div>
+  )
+}
 }
 
 export default CardCarousel;
