@@ -1,7 +1,7 @@
 @import '../../../variables.scss';
 
 .dashboard{
-    height:95vh;
+    height: calc(100vh - #{$nav-height});
 }
 
 .backgroundDiv {

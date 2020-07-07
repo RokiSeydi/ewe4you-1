@@ -1,7 +1,7 @@
 @import "../../variables.scss";
 
 nav {
-  height: 5vh;
+  height: $nav-height;
   display:flex;
   width: 100%;
   flex-direction: row;
@@ -10,7 +10,7 @@ nav {
   }
 
   img {
-    height: 5vh;
+    height: $nav-height;
     width: auto;
   }
 
