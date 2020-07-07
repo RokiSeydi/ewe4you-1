@@ -3,8 +3,12 @@ import CardCarousel from "../../Components/CardCarousel"
 import styles from "./TopicPage.module.scss"
 import NavigationBar from "../../Components/NavigationBar/NavigationBar"
 
+
 class TopicPage extends Component {
   render() { 
+
+
+
     return ( 
       <>
        <NavigationBar/>
