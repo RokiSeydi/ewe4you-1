@@ -1,4 +1,4 @@
-import img from "../img/stress.png"
+import img from "../assets/stress.png"
 
 const topics = [
     {
