@@ -3,6 +3,7 @@ import styles from "./ToolCard.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
+
 class ToolCard extends Component {
   contentLimit = (summary) => 
     summary.length <500
@@ -12,6 +13,7 @@ class ToolCard extends Component {
     const {
       title,
       text,
+      origin,
       innerColour,
       outerColour,
     } = this.props.tool;
@@ -39,7 +41,7 @@ class ToolCard extends Component {
                 <span>
                 <FontAwesomeIcon icon={['fab', 'play-circle']} />
                 </span>
-                <p>Unlocked from weight loss topic</p>
+                <p>{origin}</p>
               </div>
         </section>
 

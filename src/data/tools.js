@@ -6,6 +6,7 @@ const tools = [
         "title": "Slow Breathing",
         "image": "",
         "text" :"Exercise to breathe deeply for 60 seconds.",
+        "origin": "Locked",
         "startUrl" :"",
         "backUrl" :"",
         "innerColour" : "#3DAEDC",
@@ -17,6 +18,7 @@ const tools = [
         "title": "Tool coming soon",
         "image": " ",
         "text" :"Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+        "origin": "Locked",
         "startUrl" :"",
         "backUrl" :"",
         "innerColour" : "#6E6E6E",
@@ -29,6 +31,7 @@ const tools = [
         "title": "Tool coming soon",
         "image": " ",
         "text" :"Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+        "origin": "Locked",
         "startUrl" :"",
         "backUrl" :"",
         "innerColour" : "#6E6E6E",
@@ -41,6 +44,7 @@ const tools = [
         "title": "Tool coming soon",
         "image": " ",
         "text" :"Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+        "origin": "Locked",
         "startUrl" :"",
         "backUrl" :"",
         "innerColour" : "#6E6E6E",
@@ -53,6 +57,7 @@ const tools = [
         "title": "Tool coming soon",
         "image": " ",
         "text" :"Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+        "origin": "Locked",
         "startUrl" :"",
         "backUrl" :"",
         "innerColour" : "#6E6E6E",
@@ -65,6 +70,7 @@ const tools = [
         "title": "Tool coming soon",
         "image": " ",
         "text" :"Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+        "origin": "Locked",
         "startUrl" :"",
         "backUrl" :"",
         "innerColour" : "#6E6E6E",
@@ -76,6 +82,7 @@ const tools = [
         "title": "Tool coming soon",
         "image": " ",
         "text" :"Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+        "origin": "Locked",
         "startUrl" :"",
         "backUrl" :"",
         "innerColour" : "#6E6E6E",
@@ -87,6 +94,7 @@ const tools = [
         "title": "Tool coming soon",
         "image": " ",
         "text" :"Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+        "origin": "Locked",
         "startUrl" :"",
         "backUrl" :"",
         "innerColour" : "#6E6E6E",
@@ -98,6 +106,7 @@ const tools = [
         "title": "Tool coming soon",
         "image": " ",
         "text" :"Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+        "origin": "Locked",
         "startUrl" :"",
         "backUrl" :"",
         "innerColour" : "#6E6E6E",
@@ -109,6 +118,7 @@ const tools = [
         "title": "Tool coming soon",
         "image": " ",
         "text" :"Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+        "origin": "Locked",
         "startUrl" :"",
         "backUrl" :"",
         "innerColour" : "#6E6E6E",
@@ -120,6 +130,7 @@ const tools = [
         "title": "Tool coming soon",
         "image": " ",
         "text" :"Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+        "origin": "Locked",
         "startUrl" :"",
         "backUrl" :"",
         "innerColour" : "#6E6E6E",
@@ -131,6 +142,7 @@ const tools = [
         "title": "Tool coming soon",
         "image": " ",
         "text" :"Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+        "origin": "Locked",
         "startUrl" :"",
         "backUrl" :"",
         "innerColour" : "#6E6E6E",
@@ -139,7 +151,7 @@ const tools = [
 
 ];
 
-export default topics;
+export default tools;
 // $colour-blue: #87CEEB; 
 // $colour-dark-blue: ; 
 // $colour-yellow: #FFEE93;
