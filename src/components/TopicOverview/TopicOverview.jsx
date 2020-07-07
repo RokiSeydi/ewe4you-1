@@ -8,7 +8,7 @@ class TopicOverview extends Component {
       title,
       image,
       text,
-    } = this.props.topics;
+    } = this.props.topic;
 
     return (
       <>

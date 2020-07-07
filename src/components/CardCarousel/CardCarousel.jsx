@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
-import styles from "./CardCarousel.module.scss"
+// import styles from "./CardCarousel.module.scss"
 import TopicCard from "../TopicCard"
 import ToolCard from "../ToolCard"
 import Carousel from 'react-elastic-carousel';
-
-
-
-
+import topics from "../../data/topics";
 class CardCarousel extends Component {
-  
 getCard = () => {
   const {cardType} = this.props;
  if (cardType === 'tools') {
@@ -18,32 +14,14 @@ getCard = () => {
  return <TopicCard />
  }
 }
-
   render () {
-
     return (
-      <>
-     
       <Carousel>
-        <section className={styles.sectionFlex}>
-      {this.getCard()}
-      {this.getCard()}
-      {this.getCard()}
-        </section>
-        <section className={styles.sectionFlex}>
-      {this.getCard()}
-      {this.getCard()}
-      {this.getCard()}
-        </section>
-        <section className={styles.sectionFlex}>
-      {this.getCard()}
-      {this.getCard()}
-      {this.getCard()}
-        </section>
+        {topics.map((topic, index) => {
+          return <TopicCard topic={topic} key={index}/>
+        })}
       </Carousel>
-      </>
     )
   }
 }
-
-export default CardCarousel;
+export default CardCarousel
