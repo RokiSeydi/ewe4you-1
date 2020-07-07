@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import styles from "./CardCarousel.module.scss"
+// import styles from "./CardCarousel.module.scss"
 import TopicCard from "../TopicCard"
 import ToolCard from "../ToolCard"
 import Carousel from 'react-elastic-carousel';
 import topics from "../../data/topics";
-
 class CardCarousel extends Component {
-
 getCard = () => {
   const {cardType} = this.props;
  if (cardType === 'tools') {
@@ -16,7 +14,6 @@ getCard = () => {
  return <TopicCard />
  }
 }
-
   render () {
     return (
       <Carousel>
@@ -27,5 +24,4 @@ getCard = () => {
     )
   }
 }
-
 export default CardCarousel
