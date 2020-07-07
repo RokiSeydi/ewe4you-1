@@ -3,19 +3,22 @@ import styles from "./CardCarousel.module.scss"
 import TopicCard from "../TopicCard"
 import ToolCard from "../ToolCard"
 import Carousel from 'react-elastic-carousel';
+import topics from "../../data/topics";
 
 class CardCarousel extends Component {
   state = {
     cards: 2
   }
 
-  getCard = () => {
+  getCards = () => {
     const { cardType } = this.props;
     if (cardType === 'tools') {
       return <ToolCard />
     }
     if (cardType === 'topics') {
-      return <TopicCard />
+      return topics.map((topic, index) => {
+        return <TopicCard topic={topic} key={index}/>
+      })
     }
   }
 
@@ -43,17 +46,28 @@ render() {
   return (
     <div className={styles.cardcarousel}>
       <Carousel itemsToShow={this.state.cards} >
-        {this.getCard()}
-        {this.getCard()}
-        {this.getCard()}
-        {this.getCard()}
-        {this.getCard()}
-        {this.getCard()}
-        {this.getCard()}
+        {this.getCards()}
       </Carousel>
     </div>
   )
 }
 }
-
-export default CardCarousel;
+// class CardCarousel extends Component {
+// getCard = () => {
+//   const {cardType} = this.props;
+//  if (cardType === 'tools') {
+//  return <ToolCard />
+//  }
+//  if (cardType === 'topics') {
+//  return <TopicCard />
+//  }
+// }
+//   render () {
+//     return (
+//       <Carousel>
+        
+//       </Carousel>
+//     )
+//   }
+// }
+export default CardCarousel
