@@ -1,47 +1,47 @@
 @import "../../variables.scss";
 .navbar {
-    height: 60px;
-    display: inline-flex;
+    height: 50px;
+    display: flex;
     width: 100%;
     flex-direction: row;
     align-items: center;
+    img {
+        height: 50px;
+        width: auto;
+    }
     nav {
         background-color: $colour-blue;
         width: 100%;
-    }
-    img {
-        display: inline-flex;
-        flex-direction: row;
-        height: 60px;
-        width: auto;
+        .both {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
     }
     .links {
         margin-left: 20px;
         color: $colour-sky;
         display: inline-flex;
-        width: 75vw;
         p span {
             color: $colour-dark-blue;
             padding: 10px;
-            font-size: 30px;
+            font-size: $font-size-nav;
         }
         p {
             padding: 10px;
-            font-size: 20px;
+            font-size: $font-size-nav;
         }
     }
     .account {
         color: $colour-sky;
-        display: inline-flex;
-        justify-content: right;
         p span {
             color: $colour-dark-blue;
             padding: 10px;
-            font-size: 30px;
+            font-size: $font-size-nav;
         }
         p {
             padding: 10px;
-            font-size: 20px;
+            font-size: $font-size-nav;
         }
     }
     a:link {
@@ -51,11 +51,14 @@
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 768px) {
     .navbar {
         display: flex;
         position: absolute;
         z-index: 1;
+        .visible {
+            display: none;
+        }
         nav {
             align-items: center;
             width: 100%;
@@ -67,14 +70,13 @@
                 display: block;
                 width: 100%;
                 float: left;
+                justify-content: center;
                 align-items: center;
                 align-content: center;
-                // opacity: 0.9;
             }
             .links {
                 display: block;
-                // align-items: center;
-                // align-content: center;
+                align-items: center;
             }
         }
     }

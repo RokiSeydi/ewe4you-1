@@ -1,8 +1,15 @@
 .body {
-    border: 2px solid black;
-    position: relative;
-    align-items: center;
+    border: 1px solid black;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 250px;
+    margin-left: 250px;
     background-color: orange;
-    margin-top: 50px;
+    margin-top: 31em;
     font-size: large;
+    opacity: 0.9;
+}
+
+a:link {
+    text-decoration: none;
 }

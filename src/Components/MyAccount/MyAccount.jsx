@@ -12,7 +12,9 @@ class MyAccount extends Component {
       <NavigationBar/>
      <section className={styles.body}>
         <h1>Page under construction!</h1>
+        <div className={styles.link}>
         <Link to="/">Go back to the landing page</Link>
+        </div>
       </section>
     </>  
     
