@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import styles from "./TopicCard.module.scss";
+
 class TopicCard extends Component {
+
   contentLimit = (summary) => 
     summary.length <500
     ? summary
     : summary.substring(0,400) + "...";
+
   render() { 
     const {
       title,
@@ -16,13 +19,15 @@ class TopicCard extends Component {
     const innerStyle = {
       backgroundColor: innerColour
     };
+
     const outerStyle = {
       backgroundColor: outerColour
     };
+
     return ( 
         <section className={styles.Topics} style={outerStyle}>
             <div >
-            <h2>{title}</h2>
+              <h2>{title}</h2>
             </div>
             <div style={innerStyle} className={styles.inner}>
               <p>
