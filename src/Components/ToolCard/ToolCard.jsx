@@ -7,28 +7,43 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 
 library.add(faTachometerAlt, faComments, faWrench, faUser, fab, faPlayCircle)
 
+
 class ToolCard extends Component {
   contentLimit = (summary) => 
     summary.length <500
     ? summary
     : summary.substring(0,400) + "...";
   render() { 
+    const {
+      title,
+      text,
+      origin,
+      innerColour,
+      outerColour,
+    } = this.props.tool;
+
+    const innerStyle = {
+      backgroundColor: innerColour
+    };
+    const outerStyle = {
+      backgroundColor: outerColour
+    };
     return ( 
       
-        <section className={styles.Topics}>
+        <section className={styles.Topics} style={outerStyle}>
             <div className={styles.heading}>
-            <h2>Slow breathing</h2>
+            <h2>{title}</h2>
             </div>
-            <div className={styles.inner}>
+            <div className={styles.inner} style={innerStyle}>
               <p></p>
             </div>
               <div className={styles.playsection}>
-                <p>Exercise to breath deeply for 60 seconds</p>
-                <div className={styles.button}>
+              <p>{text}</p>
+                <span>
                 <FontAwesomeIcon icon="play-circle"/>
                 <FontAwesomeIcon icon={['fab', 'play-circle']} />
-                </div>
-                <p>Unlocked from weight loss topic</p>
+                </span>
+                <p>{origin}</p>
               </div>
         </section>
 

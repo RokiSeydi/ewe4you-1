@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styles from './App.module.scss';
 import Routes from "./Routes/Routes";
+import "./data/fa-library";
 
 
 class App extends Component {
@@ -8,7 +9,6 @@ class App extends Component {
   render() {
   
     return (
-
       <>
         <section className={styles.content}>
           <Routes/>

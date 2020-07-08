@@ -1,83 +1,75 @@
 @import "../../variables.scss";
-.navbar {
-    height: 50px;
+
+nav {
+  height: $nav-height;
+  display:flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  background-color: $colour-blue;
+  
+  .account {
+    color: $colour-sky;
     display: flex;
-    width: 100%;
-    flex-direction: row;
+    justify-content: flex-end;
+    width: 50%;
+
+    p{
+      padding:10px;
+      font-size: 20px;
+      padding-right: 40px;
+    }
+
+    p span {
+      color: $colour-dark-blue;
+      padding: 10px;
+      font-size: 20px;
+    }
+  }
+  
+
+
+  img {
+    height: $nav-height;
+    width: auto;
+  }
+
+  .links {
+    margin-left: 10px;
+    color: $colour-sky;
+    display: flex;
     align-items: center;
-    img {
-        height: 50px;
-        width: auto;
-    }
-    nav {
-        background-color: $colour-blue;
-        width: 100%;
-        .both {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-    }
-    .links {
-        margin-left: 20px;
-        color: $colour-sky;
-        display: inline-flex;
+    justify-content: flex-start;
+    width: 50%;
+
+    a {
+      text-decoration: none;
+      color: white;
+  
+      &:hover{
+        background-color: $colour-dark-blue;
+        border-radius: $border-radius;
+
         p span {
-            color: $colour-dark-blue;
-            padding: 10px;
-            font-size: $font-size-nav;
+          color: white;
+          padding: 10px;
+          font-size: 20px;
         }
-        p {
-            padding: 10px;
-            font-size: $font-size-nav;
-        }
+      }
     }
-    .account {
-        color: $colour-sky;
-        p span {
-            color: $colour-dark-blue;
-            padding: 10px;
-            font-size: $font-size-nav;
-        }
-        p {
-            padding: 10px;
-            font-size: $font-size-nav;
-        }
+
+    p{
+      padding:10px;
+      font-size: 20px;
+      text-decoration: none;
     }
-    a:link {
-        text-decoration: none;
-        font-size: 24px;
-        margin-left: 10px;
+
+    p span {
+      color: $colour-dark-blue;
+      padding: 10px;
+      font-size: 20px;
     }
+  }
 }
 
-@media only screen and (max-width: 768px) {
-    .navbar {
-        display: flex;
-        position: absolute;
-        z-index: 1;
-        .visible {
-            display: none;
-        }
-        nav {
-            align-items: center;
-            width: 100%;
-            height: 100%;
-            .both {
-                background-color: rebeccapurple;
-                width: 100vw;
-                height: 100vh;
-                display: block;
-                width: 100%;
-                float: left;
-                justify-content: center;
-                align-items: center;
-                align-content: center;
-            }
-            .links {
-                display: block;
-                align-items: center;
-            }
-        }
-    }
-}
+   
