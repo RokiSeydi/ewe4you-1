@@ -9,9 +9,9 @@ class ToolPage extends Component {
       <>
       <NavigationBar/>
       <div className={styles.Flexed} >
-      <CardCarousel cardType={'tools'}/>
-    </div>
-    </>
+        <CardCarousel cardType={'tools'}/>
+      </div>
+      </>
      )
   }
 }
