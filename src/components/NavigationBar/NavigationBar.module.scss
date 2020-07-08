@@ -1,44 +1,75 @@
 @import "../../variables.scss";
+
 nav {
-  height: 60px;
-  max-width: 100vw;
-  display:inline-flex;
-  width: 100vw;
+  height: $nav-height;
+  display:flex;
+  width: 100%;
   flex-direction: row;
   align-items: center;
   background-color: $colour-blue;
-  }
-  img {
-    height: 60px;
-    width: auto;
-  }
-  .links {
-    margin-left: 20px;
-    color: $colour-sky;
-    display: inline-flex;
-    width: 75vw;
-    p span {
-      color: $colour-dark-blue;
-      padding: 10px;
-      font-size: 30px;
-    }
-    p{
-      padding:10px;
-      font-size: 20px;
-    }
-  }
+  
   .account {
     color: $colour-sky;
-    display: inline-flex;
-    justify-content: right;
-    p span {
-      color: $colour-dark-blue;
-      padding: 10px;
-      font-size: 30px;
-    }
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+
     p{
       padding:10px;
       font-size: 20px;
+      padding-right: 40px;
+    }
+
+    p span {
+      color: $colour-dark-blue;
+      padding: 10px;
+      font-size: 20px;
     }
   }
+  
+
+
+  img {
+    height: $nav-height;
+    width: auto;
+  }
+
+  .links {
+    margin-left: 10px;
+    color: $colour-sky;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50%;
+
+    a {
+      text-decoration: none;
+      color: white;
+  
+      &:hover{
+        background-color: $colour-dark-blue;
+        border-radius: $border-radius;
+
+        p span {
+          color: white;
+          padding: 10px;
+          font-size: 20px;
+        }
+      }
+    }
+
+    p{
+      padding:10px;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    p span {
+      color: $colour-dark-blue;
+      padding: 10px;
+      font-size: 20px;
+    }
+  }
+}
+
    

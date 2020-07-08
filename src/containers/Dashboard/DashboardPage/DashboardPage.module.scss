@@ -3,11 +3,12 @@
 
 .backgroundDiv {
     margin: 0;
-    height: 100vh;
+    height: calc(100vh - #{$nav-height});
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .dashboardView {
