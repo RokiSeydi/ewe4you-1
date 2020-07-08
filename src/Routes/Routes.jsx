@@ -7,6 +7,7 @@ import TopicOverview from "../components/TopicOverview/TopicOverview";
 import topics from "../data/topics";
 import ToolPage from "../containers/ToolPage";
 import TopicPage from "../containers/TopicPage";
+import Gallery from "../containers/Gallery";
 
 class Routes extends Component {
   render() {
@@ -18,6 +19,7 @@ class Routes extends Component {
         <TopicOverview path="topic-overview" topic={topics[0]} />
         <ToolPage path="tools" />
         <TopicPage path="topics" />
+        <Gallery path="gallery" />
       </Router>
     );
   }
