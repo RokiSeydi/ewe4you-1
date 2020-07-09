@@ -7,6 +7,7 @@ import DashboardPage from "../containers/Dashboard/DashboardPage/DashboardPage";
 import ToolPage from "../containers/ToolPage";
 import TopicPage from "../containers/TopicPage";
 import TopicOverviewContainer from "../containers/TopicOverviewContainer";
+import TopicConclusionContainter from "../containers/TopicConclusionContainter";
 
 class Routes extends Component {
   render() {
@@ -18,6 +19,7 @@ class Routes extends Component {
         <TopicOverviewContainer path="topic-overview"/>
         <ToolPage path="tools" />
         <TopicPage path="topics" />
+        <TopicConclusionContainter path="topic-conclusion"/>
       </Router>
     );
   }

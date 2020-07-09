@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
-import TopicOverview from "../../components/TopicOverview";
-import styles from "./TopicOverviewContainer.module.scss";
+import TopicConclusion from "../../components/TopicConclusion";
+import styles from "./TopicConclusionContainter.module.scss";
 import NavigationBar from "../../components/NavigationBar";
 
 import topics from "../../data/topics";
 
 
-class TopicOverviewContainer extends Component {
+class TopicConclusionContainter extends Component {
 
   render() { 
     return ( 
       <>
         <NavigationBar/>
           <div className={styles.Flexed} >
-            <TopicOverview topic={topics[0]}/>
+            <TopicConclusion topic={topics[0]}/>
           </div>
       </>
      )
   }
 }
-export default TopicOverviewContainer;
+export default TopicConclusionContainter;
 
 
 

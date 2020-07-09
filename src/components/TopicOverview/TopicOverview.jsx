@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styles from './TopicOverview.module.scss';
-import { Link } from '@reach/router'
+import { Link } from '@reach/router';
 
 class TopicOverview extends Component {
   render() {
