@@ -18,11 +18,11 @@ class TopicConclusion extends Component {
                         <div>
                         <h3>Here's a summary of what we've covered this topic:</h3>
                         <ul>
-                            <li>blah</li>
-                            <li>blah</li>
-                            <li>interesting stuff</li>
-                            <li>good stuff</li>
-                            <li>ooof great content</li>
+                            <li>topic content</li>
+                            <li>topic content</li>
+                            <li>topic content</li>
+                            <li>topic content</li>
+                            <li>topic content</li>
                         </ul>
                         </div>
                         <div className={styles.buttons}>
