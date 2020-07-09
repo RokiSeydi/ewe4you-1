@@ -71,3 +71,39 @@ nav {
         }
     }
 }
+
+.FlexContainer {
+    display: flex;
+    margin: auto;
+    padding: 0 2rem;
+    width: 100%;
+}
+
+.NavLinks {
+    width: 100%;
+    display: flex;
+    & p {
+        color: #dfe6e9;
+        text-transform: uppercase;
+        font-weight: 600;
+        border-bottom: 1px solid transparent;
+        margin: 0 1.5rem;
+        transition: all 300ms linear 0s;
+        text-decoration: none;
+        cursor: pointer;
+        &:hover {
+            color: #fdcb6e;
+            border-bottom: 1px solid #fdcb6e;
+        }
+    }
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+.BurgerWrapper {
+    @media (min-width: 768px) {
+        margin: auto 0;
+        display: none;
+    }
+}

@@ -1,15 +1,21 @@
+@import "../../variables.scss";
 .body {
+    display: inline-block;
     border: 1px solid black;
+    padding: 10px;
     margin-top: 100px;
-    margin-bottom: 100px;
-    margin-right: 250px;
-    margin-left: 250px;
-    background-color: orange;
-    margin-top: 31em;
+    line-height: 30px;
+    background-color: $colour-blue;
     font-size: large;
     opacity: 0.9;
 }
 
 a:link {
+    color: red;
     text-decoration: none;
+    padding: 10px;
+}
+
+a:hover {
+    color: $colour-dark-orange;
 }
