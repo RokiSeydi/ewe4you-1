@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap');
-
+@import "../../variables.scss";
 
 .polaroid{
   border: 2px solid black;
@@ -28,6 +28,6 @@
     position: absolute;
     bottom: 20px;
     font-size: 1.5em;
-    color: blue;
+    color: $colour-dark-brown;
   }
 }

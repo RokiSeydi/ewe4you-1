@@ -13,4 +13,12 @@
     &:hover {
         background-color: $colour-dark-blue;  
     }
+
+    *:focus {
+        outline: none;
+    }
+}
+
+*:focus {
+    outline: none;
 }
