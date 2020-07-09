@@ -6,8 +6,6 @@ class TopicConclusion extends Component {
     render() {
         const {
         title,
-        image,
-        text,
         } = this.props.topic;
 
         return (
