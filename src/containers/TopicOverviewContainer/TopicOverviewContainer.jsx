@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import TopicOverview from "../../components/TopicOverview"
-import styles from "./TopicOverviewContainer.module.scss"
-import NavigationBar from "../../components/NavigationBar"
+import TopicOverview from "../../Components/TopicOverview";
+import styles from "./TopicOverviewContainer.module.scss";
+import NavigationBar from "../../Components/Navigation/NavigationBar/NavigationBar";
 
 import topics from "../../data/topics";
 
