@@ -3,7 +3,11 @@ import styles from "./PositiveAffirmations.module.scss";
 
 class PositiveAffirmations extends Component {
     state = {
-        affirmations: [],
+        userInput: "",
+    }
+    
+    handleChange = (e) => {
+        this.setState({userInput: e.target.value});
     }
 
   UserText = () => {
@@ -18,11 +22,9 @@ class PositiveAffirmations extends Component {
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur fugiat voluptates quidem dolor magni! Quibusdam ea aperiam dolores, autem, aliquid et quia blanditiis cumque harum ab nobis hic veritatis provident!
                 </p>
             <section className={styles.toolPage}>
-                <input type="text"/>
-                <p>Lorem</p>
-                <p>Lorem</p>
-                <p>Lorem</p>
-                <button type="button" onClick={this.UserText}>Next steps...</button>
+                <input type="text" onChange={this.handleChange}/>
+                <p>{this.handleChange}</p>
+                <button onClick={e => this.handleChange(e)}>Next steps...</button>
                 <p></p>
             </section>
             </>

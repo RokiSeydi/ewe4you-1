@@ -6,15 +6,13 @@ import NavigationBar from "../../components/NavigationBar/NavigationBar"
 class TopicPage extends Component {
   render() { 
 
-
-
     return ( 
       <>
        <NavigationBar/>
-      <div className={styles.Flexed} >
-      <CardCarousel cardType={'topics'}/>
-    </div>
-    </>
+        <div className={styles.Flexed} >
+          <CardCarousel cardType={'topics'}/>
+        </div>
+      </>
      )
   }
 }
