@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap');
 
+
 .polaroid{
   border: 2px solid black;
   height: 280px;
@@ -10,12 +11,15 @@
   justify-content: center;
   margin: 20px;
 
-  .img{
+  .avatar{
     height: 200px;
-    background-color: black;
-    width: 90%;
+    width: fit-content;
     position: absolute;
     top: 10px;
+
+    img{
+      height: 200px;
+    }
   }
 
   .caption{
