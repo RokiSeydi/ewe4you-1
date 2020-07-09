@@ -22,10 +22,12 @@ class Gallery extends Component {
           < Polaroid />
           < Polaroid />
           < Polaroid />
-          
+          <div className={styles.buttonWrapper}>
+               < Button text={'upload picture'}/> 
+          </div>
+        
           </div>
           </section>
-          < Button text={'upload picture'}/>
           </>
         );
     }
