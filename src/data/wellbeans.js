@@ -12,8 +12,7 @@ const wellbeans = [
         "text" :"When I am flourishing I find myself ",
         "startUrl" :"",
         "backUrl" :"",
-        "innerColour" : "#3DAEDC",
-        "outerColour" : "#87CEEB",
+        feelings: [],
     },
    
     {
@@ -23,8 +22,7 @@ const wellbeans = [
         "text" :"When I am beginning to wilt I find myself ",
         "startUrl" :"",
         "backUrl" :"",
-        "innerColour" : "#FFEE93",
-        "outerColour" : "#FCF5C7",
+        feelings: [],
     },
    
 
@@ -35,8 +33,7 @@ const wellbeans = [
         "text" :"When I am just surviving I find myself ",
         "startUrl" :"",
         "backUrl" :"",
-        "innerColour" : "#F58A07",
-        "outerColour" : "#F9AB55",
+        feelings: [],
     },
   
 
@@ -47,8 +44,7 @@ const wellbeans = [
         "text" :"When I am in crisis I find myself ",
         "startUrl" :"",
         "backUrl" :"",
-        "innerColour" : "#9F84BD",
-        "outerColour" : "#C09BD8",
+        feelings: [],
     },
 
 ];
