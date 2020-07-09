@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styles from './MyAccount.module.scss';
 import { Link } from '@reach/router';
-import NavigationBar from "../NavigationBar/NavigationBar";
+import NavigationBar from "../Navigation/NavigationBar/NavigationBar";
 
 class MyAccount extends Component {
   

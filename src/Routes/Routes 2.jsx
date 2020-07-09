@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { Router } from "@reach/router";
 
-import LandingPage from "../Components/LandingPage/LandingPage";
+import LandingPage from "../components/LandingPage/LandingPage";
 
 import TopicOverviewContainer from "../Components/TopicOverview/TopicOverview";
-import DashboardPage from "../containers/dashboard/DashboardPage/DashboardPage";
-import ToolPage from "../containers/ToolPage/ToolPage";
-import TopicPage from "../containers/TopicPage/TopicPage";
+import DashboardPage from "../containers/Dashboard/DashboardPage/dashboardPage";
+import ToolPage from "../containers/ToolPage";
+import TopicPage from "../containers/TopicPage";
 import MyAccount from "../Components/MyAccount/MyAccount";
 
 
