@@ -7,33 +7,37 @@ class PositiveAffirmations extends Component {
         userInput: "",
     }
     
-    getAffirmations = (e) => {
-        const getInput = [...this.state.affirmations]
-        getInput.push(e.target.value);
+    getUserInput = (e) => {
         this.setState({
             userInput: e.target.value
         })
     }
 
-  UserText = () => {
-    alert('lets hope this works')
-  }
+    updateAffirmations = () => {
+        const updatedAffirmations = [...this.state.affirmations]
+        updatedAffirmations.push(this.state.userInput)
+        this.setState({
+            affirmations: updatedAffirmations
+        })   }
+    
+    showInstructions = () => {
+        return this.state.affirmations.length > 2 ? <p>Repeat these 3 times to yourself in a mirror
+               You will help create a more positive narrative about yourself if you do this regularly. It will also help to create a more flexible and healthy view of yourself. </p> : null;
+    }
+
 
     render() { 
+
+    
         return ( 
             <>
             <h1>Positive Affirmations</h1>
-                <p>Please add 3 - 5 affirmations about yourself and/or your life. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia ipsum obcaecati, nam, soluta ipsam fugit magni commodi facilis qui deleniti facere dolorem alias, natus repellat ut tempore consequatur rerum. Quae.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur fugiat voluptates quidem dolor magni! Quibusdam ea aperiam dolores, autem, aliquid et quia blanditiis cumque harum ab nobis hic veritatis provident!
-                </p>
+                <p>Please add 3 - 5 affirmations about yourself and/or your life.</p>
             <section className={styles.toolPage}>
-                <input type="text" onInput={(e) => this.getAffirmations(e)}/>
-                <button onClick={this.getAffirmations}>Add</button>
-                <p>{this.userInput}</p>
-                <p>{}</p>
-                <p>{}</p>
-                <button onClick={this.UserText}>Next steps...</button>
-                <p></p>
+                <input type="text" onInput={(e) => this.getUserInput(e)}/>
+                <button onClick={this.updateAffirmations}>Add</button>
+                {this.state.affirmations.map(affirmation => <p>{affirmation}</p>)}
+            {this.showInstructions()}
             </section>
             </>
             
