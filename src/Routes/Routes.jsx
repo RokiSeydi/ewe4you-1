@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import { Router } from "@reach/router";
-
 import LandingPage from "../components/LandingPage/LandingPage";
-
 import DashboardPage from "../containers/Dashboard/DashboardPage/DashboardPage";
 import ToolPage from "../containers/ToolPage";
 import TopicPage from "../containers/TopicPage";
 import PositiveAffirmations from "../components/PositiveAffirmations";
+import Gallery from "../containers/Gallery";
 import TopicOverviewContainer from "../containers/TopicOverviewContainer";
 
 class Routes extends Component {
@@ -21,6 +20,7 @@ class Routes extends Component {
         <TopicPage path="topics" /> 
         <PositiveAffirmations path="PositiveAffirmations" />  
         <TopicPage path="topics" />
+        <Gallery path="gallery" />
       </Router>
     );
   }
