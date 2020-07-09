@@ -8,6 +8,7 @@ import DashboardPage from "../containers/dashboard/DashboardPage/DashboardPage";
 import ToolPage from "../containers/ToolPage/ToolPage";
 import TopicPage from "../containers/TopicPage/TopicPage";
 import MyAccount from "../Components/MyAccount/MyAccount";
+import Gallery from "../containers/Gallery";
 
 
 class Routes extends Component {
@@ -20,8 +21,8 @@ class Routes extends Component {
         <TopicOverviewContainer path="topic-overview"/>
         <ToolPage path="tools" />
         <TopicPage path="topics" />
-        <MyAccount path="myaccount" />   
-      
+        <MyAccount path="myaccount" />
+        <Gallery path="gallery" />
       </Router>
     );
   }
