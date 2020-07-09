@@ -21,7 +21,7 @@ class TopicOverview extends Component {
               {/* <div>
                 <img src={image} alt={title}/>
               </div> */}
-                  <div>
+                  <div className ={styles.buttonContainer}>
                     {/* <p>{text}</p> */}
                       <Link to="">
                         Start Topic
