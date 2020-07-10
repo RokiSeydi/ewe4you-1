@@ -3,7 +3,6 @@ import { Router } from "@reach/router";
 
 import LandingPage from "../Components/LandingPage/LandingPage";
 
-import TopicOverviewContainer from "../Components/TopicOverview/TopicOverview";
 import DashboardPage from "../containers/dashboard/DashboardPage/DashboardPage";
 import ToolPage from "../containers/ToolPage/ToolPage";
 import TopicPage from "../containers/TopicPage/TopicPage";
@@ -26,7 +25,7 @@ class Routes extends Component {
         <TopicPage path="topics" /> 
         <PositiveAffirmations path="PositiveAffirmations" />  
         <TopicPage path="topics" />
-        <My Account path="myaccount" />
+        <MyAccount path="myaccount" />
         <TopicConclusionContainter path="topic-conclusion"/>
         <Gallery path="gallery" />
       </Router>
