@@ -7,6 +7,7 @@ import TopicPage from "../containers/TopicPage";
 import PositiveAffirmations from "../components/PositiveAffirmations";
 import Gallery from "../containers/Gallery";
 import TopicOverviewContainer from "../containers/TopicOverviewContainer";
+import TopicConclusionContainter from "../containers/TopicConclusionContainter";
 
 class Routes extends Component {
   render() {
@@ -20,6 +21,7 @@ class Routes extends Component {
         <TopicPage path="topics" /> 
         <PositiveAffirmations path="PositiveAffirmations" />  
         <TopicPage path="topics" />
+        <TopicConclusionContainter path="topic-conclusion"/>
         <Gallery path="gallery" />
       </Router>
     );
