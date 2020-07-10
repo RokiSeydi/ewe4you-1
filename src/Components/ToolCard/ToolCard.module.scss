@@ -1,0 +1,32 @@
+@import "../../variables.scss";
+.Topics {
+    @extend %card;
+    background-color: $colour-orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 30px;
+    margin-bottom: 10px;
+    .inner {
+        @extend %innerCard;
+        background-color: $colour-dark-orange;
+        text-align: justify;
+        padding: 0px 10px;
+        border-radius: $border-radius;
+        min-height: unset;
+        p {
+            height: 200px;
+        }
+    }
+    .heading {
+        font-size: $font-size-card-title/2;
+        h2 {
+            padding: 20px;
+        }
+    }
+    div {
+        &.playsection {
+            margin-top: 20px;
+        }
+    }
+}

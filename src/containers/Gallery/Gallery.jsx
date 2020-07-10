@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import styles from "./Gallery.module.scss";
-import Polaroid from "../../components/Polaroid";
-import NavigationBar from '../../components/NavigationBar/NavigationBar';
-import Button from "../../components/Button/Button "
+import Polaroid from "../../Components/Polaroid";
+import NavigationBar from '../../Components/Navigation/NavigationBar/NavigationBar';
+import Button from "../../Components/Button/Button";
 
 class Gallery extends Component {
     state = {  }
@@ -23,7 +23,7 @@ class Gallery extends Component {
           < Polaroid />
           < Polaroid />
           <div className={styles.buttonWrapper}>
-               < Button text={'upload picture'}/> 
+               <Button text={'upload picture'}/> 
           </div>
         
           </div>

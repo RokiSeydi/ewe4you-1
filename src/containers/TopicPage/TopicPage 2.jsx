@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CardCarousel from "../../Components/CardCarousel";
+import CardCarousel from "../../components/CardCarousel";
 import styles from "./TopicPage.module.scss";
 import NavigationBar from "../../Components/Navigation/NavigationBar/NavigationBar";
 

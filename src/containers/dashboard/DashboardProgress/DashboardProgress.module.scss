@@ -1,0 +1,21 @@
+@import '../../../variables.scss';
+
+.progress {
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    margin: $margin-single * 2;
+    background-color: $colour-blue;
+    padding: $padding-single*2;
+    height: 100%;
+    width: 80%;
+}
+
+h3 {
+    font-size: $font-size-h3;
+    padding: $padding-single;
+}
+
+p {
+    font-size: $font-size-p;
+    padding: $padding-single;
+}
