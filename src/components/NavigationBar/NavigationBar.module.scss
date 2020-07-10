@@ -13,11 +13,12 @@ nav {
     display: flex;
     justify-content: flex-end;
     width: 50%;
+    margin-right: 30px;
 
     p{
       padding:10px;
       font-size: 20px;
-      padding-right: 40px;
+      padding-right: 20px;
     }
 
     p span {
@@ -25,13 +26,35 @@ nav {
       padding: 10px;
       font-size: 20px;
     }
+
+    a {
+      text-decoration: none;
+      color: white;
+  
+      &:hover{
+        background-color: $colour-dark-blue;
+        border-radius: $border-radius;
+
+        p span {
+          color: white;
+          padding: 10px;
+          font-size: 20px;
+        }
+      }
+    }
   }
   
 
 
   img {
-    height: $nav-height;
+    height: $nav-height/1.25;
     width: auto;
+    padding-left: 10px;
+
+    &:hover{
+      height: $nav-height;
+
+    }
   }
 
   .links {

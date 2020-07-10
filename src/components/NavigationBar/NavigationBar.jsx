@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styles from "./NavigationBar.module.scss";
-import logo from "../../assets/logo.jpg";
+import logo from "../../assets/sheeplogo.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from '@reach/router'
 
@@ -18,7 +18,7 @@ class NavigationBar extends Component{
             <Link to="/tools"><p><span><FontAwesomeIcon icon="wrench"></FontAwesomeIcon></span>Toolbox</p></Link>
           </div>
           <div className={styles.account}>
-            <p><span><FontAwesomeIcon icon="user"></FontAwesomeIcon></span>My Account</p>
+          <Link to="/"><p><span><FontAwesomeIcon icon="user"></FontAwesomeIcon></span>My Account</p></Link>
           </div>
         </nav>
         </>
