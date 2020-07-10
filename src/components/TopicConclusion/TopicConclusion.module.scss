@@ -34,17 +34,6 @@
     align-items: center;
     justify-content: center;
 
-    img {
-        height: 200px;
-        padding-top: 30px;
-    }
-
-    p {
-        padding: 30px;
-        font-size: $font-size-h3;
-    }
-
-
     a {
         display: inline-block;
         color: black;
@@ -54,35 +43,49 @@
         padding: 20px;
         margin: 20px;
         width: 25%;
-        font-size: $font-size-h3;
+        font-size: $font-size-h4;
         
         &:hover {
             background-color: $colour-dark-blue;  
         }
     }
 
+    
+    .h2Container {
+        height: 20%;
+        
+        h2 {
+            font-size: $font-size-h2;
+            padding: 20px;
+        }
+    }
+    
+    .summary {
+        height: 60%;
+
+        h3 {
+            font-size: $font-size-h3;
+            padding: 10px;
+        }
+        
+        li {
+            font-size: $font-size-h4;
+            padding: 5px;
+            text-align: left;
+        }
+        
+        ul {
+            padding: 20px;
+            padding-left: 40px;
+            
+        }
+    }
+    
     .buttons {
         width: 100%;
+        height: 20%;
     }
 
-    h2 {
-        font-size: $font-size-h2;
-        padding: 20px;
-    }
-
-    h3 {
-        font-size: $font-size-h3;
-        padding: 10px;
-    }
-
-    li {
-        font-size: $font-size-h4;
-        padding: 5px;
-    }
-
-    ul {
-        padding: 20px;
-    }
 }
 
 

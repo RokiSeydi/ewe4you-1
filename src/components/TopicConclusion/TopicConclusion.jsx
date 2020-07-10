@@ -14,26 +14,28 @@ class TopicConclusion extends Component {
                 <div className={styles.outer}>
                         <br/>  
                     <div className={styles.inner}>
-                        <h2>Congratulations on finishing {title}</h2>
-                        <div>
-                        <h3>Here's a summary of what we've covered this topic:</h3>
-                        <ul>
-                            <li>topic content</li>
-                            <li>topic content</li>
-                            <li>topic content</li>
-                            <li>topic content</li>
-                            <li>topic content</li>
-                        </ul>
+                        <div className={styles.h2Container}>
+                            <h2>Congratulations on finishing {title}!</h2>
+                        </div>
+                        <div className={styles.summary}>
+                            <h3>Here's a summary of what we've covered this topic:</h3>
+                            <ul>
+                                <li>topic content</li>
+                                <li>topic content</li>
+                                <li>topic content</li>
+                                <li>topic content</li>
+                                <li>topic content</li>
+                            </ul>
                         </div>
                         <div className={styles.buttons}>
-                            <Link to="/tools">
-                                Tools Page
-                            </Link>
-                            <Link to="/topics">
-                                Topics Page
+                            <Link to="/topic-overview">
+                                To Beginning
                             </Link>
                             <Link to="/dashboard">
                                 Dashboard
+                            </Link>
+                            <Link to="/tools">
+                                Unlocked tools
                             </Link>
                         </div>
                     </div>
