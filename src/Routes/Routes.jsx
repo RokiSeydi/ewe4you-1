@@ -8,6 +8,10 @@ import DashboardPage from "../containers/dashboard/DashboardPage/DashboardPage";
 import ToolPage from "../containers/ToolPage/ToolPage";
 import TopicPage from "../containers/TopicPage/TopicPage";
 import MyAccount from "../Components/MyAccount/MyAccount";
+
+import DashboardPage from "../containers/Dashboard/DashboardPage/DashboardPage";
+
+import PositiveAffirmations from "../components/PositiveAffirmations";
 import Gallery from "../containers/Gallery";
 
 
@@ -20,6 +24,8 @@ class Routes extends Component {
         <DashboardPage path="dashboard" />
         <TopicOverviewContainer path="topic-overview"/>
         <ToolPage path="tools" />
+        <TopicPage path="topics" /> 
+        <PositiveAffirmations path="PositiveAffirmations" />  
         <TopicPage path="topics" />
         <MyAccount path="myaccount" />
         <Gallery path="gallery" />
