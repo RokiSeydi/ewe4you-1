@@ -28,6 +28,9 @@ class TopicOverview extends Component {
                   <Link to="/topics">
                     Go Back
                   </Link>
+                  <Link to="/topic-conclusion">
+                    Topic Conclusion
+                  </Link>
                 </div>
             </div>
                 <br/>

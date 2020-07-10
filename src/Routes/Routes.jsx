@@ -4,10 +4,12 @@ import LandingPage from "../components/LandingPage/LandingPage";
 import DashboardPage from "../containers/Dashboard/DashboardPage/DashboardPage";
 import ToolPage from "../containers/ToolPage";
 import TopicPage from "../containers/TopicPage";
+import PositiveAffirmations from "../components/PositiveAffirmations";
 import Gallery from "../containers/Gallery";
 import TopicOverviewContainer from "../containers/TopicOverviewContainer";
 import ToolOverview from "../components/ToolOverview";
 import ToolOverviewContainer from "../containers/ToolOverviewContainer";
+import TopicConclusionContainter from "../containers/TopicConclusionContainter";
 
 class Routes extends Component {
   render() {
@@ -19,7 +21,10 @@ class Routes extends Component {
         <TopicOverviewContainer path="topic-overview"/>
         <ToolOverviewContainer path="tool-overview"/>
         <ToolPage path="tools" />
+        <TopicPage path="topics" /> 
+        <PositiveAffirmations path="PositiveAffirmations" />  
         <TopicPage path="topics" />
+        <TopicConclusionContainter path="topic-conclusion"/>
         <Gallery path="gallery" />
       </Router>
     );

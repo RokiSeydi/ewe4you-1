@@ -1,0 +1,81 @@
+@import "../../variables.scss";
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1 {
+    font-size: 30px;
+    padding: 20px;
+}
+p {
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.header {
+    border: 2px solid $colour-dark-purple;
+    background-color: $colour-orange;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    height: 180px;
+    margin: 40px;
+    opacity: 0.9;
+
+    h1 {
+        font-weight: 999;
+        font-size: $font-size-h2;
+    }
+
+    p {
+        font-size: $font-size-h4;
+    }
+}
+
+.showInstructionsStyle {
+    font-size: $font-size-h4;
+}
+
+.toolPage {
+    border: 2px solid $colour-dark-purple;
+    background-color: $colour-purple;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    padding: 40px;
+    height: 90%;
+    margin: 40px;
+    opacity: 0.9;
+    overflow: scroll;
+    overflow-x: hidden;
+
+
+    
+    input {
+        height: 50px;
+        width: 100%;
+        border: 2px solid $colour-dark-purple;
+        box-shadow: $box-shadow;
+        margin: 10px;
+
+    }
+
+    button {
+        background-color: $colour-light-green;
+        border-radius: $border-radius;
+        padding: 20px;
+        border: none;
+        width: 100px;
+    }
+
+    
+}
+@media only screen and (max-width: 600px) {
+    .header {
+        h1 {
+            font-size: $font-size-h4;
+        }
+        p {
+            font-size: $font-size-p;
+        }
+    }
+}
