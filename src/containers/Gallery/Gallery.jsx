@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styles from "./Gallery.module.scss";
 import Polaroid from "../../components/Polaroid";
 import NavigationBar from '../../components/NavigationBar/NavigationBar';
-import Button from "../../components/Button/Button "
+import Button from "../../components/Button"
 
 class Gallery extends Component {
     state = {  }

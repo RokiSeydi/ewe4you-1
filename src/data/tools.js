@@ -1,4 +1,4 @@
-import galleryPicture from "../assets/tooloverviewgallery.png";
+// import galleryPicture from "../assets/tooloverviewgallery.png";
 
 const tools = [
     {
@@ -16,7 +16,7 @@ const tools = [
     {
         "Id": "0002",
         "title": "Selfie steem",
-        "image": {galleryPicture},
+        "image": " ",
         "text" :"Take/upload a picture of yourself and leave a comment on it.",
         "origin": "Unocked",
         "startUrl" :"/gallery",

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styles from './ToolOverview.module.scss';
 import { Link } from '@reach/router'; 
 import Button from "../Button";
+import picture from "../../assets/placeholder.jpg";
 
 class ToolOverview extends Component {
   render() {
@@ -30,7 +31,7 @@ class ToolOverview extends Component {
                 <h1>{title}</h1>  
             <div className={styles.inner} style={innerStyle}>
               <div>
-                <img src={image} alt={title}/>
+                <img src={picture} alt={title}/>
               </div>
               <div>
                 <p>{text}</p>

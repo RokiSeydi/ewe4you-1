@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styles from './TopicOverview.module.scss';
 import { Link } from '@reach/router'
+import picture from "../../assets/stress.png"
 
 class TopicOverview extends Component {
   render() {
@@ -17,7 +18,7 @@ class TopicOverview extends Component {
                 <h1>{title}</h1>  
             <div className={styles.inner}>
               <div>
-                <img src={image} alt={title}/>
+                <img src={picture} alt={title}/>
               </div>
               <div>
                 <p>{text}</p>
