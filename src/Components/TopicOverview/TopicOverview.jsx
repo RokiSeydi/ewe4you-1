@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styles from './TopicOverview.module.scss';
-import { Link } from '@reach/router'
+import { Link } from '@reach/router';
 
 class TopicOverview extends Component {
   render() {
@@ -26,6 +26,9 @@ class TopicOverview extends Component {
                   </Link>
                   <Link to="/topics">
                     Go Back
+                  </Link>
+                  <Link to="/topic-conclusion">
+                    Topic Conclusion
                   </Link>
                 </div>
             </div>
