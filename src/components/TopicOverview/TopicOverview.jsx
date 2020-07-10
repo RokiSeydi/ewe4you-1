@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styles from './TopicOverview.module.scss';
-
+import { Link } from '@reach/router'
 import picture from "../../assets/stress.png"
 
 class TopicOverview extends Component {
