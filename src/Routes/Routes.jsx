@@ -9,9 +9,7 @@ import ToolPage from "../containers/ToolPage/ToolPage";
 import TopicPage from "../containers/TopicPage/TopicPage";
 import MyAccount from "../Components/MyAccount/MyAccount";
 
-import DashboardPage from "../containers/Dashboard/DashboardPage/DashboardPage";
-
-import PositiveAffirmations from "../components/PositiveAffirmations";
+import PositiveAffirmations from "../Components/PositiveAffirmations/PositiveAffirmations";
 import Gallery from "../containers/Gallery";
 
 
