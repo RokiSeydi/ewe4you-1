@@ -6,6 +6,8 @@ import ToolPage from "../containers/ToolPage";
 import TopicPage from "../containers/TopicPage";
 import Gallery from "../containers/Gallery";
 import TopicOverviewContainer from "../containers/TopicOverviewContainer";
+import ToolOverview from "../components/ToolOverview";
+import ToolOverviewContainer from "../containers/ToolOverviewContainer";
 
 class Routes extends Component {
   render() {
@@ -15,6 +17,7 @@ class Routes extends Component {
         <LandingPage path="/" />
         <DashboardPage path="dashboard" />
         <TopicOverviewContainer path="topic-overview"/>
+        <ToolOverviewContainer path="tool-overview"/>
         <ToolPage path="tools" />
         <TopicPage path="topics" />
         <Gallery path="gallery" />

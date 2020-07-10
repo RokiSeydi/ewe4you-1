@@ -1,8 +1,7 @@
 @import "../../variables.scss";
 
-.Topics {
+.Tools {
     @extend %card;
-    background-color: $colour-orange;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,7 +10,6 @@
 
     .inner {
         @extend %innerCard;
-        background-color: $colour-dark-orange;
         text-align: justify;
         padding: 0px 10px;
         border-radius: $border-radius;

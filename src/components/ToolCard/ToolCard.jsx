@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styles from "./ToolCard.module.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 
 
@@ -16,6 +16,7 @@ class ToolCard extends Component {
       origin,
       innerColour,
       outerColour,
+      toolsOverview
     } = this.props.tool;
 
     const innerStyle = {
@@ -26,18 +27,18 @@ class ToolCard extends Component {
     };
     return ( 
       
-        <section className={styles.Topics} style={outerStyle}>
-            <div className={styles.heading}>
+        <section className={styles.Tools}style={outerStyle}>
+            <div className={styles.heading} >
             <h2>{title}</h2>
             </div>
             <div className={styles.inner} style={innerStyle}>
               <p></p>
             </div>
-              <div className={styles.playsection}>
+              <div className={styles.playsection} >
               <p>{text}</p>
-                <span>
+                <a href={toolsOverview}>
                 <FontAwesomeIcon icon="play-circle"/>
-                </span>
+                </a>
                 <span>
                 <FontAwesomeIcon icon={['fab', 'play-circle']} />
                 </span>

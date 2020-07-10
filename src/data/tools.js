@@ -1,4 +1,4 @@
-
+import galleryPicture from "../assets/tooloverviewgallery.png";
 
 const tools = [
     {
@@ -8,21 +8,22 @@ const tools = [
         "text" :"Exercise to breathe deeply for 60 seconds.",
         "origin": "Locked",
         "startUrl" :"",
-        "backUrl" :"",
+        "backUrl" :"/tools",
         "innerColour" : "#3DAEDC",
         "outerColour" : "#87CEEB",
     },
    
     {
         "Id": "0002",
-        "title": "Tool coming soon",
-        "image": " ",
-        "text" :"Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-        "origin": "Locked",
-        "startUrl" :"",
-        "backUrl" :"",
-        "innerColour" : "#6E6E6E",
-        "outerColour" : "#B5B5B5",
+        "title": "Selfie steem",
+        "image": {galleryPicture},
+        "text" :"Take/upload a picture of yourself and leave a comment on it.",
+        "origin": "Unocked",
+        "startUrl" :"/gallery",
+        "backUrl" :"/tools",
+        "innerColour" : "#FFEE93",
+        "outerColour" : "#FCF5C7",
+        "toolsOverview" : "/tool-overview"
     },
    
 
