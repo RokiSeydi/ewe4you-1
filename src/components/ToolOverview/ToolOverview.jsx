@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styles from './ToolOverview.module.scss';
-import { Link } from '@reach/router'; 
 import Button from "../Button";
 import picture from "../../assets/placeholder.jpg";
 
@@ -8,7 +7,6 @@ class ToolOverview extends Component {
   render() {
     const {
       title,
-      image,
       text,
       startUrl,
       backUrl, 

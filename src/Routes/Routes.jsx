@@ -7,7 +7,6 @@ import TopicPage from "../containers/TopicPage";
 import PositiveAffirmations from "../components/PositiveAffirmations";
 import Gallery from "../containers/Gallery";
 import TopicOverviewContainer from "../containers/TopicOverviewContainer";
-import ToolOverview from "../components/ToolOverview";
 import ToolOverviewContainer from "../containers/ToolOverviewContainer";
 import TopicConclusionContainter from "../containers/TopicConclusionContainter";
 
