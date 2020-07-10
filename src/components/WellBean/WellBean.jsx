@@ -7,7 +7,8 @@ import img from "../../assets/wellbeans/bakedbean.png"
 class WellBean extends Component {
   state = { 
     onBean: false,
-    currentBean: "hello",
+    currentBean: [],
+    currentInputText: "",
     otherBeans: []
    }
 
@@ -38,6 +39,20 @@ class WellBean extends Component {
     })
   }
 
+  addFeeling = () => {
+  let updatedBean = this.state.currentBean;
+    if(updatedBean.feelings.length<5){
+      updatedBean.feelings.push(this.state.currentInputText);
+      this.setState({
+        currentBean: updatedBean
+      })
+    }
+  }
+
+  handleInputChange(event){
+    this.setState({currentInputText: event});
+  }
+
   render() {
     if (this.state.onBean) {
       return (
@@ -55,11 +70,10 @@ class WellBean extends Component {
             <div className={styles.currentBeanList}>
               <h3>{this.state.currentBean.text}</h3>
               <div className ={styles.feelingListSection}>
-                <p>feeling 1</p>
-                <p>feeling 2</p>
-                <p>feeling 3</p>
-                <p>feeling 4</p>
-                <p>feeling 5</p>
+                <input className = {styles.feelingInputText} type="text" onChange={e => this.handleInputChange(e.target.value)}/> <button onClick={() => this.addFeeling()}>Add</button>
+                {this.state.currentBean.feelings.map((feeling) => {
+                  return <p>{feeling}</p>
+                })}
               </div>
               <div></div>
             </div>
