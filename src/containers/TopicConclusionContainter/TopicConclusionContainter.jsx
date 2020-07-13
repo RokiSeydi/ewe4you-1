@@ -1,70 +1,20 @@
-import React, { Component } from 'react';
-import TopicConclusion from "../../Components/TopicConclusion";
+import React, { Component } from "react";
+import TopicConclusion from "../../components/TopicConclusion";
 import styles from "./TopicConclusionContainter.module.scss";
-import NavigationBar from "../../Components/Navigation/NavigationBar/NavigationBar";
+import NavigationBar from "../../components/Navigation/NavigationBar";
 
 import topics from "../../data/topics";
 
-
 class TopicConclusionContainter extends Component {
-
-  render() { 
-    return ( 
+  render() {
+    return (
       <>
-        <NavigationBar/>
-          <div className={styles.Flexed} >
-            <TopicConclusion topic={topics[0]}/>
-          </div>
+        <NavigationBar />
+        <div className={styles.Flexed}>
+          <TopicConclusion topic={topics[0]} />
+        </div>
       </>
-     )
+    );
   }
 }
 export default TopicConclusionContainter;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
