@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import Button from './Button';
+import MyAccount from './MyAccount';
 
 test('should render', () => {
-    expect(render( < Button text = "blah" / > )).toBeTruthy();
+    expect(render( < MyAccount / > )).toBeTruthy();
 });

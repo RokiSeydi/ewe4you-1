@@ -1,18 +1,16 @@
 import React, { Component } from "react";
 import styles from "./DashboardPage.module.scss";
 
-import DashboardUpdate from "../DashboardUpdate/DashboardUpdate"
-import DashboardProgress from "../DashboardProgress/DashboardProgress"
-import NavigationBar from "../../../components/NavigationBar/NavigationBar"
+import DashboardUpdate from "../DashboardUpdate";
+import DashboardProgress from "../DashboardProgress";
+import NavigationBar from "../../../components/Navigation/NavigationBar";
 
 class DashboardPage extends Component {
-
   render() {
-    
     return (
       <>
-      <NavigationBar/>
-      <div className={styles.backgroundDiv}>
+        <NavigationBar />
+        <div className={styles.backgroundDiv}>
           <h1>Hi there! Welcome to your dashboard view</h1>
           <div className={styles.dashboardView}>
             <section className={styles.updateSection}>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import NavigationBar from './NavigationBar';
+import BurgerMenu from './BurgerMenu';
 
 test('should render', () => {
-    expect(render(< NavigationBar />)).toBeTruthy();
+    expect(render( < BurgerMenu / > )).toBeTruthy();
 });

@@ -1,71 +1,19 @@
-import React, { Component } from 'react';
-import CardCarousel from "../../components/CardCarousel"
-import styles from "./TopicPage.module.scss"
-import NavigationBar from "../../components/NavigationBar/NavigationBar"
+import React, { Component } from "react";
+import CardCarousel from "../../components/CardCarousel";
+import styles from "./TopicPage.module.scss";
+import NavigationBar from "../../components/Navigation/NavigationBar";
 
 class TopicPage extends Component {
-  render() { 
-
-    return ( 
+  render() {
+    return (
       <>
-       <NavigationBar/>
-        <div className={styles.Flexed} >
-          <CardCarousel cardType={'topics'}/>
+        <NavigationBar />
+        <div className={styles.Flexed}>
+          <CardCarousel cardType={"topics"} />
         </div>
       </>
-     )
+    );
   }
 }
 
-
-
 export default TopicPage;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

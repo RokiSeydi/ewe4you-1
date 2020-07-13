@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import Button from './Button';
+import NavigationBar from './NavigationBar';
 
 test('should render', () => {
-    expect(render( < Button text = "blah" / > )).toBeTruthy();
+    expect(render( < NavigationBar / > )).toBeTruthy();
 });
