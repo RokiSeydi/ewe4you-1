@@ -42,12 +42,7 @@ class WellBean extends Component {
     if (this.state.onBean) {
       return (
         <>
-        <section className={styles.onBeanSection}>
-          <div className={styles.otherBeans}>
-            <div className={styles.beanImageContainer}><img src={this.state.otherBeans[0].image} onClick={() => this.otherBeanClick(this.state.otherBeans[0])} alt="bean"/></div>
-            <div className={styles.beanImageContainer}><img src={this.state.otherBeans[1].image} onClick={() => this.otherBeanClick(this.state.otherBeans[1])} alt="bean"/></div>
-            <div className={styles.beanImageContainer}><img src={this.state.otherBeans[2].image} onClick={() => this.otherBeanClick(this.state.otherBeans[2])} alt="bean"/></div>
-          </div>
+        <div className={styles.onBeanSection}>
           <div className={styles.currentBean}>
             <div className={styles.currentBeanImage}>
               <img src={this.state.currentBean.image} alt="bean"></img>
@@ -64,7 +59,27 @@ class WellBean extends Component {
               <div></div>
             </div>
           </div>
-        </section>
+          <div className={styles.otherBeans}>
+            <div className={styles.otherBeanContainer}>
+              <div className={styles.beanImageContainer}><img src={this.state.otherBeans[0].image} 
+              onClick={() => this.otherBeanClick(this.state.otherBeans[0])} alt="bean"/>
+              </div>
+              <span>{this.state.otherBeans[0].title}</span>
+            </div>
+            <div className={styles.otherBeanContainer}>
+              <div className={styles.beanImageContainer}><img src={this.state.otherBeans[1].image} 
+              onClick={() => this.otherBeanClick(this.state.otherBeans[1])} alt="bean"/>
+              </div>
+              <span>{this.state.otherBeans[1].title}</span>
+            </div>
+            <div className={styles.otherBeanContainer}>
+              <div className={styles.beanImageContainer}><img src={this.state.otherBeans[2].image} 
+              onClick={() => this.otherBeanClick(this.state.otherBeans[2])} alt="bean"/>
+              </div>
+              <span>{this.state.otherBeans[2].title}</span>
+            </div>
+          </div>
+        </div>
         </>
       );
     } else{
@@ -73,13 +88,33 @@ class WellBean extends Component {
         <div className ={styles.noBeanContainer}>
           <h1>Pick a bean</h1>
           <section className={styles.allbeans}>
-            <div className ={styles.beanRow}>          
-              <div className={styles.beanDiv}><img src={wellbeans[0].image} onClick={() => this.clickedBean(wellbeans[0])} alt="bean"/></div>
-              <div className={styles.beanDiv}><img src={wellbeans[1].image} onClick={() => this.clickedBean(wellbeans[1])} alt="bean"/></div>
+            <div className ={styles.beanRow}> 
+              <div className={styles.beanContainer}>
+                <div className={styles.beanDiv}><img src={wellbeans[0].image} 
+                onClick={() => this.clickedBean(wellbeans[0])} alt="bean"/>
+                </div>
+                <span>{wellbeans[0].title}</span>
+              </div>         
+              <div className={styles.beanContainer}>
+                <div className={styles.beanDiv}><img src={wellbeans[1].image} 
+                onClick={() => this.clickedBean(wellbeans[1])} alt="bean"/>
+                </div>
+                <span>{wellbeans[1].title}</span>
+              </div>         
             </div>
             <div className ={styles.beanRow}>
-              <div className={styles.beanDiv}><img src={wellbeans[2].image} onClick={() => this.clickedBean(wellbeans[2])} alt="bean"/></div>
-              <div className={styles.beanDiv}><img src={wellbeans[3].image} onClick={() => this.clickedBean(wellbeans[3])} alt="bean"/></div>
+              <div className={styles.beanContainer}>
+                <div className={styles.beanDiv}><img src={wellbeans[2].image} 
+                onClick={() => this.clickedBean(wellbeans[2])} alt="bean"/>
+                </div>
+                <span>{wellbeans[2].title}</span>
+              </div>         
+              <div className={styles.beanContainer}>
+                <div className={styles.beanDiv}><img src={wellbeans[3].image} 
+                onClick={() => this.clickedBean(wellbeans[3])} alt="bean"/>
+                </div>
+                <span>{wellbeans[3].title}</span>
+              </div>         
             </div>
           </section>
         </div>
