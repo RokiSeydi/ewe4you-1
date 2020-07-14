@@ -1,70 +1,20 @@
-import React, { Component } from 'react';
-import TopicOverview from "../../Components/TopicOverview";
+import React, { Component } from "react";
+import TopicOverview from "../../components/TopicOverview";
 import styles from "./TopicOverviewContainer.module.scss";
-import NavigationBar from "../../Components/Navigation/NavigationBar/NavigationBar";
+import NavigationBar from "../../components/Navigation/NavigationBar";
 
 import topics from "../../data/topics";
 
-
 class TopicOverviewContainer extends Component {
-
-  render() { 
-    return ( 
+  render() {
+    return (
       <>
-        <NavigationBar/>
-          <div className={styles.Flexed} >
-            <TopicOverview topic={topics[0]}/>
-          </div>
+        <NavigationBar />
+        <div className={styles.Flexed}>
+          <TopicOverview topic={topics[0]} />
+        </div>
       </>
-     )
+    );
   }
 }
 export default TopicOverviewContainer;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

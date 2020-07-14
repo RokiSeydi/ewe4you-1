@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import { Router } from "@reach/router";
 
-import LandingPage from "../Components/LandingPage/LandingPage";
+import LandingPage from "../components/LandingPage";
 
-import DashboardPage from "../containers/dashboard/DashboardPage/DashboardPage";
-import ToolPage from "../containers/ToolPage/ToolPage";
-import TopicPage from "../containers/TopicPage/TopicPage";
-import MyAccount from "../Components/MyAccount/MyAccount";
+import DashboardPage from "../containers/dashboard/DashboardPage";
+import ToolPage from "../containers/ToolPage";
+import TopicPage from "../containers/TopicPage";
+import MyAccount from "../components/MyAccount";
 
-import PositiveAffirmations from "../Components/PositiveAffirmations/PositiveAffirmations";
+import PositiveAffirmations from "../components/PositiveAffirmations";
 import Gallery from "../containers/Gallery";
 import TopicOverviewContainer from "../containers/TopicOverviewContainer";
 import TopicConclusionContainter from "../containers/TopicConclusionContainter";
@@ -16,18 +16,17 @@ import StressGraph from "../Components/StressGraph/StressGraph";
 
 class Routes extends Component {
   render() {
-  
     return (
       <Router>
         <LandingPage path="/" />
         <DashboardPage path="dashboard" />
-        <TopicOverviewContainer path="topic-overview"/>
+        <TopicOverviewContainer path="topic-overview" />
         <ToolPage path="tools" />
-        <TopicPage path="topics" /> 
-        <PositiveAffirmations path="PositiveAffirmations" />  
+        <TopicPage path="topics" />
+        <PositiveAffirmations path="PositiveAffirmations" />
         <TopicPage path="topics" />
         <MyAccount path="myaccount" />
-        <TopicConclusionContainter path="topic-conclusion"/>
+        <TopicConclusionContainter path="topic-conclusion" />
         <Gallery path="gallery" />
         <StressGraph path="stress-graph" />
       </Router>
