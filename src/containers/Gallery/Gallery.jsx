@@ -4,6 +4,7 @@ import Polaroid from "../../components/Polaroid";
 import NavigationBar from "../../components/Navigation/NavigationBar";
 import Button from "../../components/Button/";
 import firebase from "../../firebase";
+import { firestore } from "../../firebase";
 
 class Gallery extends Component {
   state = {
@@ -12,10 +13,24 @@ class Gallery extends Component {
     imagesFromDatabase: [],
   };
 
-  alertFunction = () => {
-    console.log("working button");
-    alert("i work");
+  setImage = () => {
+    console.log('function called')
+    firestore
+      .collection("Selfie")
+      .doc("testuid")
+      .set({
+        imgUrls: this.state.imagesFromDatabase
+      })
+      // .then((querySnapshot) => {
+      //   const imageRefs = querySnapshot.docs.map((doc) => doc.data());
+      //   this.setState({ imageRefs });
+      // })
+      .catch((err) => console.log(err));
   };
+
+  componentDidMount() {
+    // this.setImage();
+  }
 
   getImages = () => {
     this.state.storageRefs.forEach((image) => {
@@ -92,7 +107,8 @@ class Gallery extends Component {
         <section className={styles.gallery}>
           <div className={styles.polaroidContainer}>
           {this.state.imagesFromDatabase.map((img) => (
-              <Polaroid src={img} />
+              <Polaroid 
+              setImage = {this.state.imageRef} />
             ))}
         
           </div>
