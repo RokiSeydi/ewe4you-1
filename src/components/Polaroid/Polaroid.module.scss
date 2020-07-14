@@ -15,12 +15,13 @@
 
   .avatar{
     height: 200px;
-    width: fit-content;
-    position: absolute;
-    top: 10px;
+    width: 200px;
+    position: flex;
+    justify-content: center;
+    margin-top: 10px;
 
     img{
-      height: 200px;
+      height: 200px; 
       border: 1px solid black;
     }
   }

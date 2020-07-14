@@ -4,7 +4,7 @@ import styles from "./Button.module.scss";
 class Button extends Component {
   state = {  }
   render() { 
-  return <a className={styles.button} href={this.props.link}>{this.props.text}</a>;
+  return <button className={styles.button} onClick={this.props.link}>{this.props.text}</button>;
   }
 }
  

@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "ewe4you-ba8a2"
+    "ewe4youselfie": "ewe4youselfie",
+    "default": "ewe4youselfie"
   }
 }
+

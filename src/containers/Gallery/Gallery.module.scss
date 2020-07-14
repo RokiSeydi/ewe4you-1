@@ -1,3 +1,4 @@
+@import '../../variables.scss';
 
 .gallery{
   display: flex;
@@ -12,10 +13,41 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     }
 
     div.buttonWrapper{
       width: 100%;
     }
+}
+
+.customfileupload {
+  color: black;
+  background-color: $colour-blue;
+  border-radius: $border-radius;
+  width: 250px;
+  border: none;
+  padding: 20px;
+  padding-left: 65px;
+  padding-right: 65px;
+  margin: 20px;
+ 
+  font-size: $font-size-h4;
+  cursor: pointer;
+  box-shadow: $box-shadow;
+
+  input[type="file"] {
+    display: none;
+  }
+  
+  &:hover {
+      background-color: $colour-dark-blue;  
+  }
+
+  *:focus {
+      outline: none;
+  }
+}
+
+*:focus {
+  outline: none;
 }

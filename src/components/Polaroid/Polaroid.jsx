@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import styles from "./Polaroid.module.scss";
-import avatar from "../../assets/placeholder.jpg";
 
 class Polaroid extends Component {
   state = {  }
   render() { 
+    const{src} = this.props;
     return (
       <> 
   <div className={styles.polaroid}>
-    <div className={styles.avatar}>
-      <img src={avatar} alt="avatar"/>
+    <div>
+      <img src={src} alt="avatar"className={styles.avatar}/>
     </div>
-    <p className={styles.caption}>Me at the zoo!</p>
+    <p className={styles.caption}>I'm all ears!</p>
   </div>
       </>
     )
