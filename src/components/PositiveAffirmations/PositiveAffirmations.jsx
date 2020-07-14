@@ -50,7 +50,7 @@ class PositiveAffirmations extends Component {
                 <input type="text" onInput={(e) => this.getUserInput(e)}/>
                 <button onClick={this.updateAffirmations}>Add</button>
                 <button onClick={this.deleteAffirmations}>Delete</button>
-                <button onClick={this.updateInstructionsState}>Next</button>
+                <button onClick={this.updateInstructionsState}>Done</button>
                 {this.state.affirmations.map(affirmation => <p>{affirmation}</p>)}
             </section>
             </>
