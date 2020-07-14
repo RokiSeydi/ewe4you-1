@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import styles from "./ToolCard.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faTachometerAlt, faComments, faWrench, faUser, faPlayCircle } from '@fortawesome/free-solid-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons';
 
+library.add(faTachometerAlt, faComments, faWrench, faUser, fab, faPlayCircle)
 
 
 class ToolCard extends Component {
@@ -37,8 +41,6 @@ class ToolCard extends Component {
               <p>{text}</p>
                 <span>
                 <FontAwesomeIcon icon="play-circle"/>
-                </span>
-                <span>
                 <FontAwesomeIcon icon={['fab', 'play-circle']} />
                 </span>
                 <p>{origin}</p>

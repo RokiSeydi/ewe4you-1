@@ -1,0 +1,16 @@
+    .Wrapper {
+        position: relative;
+        padding-top: .7rem;
+        padding-right: 10px;
+        cursor: pointer;
+        display: block;
+        & span {
+            background: #fdcb6e;
+            display: block;
+            position: relative;
+            width: 3.5rem;
+            height: .4rem;
+            margin-bottom: .7rem;
+            transition: all ease-in-out 0.2s;
+        }
+    }

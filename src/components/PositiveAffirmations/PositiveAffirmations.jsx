@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import styles from "./PositiveAffirmations.module.scss";
-import NavigationBar from "../../components/NavigationBar/NavigationBar"
+import NavigationBar from "../../components/Navigation/NavigationBar";
 
 class PositiveAffirmations extends Component {
     state = {

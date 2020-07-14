@@ -1,2 +1,2 @@
 import TopicOverview from "./TopicOverview";
-export default TopicOverview
+export default TopicOverview;
