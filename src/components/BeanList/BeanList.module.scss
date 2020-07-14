@@ -1,0 +1,43 @@
+@import "../../../src/variables.scss";
+
+
+.feelingContainer{
+
+
+    background-color: $colour-orange;
+    border-radius: $border-radius;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6px;
+    width: 90%;
+
+    input {
+        border: none;
+        border-radius: $border-radius/2;
+        padding: 4px;
+        width: 85%;
+        font-size: 1.5em;
+    }
+
+    p {
+        padding: 4px;
+        width: 85%;
+        text-align: left;
+    }
+
+    span {
+        font-size: 2.4em;
+        width: 20%;
+
+        .faPlus {
+            color: green;
+        }
+        
+        .faMinus {
+            color: red;
+        }
+    }
+}
+

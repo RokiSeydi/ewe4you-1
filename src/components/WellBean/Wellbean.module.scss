@@ -1,6 +1,5 @@
 @import '../../variables.scss';
 
-
 .onBeanSection {
     display: flex;
     flex-direction: column;
@@ -18,7 +17,6 @@
         font-size: 1em;
 
         .otherBeanContainer{
-
             border-radius: $border-radius;
             padding-bottom: 5px;
             height: 80%;
@@ -89,6 +87,10 @@
                 font-size: 1em;
                 padding: 10px;
             }
+
+            .feelingListSection{
+                width: 100%;
+            }
         }
     }
 }
@@ -128,7 +130,6 @@
 
     @media only screen and (max-width: 768px) {
         flex-direction: column;
-
     }
 
     .beanContainer{

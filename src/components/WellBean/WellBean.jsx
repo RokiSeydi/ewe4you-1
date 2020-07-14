@@ -2,41 +2,65 @@ import React, { Component } from 'react';
 import styles from "./WellBean.module.scss"
 
 import wellbeans from "../../data/wellbeans";
-import img from "../../assets/wellbeans/bakedbean.png"
+import img from "../../assets/wellbeans/bakedbean.png";
+import BeanList from "../BeanList";
 
 class WellBean extends Component {
   state = { 
     onBean: false,
     currentBean: "hello",
+    currentInputText: "",
     otherBeans: []
    }
 
-   clickedBean = (bean) =>{
+   clickedBean = (selectedBean) =>{
     this.setState({
       onBean: !this.state.onBean,
-      currentBean: bean 
+      currentBean: selectedBean,
+      otherBeans: this.shuffleBeans(selectedBean) 
     })
-    this.shuffleBeans(bean);
   }
 
-  shuffleBeans = (selectedBean) => {
-    let otherBeanArray = [];
-    wellbeans.map((bean) => {
-      if(selectedBean.Id !== bean.Id){
-        otherBeanArray.push(bean);
+    otherBeanClick = (newBean) => {
+      this.setState({
+        currentBean: newBean,
+        otherBeans: this.shuffleBeans(newBean),
+        currentInputText: ""
+      })
+    }
+
+    shuffleBeans = (selectedBean) => {
+      return wellbeans.filter((bean) => selectedBean.Id !== bean.Id);
+    }
+
+    addFeeling = (add, index) => {
+      if(add){
+        let updatedBean = this.state.currentBean;
+        if(updatedBean.feelings.length<5){
+          updatedBean.feelings.push(this.state.currentInputText);
+          this.setState({
+            currentBean: updatedBean,
+            currentInputText: ""
+          })
+        }
+      }else{
+        let updatedBean = this.state.currentBean;
+        updatedBean.feelings.splice(index, 1);
+        this.setState({
+          currentBean: updatedBean,
+        })
       }
-    })
-    this.setState({
-      otherBeans: otherBeanArray
-    })
-  }
+    }
+    
+    handleInputChange = (event) => {
+      this.setState({currentInputText: event});
+    }
 
-  otherBeanClick = (newBean) => {
-    this.shuffleBeans(newBean);
-    this.setState({
-      currentBean: newBean
-    })
-  }
+    isFeelingListFull = () => {
+      if  (this.state.currentBean.feelings.length<5) {
+        return <BeanList canEdit ={true} addFeeling={this.addFeeling} onHandleChange={this.handleInputChange} inputText={this.state.currentInputText}/>
+      }
+    }
 
   render() {
     if (this.state.onBean) {
@@ -50,11 +74,10 @@ class WellBean extends Component {
             <div className={styles.currentBeanList}>
               <h3>{this.state.currentBean.text}</h3>
               <div className ={styles.feelingListSection}>
-                <p>feeling 1</p>
-                <p>feeling 2</p>
-                <p>feeling 3</p>
-                <p>feeling 4</p>
-                <p>feeling 5</p>
+                {this.isFeelingListFull()}
+                {this.state.currentBean.feelings.map((feeling, index) => {
+                  return <BeanList strFeeling={feeling} canEdit={false} addFeeling={this.addFeeling} key={index} index={index}/>
+                })}
               </div>
               <div></div>
             </div>
