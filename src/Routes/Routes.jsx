@@ -12,6 +12,7 @@ import PositiveAffirmations from "../Components/PositiveAffirmations/PositiveAff
 import Gallery from "../containers/Gallery";
 import TopicOverviewContainer from "../containers/TopicOverviewContainer";
 import TopicConclusionContainter from "../containers/TopicConclusionContainter";
+import StressGraph from "../Components/StressGraph/StressGraph";
 
 class Routes extends Component {
   render() {
@@ -28,6 +29,7 @@ class Routes extends Component {
         <MyAccount path="myaccount" />
         <TopicConclusionContainter path="topic-conclusion"/>
         <Gallery path="gallery" />
+        <StressGraph path="stress-graph" />
       </Router>
     );
   }
