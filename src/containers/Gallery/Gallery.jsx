@@ -93,7 +93,7 @@ class Gallery extends Component {
     return (
       <>
         <NavigationBar />
-        <h1>Selfie-Steam</h1>
+        <h1>Selfie-Steem</h1>
         <h3>Upload a photo of yourself and add a comment</h3>
         <div>
           <label className={styles.customfileupload}>
