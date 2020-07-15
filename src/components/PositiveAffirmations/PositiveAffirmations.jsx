@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styles from "./PositiveAffirmations.module.scss";
 import NavigationBar from "../../components/Navigation/NavigationBar";
+import Firestore from "../../firebase.js";
 
 class PositiveAffirmations extends Component {
     state = {
@@ -36,6 +37,15 @@ class PositiveAffirmations extends Component {
         })
     }
 
+    addToDatabase = () => {
+        Firestore
+        .collection("affirmations")
+        .doc("testuid")
+        .set(this.state.affirmations)
+        .then((res) => console.log(res))
+        .catch((err) => console.log(err))
+    }
+
     render() { 
         return ( 
             <>
@@ -50,7 +60,7 @@ class PositiveAffirmations extends Component {
                 <input type="text" onInput={(e) => this.getUserInput(e)}/>
                 <button onClick={this.updateAffirmations}>Add</button>
                 <button onClick={this.deleteAffirmations}>Delete</button>
-                <button onClick={this.updateInstructionsState}>Done</button>
+                <button onClick={this.addToDatabase}>Done</button>
                 {this.state.affirmations.map(affirmation => <p>{affirmation}</p>)}
             </section>
             </>

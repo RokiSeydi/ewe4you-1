@@ -55,7 +55,7 @@ p {
     
     input {
         height: 80px;
-        width: 85%;
+        width: 90%;
         border: 2px solid $colour-dark-purple;
         box-shadow: $box-shadow;
         margin: 10px;
@@ -72,7 +72,10 @@ p {
         display: flex;
         margin: 0 auto; 
         display: inline-block;
-        
+    }
+    
+    button:hover {
+        cursor: pointer;
     }
 
     
