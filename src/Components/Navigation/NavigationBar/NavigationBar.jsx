@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import styles from "./NavigationBar.module.scss";
 
 import logo from "../../../assets/logo.jpg";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { Link } from '@reach/router';
+import { Link } from "@reach/router";
 
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import CollapseMenu from "../CollapseMenu/CollapseMenu";
