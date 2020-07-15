@@ -9,71 +9,39 @@ import { firestore } from "../../firebase";
 class Gallery extends Component {
   state = {
     file: "",
-    storageRefs: [],
+    storageRef: "",
     imagesFromDatabase: [],
   };
-
-  setImage = () => {
-    console.log('function called')
-    firestore
-      .collection("Selfie")
-      .doc("testuid")
-      .set({
-        imgUrls: this.state.imagesFromDatabase
-      })
-      // .then((querySnapshot) => {
-      //   const imageRefs = querySnapshot.docs.map((doc) => doc.data());
-      //   this.setState({ imageRefs });
-      // })
-      .catch((err) => console.log(err));
+  componentDidMount = () => {
+    this.getFileFromDatabase();
   };
 
-  componentDidMount() {
-    // this.setImage();
-  }
-
-  getImages = () => {
-    this.state.storageRefs.forEach((image) => {
-      //create a storage reference
-      let storage = firebase.storage().ref(image);
-      //get file url
-      storage
-        .getDownloadURL()
-        .then((url) => {
-          this.setState({
-            imagesFromDatabase: [...this.state.imagesFromDatabase, url],
-          });
-        })
-        .catch((error) => {
-          console.error(error);
-        });
+  handleFileChange = (e) => {
+    this.setState({
+      file: e.target.files[0],
+      storageRef: e.target.files[0].name,
     });
   };
 
-  uploadMeTing = () => {
+  uploadImage = () => {
     if (this.state.file) {
-      console.log("hello");
-      // Store the storage refs in the database
-      const storage = firebase.storage().ref(this.state.file.name);
+      const storage = firebase.storage().ref(this.state.storageRef);
       const upload = storage.put(this.state.file);
       upload.on(
         "state_changed",
-        // upload progress function
         (snapshot) => {
-          var percentage =
+          let percentage =
             (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-          // place to include progress bar if wanted
         },
-        // upload failed function
+    
         (err) => {
           console.error(err);
           alert("upload failed");
         },
-        // upload complete function
+      
         () => {
-          console.log("upload complete");
           alert("file uploaded");
-          this.getImages();
+          this.getDownloadURL(this.state.storageRef);
         }
       );
     } else {
@@ -81,12 +49,46 @@ class Gallery extends Component {
     }
   };
 
-  handleFileChange = (e) => {
-    this.setState({
-      file: e.target.files[0],
-      storageRefs: [...this.state.storageRefs, e.target.files[0].name],
-    });
+  getDownloadURL = (storageRef) => {
+    let storage = firebase.storage().ref(storageRef);
+    storage
+      .getDownloadURL()
+      .then((url) => {
+        this.storeDownloadUrl(url);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
+
+  storeDownloadUrl = (url) => {
+    const array = [...this.state.imagesFromDatabase, url]
+    firestore
+      .collection("Selfie")
+      .doc("testuid")
+      .set({
+        imgUrls:array,
+      })
+      .then(this.getFileFromDatabase())
+      .catch((err) => console.log(err));
+  };
+
+  getFileFromDatabase = () => {
+    const docRef = firestore.collection("Selfie").doc("testuid");
+
+    docRef
+      .get()
+      .then((doc) => {
+        if (doc.exists) {
+          this.setState({ imagesFromDatabase: doc.data().imgUrls });
+        } else {
+        }
+      })
+      .catch((error) => {
+        console.log("Error getting document:", error);
+      });
+  };
+
   render() {
     return (
       <>
@@ -94,23 +96,21 @@ class Gallery extends Component {
         <h1>Selfie-Steam</h1>
         <h3>Upload a photo of yourself and add a comment</h3>
         <div>
-        <label className={styles.customfileupload}>
-          <input type="file" onChange={this.handleFileChange}/>
-        Select file
-        </label>
-              <Button
-                link={this.uploadMeTing}
-                className={styles.buttonWrapper}
-                text={"Upload picture"}
-              />
-            </div>
+          <label className={styles.customfileupload}>
+            <input type="file" onChange={this.handleFileChange} />
+            Select file
+          </label>
+          <Button
+            link={this.uploadImage}
+            className={styles.buttonWrapper}
+            text={"Upload picture"}
+          />
+        </div>
         <section className={styles.gallery}>
           <div className={styles.polaroidContainer}>
-          {this.state.imagesFromDatabase.map((img) => (
-              <Polaroid 
-              setImage = {this.state.imageRef} />
+            {this.state.imagesFromDatabase.map((url) => (
+              <Polaroid src={url} />
             ))}
-        
           </div>
         </section>
       </>
@@ -119,4 +119,5 @@ class Gallery extends Component {
 }
 
 export default Gallery;
+
 
