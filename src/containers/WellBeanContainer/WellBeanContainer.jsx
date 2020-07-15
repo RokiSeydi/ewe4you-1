@@ -4,8 +4,8 @@ import styles from "./WellBeanContainer.module.scss";
 import NavigationBar from "../../components/Navigation/NavigationBar";
 import { Link } from '@reach/router';
 
-
 class WellBeanContainer extends Component {
+
   render() {
     return (
       <>
@@ -15,9 +15,7 @@ class WellBeanContainer extends Component {
             <div className={styles.outer}>
                   <h1>{"Well Bean"}</h1>  
               <div className={styles.inner}>
-                <div>
-                  <WellBean/>
-                </div>
+                  <WellBean />
                 <div className={styles.buttonContainer}>
                     <Link to="/topic-overview">
                       Go Back
@@ -27,7 +25,7 @@ class WellBeanContainer extends Component {
                     </Link>
                   </div>
               </div>
-                  <br/>
+              <br/>
             </div>
           </div>
         </div>

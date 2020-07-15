@@ -10,9 +10,6 @@ class BeanList extends Component {
    }
 
    toggleClick = (add, target) => {
-     this.setState({
-       inputValue: ""
-     })
      this.props.addFeeling(add, target);
    }
 

@@ -1,17 +1,37 @@
 import React, { Component } from 'react';
 import styles from "./WellBean.module.scss"
 
-import wellbeans from "../../data/wellbeans";
+// import wellbeans from "../../data/wellbeans";
 import img from "../../assets/wellbeans/bakedbean.png";
 import BeanList from "../BeanList";
+import { firestore } from "../../firebase";
+import wellbeans from "../../data/wellbeans";
+
 
 class WellBean extends Component {
-  state = { 
+  state = {
+    wellbeans: null, 
     onBean: false,
     currentBean: "hello",
     currentInputText: "",
     otherBeans: []
    }
+
+   componentDidMount() {
+    this.getWellBeanState();
+  }
+
+  getWellBeanState = () => {
+    firestore
+      .collection("WellBean").doc("testuid")
+      .get()
+      .then((doc) => {
+          this.setState({
+            wellbeans: doc.data()
+          })    
+      })
+      .catch((err) => console.log(err));
+  };
 
    clickedBean = (selectedBean) =>{
     this.setState({
@@ -30,25 +50,43 @@ class WellBean extends Component {
     }
 
     shuffleBeans = (selectedBean) => {
-      return wellbeans.filter((bean) => selectedBean.Id !== bean.Id);
+    console.log(selectedBean);
+    console.log(this.state.wellbeans.beans);
+
+      return this.state.wellbeans.beans.filter((bean) => selectedBean.Id !== bean.Id);
     }
 
     addFeeling = (add, index) => {
       if(add){
         let updatedBean = this.state.currentBean;
+        let beansArray = [];
+        beansArray.push(updatedBean);
+        beansArray.push(this.state.otherBeans[0]);
+        beansArray.push(this.state.otherBeans[1]);
+        beansArray.push(this.state.otherBeans[2]);
+
         if(updatedBean.feelings.length<5){
           updatedBean.feelings.push(this.state.currentInputText);
           this.setState({
             currentBean: updatedBean,
-            currentInputText: ""
+            currentInputText: "",
+            wellbeans: beansArray
           })
+          this.updateBeansInDB();
         }
       }else{
         let updatedBean = this.state.currentBean;
         updatedBean.feelings.splice(index, 1);
+        let beansArray = [];
+        beansArray.push(updatedBean);
+        beansArray.push(this.state.otherBeans[0]);
+        beansArray.push(this.state.otherBeans[1]);
+        beansArray.push(this.state.otherBeans[2]);
         this.setState({
           currentBean: updatedBean,
+          wellbeans: beansArray
         })
+        this.updateBeansInDB();
       }
     }
     
@@ -62,7 +100,31 @@ class WellBean extends Component {
       }
     }
 
+    updateBeansInDB = () => {   
+        firestore
+          .collection("WellBean")
+          .doc("testuid")
+          .set({
+            beans: this.state.wellbeans.beans
+          })
+          .then((res) => console.log(res))
+          .catch((err) => console.log(err)) 
+    }
+    
+    // updateBeanstoDB = () => {
+    //   console.log("this has happened");
+    //     firestore
+    //       .collection("WellBean")
+    //       .doc("testuid")
+    //       .set({
+    //         beans: wellbeans
+    //       })
+    //       .then((res) => console.log(res))
+    //       .catch((err) => console.log(err)) 
+    // }
+
   render() {
+    if(this.state.wellbeans!=null){     
     if (this.state.onBean) {
       return (
         <>
@@ -113,36 +175,41 @@ class WellBean extends Component {
           <section className={styles.allbeans}>
             <div className ={styles.beanRow}> 
               <div className={styles.beanContainer}>
-                <div className={styles.beanDiv}><img src={wellbeans[0].image} 
-                onClick={() => this.clickedBean(wellbeans[0])} alt="bean"/>
+                <div className={styles.beanDiv}><img src={this.state.wellbeans.beans[0].image} 
+                onClick={() => this.clickedBean(this.state.wellbeans.beans[0])} alt="bean"/>
                 </div>
-                <span>{wellbeans[0].title}</span>
+                <span>{this.state.wellbeans.beans[0].title}</span>
               </div>         
               <div className={styles.beanContainer}>
-                <div className={styles.beanDiv}><img src={wellbeans[1].image} 
-                onClick={() => this.clickedBean(wellbeans[1])} alt="bean"/>
+                <div className={styles.beanDiv}><img src={this.state.wellbeans.beans[1].image} 
+                onClick={() => this.clickedBean(this.state.wellbeans.beans[1])} alt="bean"/>
                 </div>
-                <span>{wellbeans[1].title}</span>
+                <span>{this.state.wellbeans.beans[1].title}</span>
               </div>         
             </div>
             <div className ={styles.beanRow}>
               <div className={styles.beanContainer}>
-                <div className={styles.beanDiv}><img src={wellbeans[2].image} 
-                onClick={() => this.clickedBean(wellbeans[2])} alt="bean"/>
+                <div className={styles.beanDiv}><img src={this.state.wellbeans.beans[2].image} 
+                onClick={() => this.clickedBean(this.state.wellbeans.beans[2])} alt="bean"/>
                 </div>
-                <span>{wellbeans[2].title}</span>
+                <span>{this.state.wellbeans.beans[2].title}</span>
               </div>         
               <div className={styles.beanContainer}>
-                <div className={styles.beanDiv}><img src={wellbeans[3].image} 
-                onClick={() => this.clickedBean(wellbeans[3])} alt="bean"/>
+                <div className={styles.beanDiv}><img src={this.state.wellbeans.beans[3].image} 
+                onClick={() => this.clickedBean(this.state.wellbeans.beans[3])} alt="bean"/>
                 </div>
-                <span>{wellbeans[3].title}</span>
+                <span>{this.state.wellbeans.beans[3].title}</span>
               </div>         
             </div>
           </section>
         </div>
         </>
       );
+    }
+    }else{
+      return (<>
+      {/* {this.updateBeanstoDB()} */}
+      </>)
     }
   }
 }
