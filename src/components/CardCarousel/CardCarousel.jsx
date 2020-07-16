@@ -30,7 +30,7 @@ class CardCarousel extends Component {
 handleResize = () => {
   if (window.innerWidth > 1200) {
     this.setState({cards: 3})
-  } else if (window.innerWidth > 769 && window.innerWidth < 1200) {
+  } else if (window.innerWidth >= 768 && window.innerWidth < 1200) {
     this.setState({cards: 2})
   } else if (window.innerWidth > 0 && window.innerWidth < 768) {
     this.setState({cards: 1})

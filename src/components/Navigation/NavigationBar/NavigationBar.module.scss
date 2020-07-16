@@ -13,6 +13,8 @@ nav {
     img {
         height: $nav-height;
         width: auto;
+        padding: 0px;
+        margin: 0px;
     }
 
     .FlexContainer {
@@ -36,18 +38,15 @@ nav {
                     color: #fdcb6e;
                 }
             }
-            @media (max-width: 768px) {
-                display: none;
-            }
-        
-
+            
             .links {
                 margin-left: 10px;
                 color: $colour-sky;
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
-                width: 100%;
+                width: 75%;
+                
                 
                 a {
                     text-decoration: none;
@@ -59,7 +58,6 @@ nav {
                         border-radius: $border-radius;
                         p span {
                             color: white;
-                            font-size: 20px;
                         }
                     }
                 }
@@ -71,6 +69,7 @@ nav {
                 p span {
                     color: $colour-dark-blue;
                     font-size: 20px;
+                    padding-right: 5px;
                 }
             }
 
@@ -79,8 +78,8 @@ nav {
                 color: $colour-sky;
                 display: flex;
                 justify-content: flex-end;
-                width: 100%;
-                padding-right: 30px;
+                width: 35%;
+                padding-right: 20px;
 
                 a {
                     text-decoration: none;
@@ -92,7 +91,6 @@ nav {
                         border-radius: $border-radius;
                         p span {
                             color: white;
-                            font-size: 20px;
                         }
                     }
                 }
@@ -100,19 +98,23 @@ nav {
                 p {
                     padding: 0px;
                     font-size: 20px;
-                    
                 }
                 
                 p span {
                     color: $colour-dark-blue;
                     font-size: 20px;
+                    padding-right: 5px;
                 }
+            }
+
+            @media (max-width: $tablet-break-point) {
+                display: none;
             }
         }
     }
 
     .BurgerWrapper {
-        @media (min-width: 768px) {
+        @media (min-width: 769px) {
             margin: auto 0;
             display: none;
         }

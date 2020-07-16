@@ -1,6 +1,5 @@
 @import '../../../variables.scss';
 
-
 .backgroundDiv {
     margin: 0;
     height: calc(100vh - #{$nav-height});
@@ -8,31 +7,54 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    
+    .dashboardView {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+        
+        .updateSection {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .progressSection {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    
 }
 
-.dashboardView {
-    height: 80%;
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+@media only screen and  (min-width: $tablet-break-point) {
 
-.updateSection {
-    height: 80%;
-    width: 80%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.progressSection {
-    height: 80%;
-    width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    .backgroundDiv {
+        justify-content: center;
+        
+        .dashboardView {
+            height: 80%;
+            width: 80%;
+            flex-direction: row;
+            justify-content: space-between;
+            
+            .updateSection {
+                height: 80%;
+                width: 80%;
+                justify-content: space-between;
+            }
+            
+            .progressSection {
+                height: 80%;
+                width: 80%;
+            }
+        }
+        
+    }
 }

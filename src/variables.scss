@@ -32,6 +32,9 @@ $border-radius: 30px;
 
 $nav-height: 60px;
 
+$mobile-break-point: 426px;
+$tablet-break-point: 769px;
+
 %card {
     max-height: 500px;
     max-width: 320px;
@@ -48,11 +51,13 @@ $nav-height: 60px;
 
   }
   %innerCard {
-    max-height: 308px;
-    min-height: 308px;
-    max-width: 267px;
-    min-width: 267px;
+    // max-height: 308px;
+    // min-height: 308px;
+    // max-width: 267px;
+    // min-width: 267px;
     margin: 0 auto;
+    height: 70%;
+    width: 90%;
   }
 
   %expandedCard {

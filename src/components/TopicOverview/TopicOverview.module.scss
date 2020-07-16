@@ -6,61 +6,153 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.outer {
-    height: 90%;
-    width: 70%;
-    background-color: $colour-orange;
-    border-radius: $border-radius;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    h1 {
-        padding: 20px;
-        font-size: $font-size-h2;
-    }
-}
-
-.inner {
-    height: 90%;
-    width: 90%;
-    border-radius: $border-radius;
-    background-color: $colour-dark-orange;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    img {
-        height: 200px;
-        padding-top: 30px;
-    }
-
-    p {
-        padding: 30px;
-        font-size: $font-size-h3;
-    }
-
-
-
-    a {
-        display: inline-block;
-        color: black;
-        background-color: $colour-blue;
-        border-radius: $border-radius;
-        border: none;
-        padding: 20px;
-        margin: 20px;
-        width: 25%;
-        font-size: $font-size-h4;
+    padding: 0px;
+    margin: 0px;
+    
+    .outer {
+        height: 100%;
+        width: 100%;
+        background-color: $colour-orange;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+        h1 {
+            font-size: $font-size-h3;
+        }
         
-        &:hover {
-            background-color: $colour-dark-blue;  
+        .inner {
+            height: 86%;
+            width: 100%;
+            background-color: $colour-dark-orange;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            
+        
+            .img {
+                height: 35%;
+                
+                img{
+                    height: 100%;
+                }
+            }
+        
+            .text {
+                height: 30%;
+                
+                p {
+                    height: 100%;
+                    font-size: $font-size-p;
+                    
+                }
+            }
+    
+        
+            .links {
+                height: 30%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                
+    
+                a {
+                    color: black;
+                    background-color: $colour-blue;
+                    border-radius: $border-radius;
+                    border: none;
+                    font-size: $font-size-p;
+                    
+                    &:hover {
+                        background-color: $colour-dark-blue;  
+                    }
+                }
+            }
+        
+        }
+    }
+    
+}
+
+@media only screen and (min-width: $mobile-break-point) {
+    
+    .container {
+        
+        .outer {
+            border-radius: $border-radius;
+            height: 90%;
+            width: 70%;
+            padding-bottom: 20px;
+            
+            .inner {
+                height: 90%;
+                width: 90%;
+                border-radius: $border-radius;
+                margin-bottom: 20px;
+                
+
+                .text {
+                    p {
+                    font-size: $font-size-progress;
+                    }
+                    
+                }
+                
+                .links {
+                    width: 100%;
+                    flex-direction: row;
+                    align-items: flex-end;
+                    margin-bottom: 40px;
+                    
+                    a{
+                        font-size: $font-size-progress;
+                    }
+                }
+                
+            }
         }
     }
 }
 
+@media only screen and (min-width: $tablet-break-point) {
+    
+    .container {
+        
+        .outer {
+            border-radius: $border-radius;
+            height: 90%;
+            width: 70%;
+            padding-bottom: 20px;
+            
+            .inner {
+                height: 90%;
+                width: 90%;
+                border-radius: $border-radius;
+                margin-bottom: 20px;
+                
+
+                .text {
+                    p {
+                    font-size: $font-size-h3;
+                    }
+                    
+                }
+                
+                .links {
+                    width: 100%;
+                    flex-direction: row;
+                    align-items: flex-end;
+                    margin-bottom: 40px;
+                    
+                    a{
+                        font-size: $font-size-h3;
+                    }
+                }
+                
+            }
+        }
+    }
+}
 
