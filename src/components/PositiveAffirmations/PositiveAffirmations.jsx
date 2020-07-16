@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styles from "./PositiveAffirmations.module.scss";
 import NavigationBar from "../../components/Navigation/NavigationBar";
-import Firestore from "../../firebase.js";
+import { firestore } from "../../firebase.js";
 
 class PositiveAffirmations extends Component {
     state = {
@@ -9,7 +9,27 @@ class PositiveAffirmations extends Component {
         userInput: "",
         showInstructions: false,
     }
-    
+
+    addToDatabase = () => {
+        firestore
+            .collection("affirmations")
+            .doc("testuid")
+            .set({ affirmations: this.state.affirmations })
+            .then((res) => console.log(res))
+            .catch((err) => console.log(err))
+    }
+
+    componentDidMount() {
+        firestore
+            .collection("affirmations")
+            .doc("testuid")
+            .get()
+            .then((doc) => {
+                const savedAffirmations = doc.data().affirmations;
+                this.setState({ affirmations: savedAffirmations });
+            })
+    }
+
     getUserInput = (e) => {
         this.setState({
             userInput: e.target.value
@@ -21,8 +41,9 @@ class PositiveAffirmations extends Component {
         updatedAffirmations.push(this.state.userInput)
         this.setState({
             affirmations: updatedAffirmations
-        })   }
-    
+        })
+    }
+
     deleteAffirmations = () => {
         const deleteAffirmations = [...this.state.affirmations]
         deleteAffirmations.pop(this.state.userInput)
@@ -30,43 +51,35 @@ class PositiveAffirmations extends Component {
             affirmations: deleteAffirmations
         })
     }
-    
+
     updateInstructionsState = () => {
         this.setState({
             showInstructions: true
         })
     }
 
-    addToDatabase = () => {
-        Firestore
-        .collection("affirmations")
-        .doc("testuid")
-        .set(this.state.affirmations)
-        .then((res) => console.log(res))
-        .catch((err) => console.log(err))
-    }
+    render() {
 
-    render() { 
-        return ( 
+        return (
             <>
-            <NavigationBar/>
-            <section className={styles.header}>.
+                <NavigationBar />
+                <section className={styles.header}>.
             <h1>Positive Affirmations</h1>
-                {this.state.showIntructions || this.state.affirmations.length > 2 ? <p className={styles.showInstructionsStyle}> Great! Now that you've got these positive affirmations, repeat these 3 times to yourself in a mirror
+                    {this.state.showIntructions || this.state.affirmations.length > 2 ? <p className={styles.showInstructionsStyle}> Great! Now that you've got these positive affirmations, repeat these 3 times to yourself in a mirror
                You will help create a more positive narrative about yourself if you do this regularly. It will also help to create a more flexible and healthy view of yourself. </p> : ""}
-            </section>
-            <section className={styles.toolPage}>
-            <p>Please add 3 - 5 affirmations about yourself or your life.</p>
-                <input type="text" onInput={(e) => this.getUserInput(e)}/>
-                <button onClick={this.updateAffirmations}>Add</button>
-                <button onClick={this.deleteAffirmations}>Delete</button>
-                <button onClick={this.addToDatabase}>Done</button>
-                {this.state.affirmations.map(affirmation => <p>{affirmation}</p>)}
-            </section>
+                </section>
+                <section className={styles.toolPage}>
+                    <p>Please add 3 - 5 affirmations about yourself or your life.</p>
+                    <input type="text" onInput={(e) => this.getUserInput(e)} />
+                    <button onClick={this.updateAffirmations}>Add</button>
+                    <button onClick={this.deleteAffirmations}>Delete</button>
+                    <button onClick={this.addToDatabase}>Save</button>
+                    {this.state.affirmations.map(affirmation => <p>{affirmation}</p>)}
+                </section>
             </>
-            
+
         );
     }
-}  
+}
 
 export default PositiveAffirmations;
