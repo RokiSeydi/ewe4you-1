@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Router } from "@reach/router";
 import LandingPage from "../components/LandingPage";
-import DashboardPage from "../containers/Dashboard/DashboardPage";
+import DashboardPage from "../containers/Dashboard11/DashboardPage";
 import ToolPage from "../containers/ToolPage";
 import TopicPage from "../containers/TopicPage";
 import MyAccount from "../components/MyAccount";
