@@ -33,9 +33,9 @@ class ToolOverview extends Component {
               </div>
               <div>
                 <p>{text}</p>
-                <Button text={'Start Tool'} link={startUrl}/>
+                <a href={startUrl} className={styles.links}>Start Tool</a>
                       
-                <Button text={'Go Back'} link={backUrl}/>
+                <a href={backUrl} className={styles.links}>Go Back</a>
                 </div>
             </div>
                 <br/>

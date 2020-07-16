@@ -8,9 +8,10 @@ import { firestore } from "../../firebase";
 
 class Gallery extends Component {
   state = {
-    file: "",
+    file: [],
     storageRef: "",
     imagesFromDatabase: [],
+    caption: "",
   };
   componentDidMount = () => {
     this.getFileFromDatabase();
@@ -24,6 +25,7 @@ class Gallery extends Component {
   };
 
   uploadImage = () => {
+    // Need to make delete what we have in this.state.caption
     if (this.state.file) {
       const storage = firebase.storage().ref(this.state.storageRef);
       const upload = storage.put(this.state.file);
@@ -33,12 +35,12 @@ class Gallery extends Component {
           let percentage =
             (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
         },
-    
+
         (err) => {
           console.error(err);
           alert("upload failed");
         },
-      
+
         () => {
           alert("file uploaded");
           this.getDownloadURL(this.state.storageRef);
@@ -62,12 +64,13 @@ class Gallery extends Component {
   };
 
   storeDownloadUrl = (url) => {
-    const array = [...this.state.imagesFromDatabase, url]
+    const newImageObject = { url: url, caption: this.state.caption };
+    const array = [...this.state.imagesFromDatabase, newImageObject];
     firestore
       .collection("Selfie")
       .doc("testuid")
       .set({
-        imgUrls:array,
+        imgUrls: array,
       })
       .then(this.getFileFromDatabase())
       .catch((err) => console.log(err));
@@ -81,7 +84,6 @@ class Gallery extends Component {
       .then((doc) => {
         if (doc.exists) {
           this.setState({ imagesFromDatabase: doc.data().imgUrls });
-        } else {
         }
       })
       .catch((error) => {
@@ -89,27 +91,76 @@ class Gallery extends Component {
       });
   };
 
+  uploadComment = () => {
+    console.log(this.state.caption);
+    let userCaption = prompt("Please enter your caption");
+    console.log(userCaption);
+    this.setState({ caption: userCaption }, () =>
+      console.log(this.state.caption)
+    );
+  };
+
+  // checkFormCompleted = () => {
+  //   let isCompleted = true;
+  //   for (const field in (this.state.caption) && (this.state.imagesFromDatabase)) {
+  //     if ((this.state.caption) && (this.state.imagesFromDatabase) === "") {
+  //       return
+  //       isCompleted = false
+  //   }
+  //   return isCompleted;
+  // };
+
+  // checkFormCompleted = () => {
+  //   let isCompleted = true;
+  //   for (const field in (this.state.caption) && (this.state.imagesFromDatabase)) {
+  //     if ((this.state.caption[field] === "") && (this.state.imagesFromDatabase[field] === "")) {
+  //       console.log('both have been uploaded')
+  //       return isCompleted = false;
+  //     } else {
+  //      console.log('not yet')
+  //     }
+  //   }
+  //   return isCompleted;
+  // };
+
+  checkFormCompleted = () => {
+    let isCompleted = true;
+    if (this.state.caption === "" || this.state.file === []) {
+      console.log("You forgot to upload a comment");
+      isCompleted = false;
+    }
+    return isCompleted;
+  };
+
+
   render() {
+    this.checkFormCompleted()
     return (
       <>
         <NavigationBar />
         <h1>Selfie-Steem</h1>
         <h3>Upload a photo of yourself and add a comment</h3>
-        <div>
+        <div className={styles.buttonSection}>
           <label className={styles.customfileupload}>
             <input type="file" onChange={this.handleFileChange} />
             Select file
           </label>
           <Button
+            link={this.uploadComment}
+            className={styles.buttonWrapper}
+            text={"Add Comment"}
+          />
+          <Button
             link={this.uploadImage}
             className={styles.buttonWrapper}
-            text={"Upload picture"}
+            text={"Upload"}
+            disabled={!this.checkFormCompleted()}
           />
         </div>
         <section className={styles.gallery}>
           <div className={styles.polaroidContainer}>
-            {this.state.imagesFromDatabase.map((url) => (
-              <Polaroid src={url} />
+            {this.state.imagesFromDatabase.map((imageObject) => (
+              <Polaroid src={imageObject.url} text={imageObject.caption} />
             ))}
           </div>
         </section>
@@ -119,5 +170,3 @@ class Gallery extends Component {
 }
 
 export default Gallery;
-
-

@@ -1,8 +1,17 @@
 @import '../../variables.scss';
 
+
+.buttonSection{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
 .gallery{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 
@@ -14,8 +23,7 @@
     flex-wrap: wrap;
     justify-content: center;
     }
-
-    div.buttonWrapper{
+    .buttonWrapper{
       width: 100%;
     }
 }

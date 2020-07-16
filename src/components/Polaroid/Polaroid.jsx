@@ -11,11 +11,11 @@ class Polaroid extends Component {
     <div>
       <img src={src} alt="avatar"className={styles.avatar}/>
     </div>
-    <p className={styles.caption}>I'm all ears!</p>
+    <p className={styles.caption}>{this.props.text}</p>
   </div>
       </>
     )
   }
 }
- 
+
 export default Polaroid;

@@ -11,7 +11,7 @@ class ToolOverviewContainer extends Component {
       <>
         <NavigationBar />
         <div className={styles.Flexed}>
-          <ToolOverview tool={tool[1]} />
+          <ToolOverview tool={tool[1]}/>
         </div>
       </>
     );

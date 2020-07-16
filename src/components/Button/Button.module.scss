@@ -20,6 +20,11 @@
     *:focus {
         outline: none;
     }
+
+    &:disabled{
+    //   background-color: grey;
+    opacity: 0.5;
+    }
 }
 
 *:focus {
