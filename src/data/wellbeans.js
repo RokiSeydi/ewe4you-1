@@ -4,9 +4,10 @@ import greenbeanimg from "../assets/wellbeans/greenbean.png"
 import kidneybeanimg from "../assets/wellbeans/kidneybean.png"
 
 
-const wellbeans = [
+const wellbeans = {beans: [
+    
     {
-        "Id": "0001",
+        "Id": "flourishing",
         "title": "Flourishing",
         "image": bakedbeanimg,
         "text" :"When I am flourishing I find myself ",
@@ -16,7 +17,7 @@ const wellbeans = [
     },
    
     {
-        "Id": "0002",
+        "Id": "wilting",
         "title": "Wilting",
         "image": butterbeanimg,
         "text" :"When I am beginning to wilt I find myself ",
@@ -27,7 +28,7 @@ const wellbeans = [
    
 
     {
-        "Id": "0003",
+        "Id": "surviving",
         "title": "Surviving",
         "image": greenbeanimg,
         "text" :"When I am just surviving I find myself ",
@@ -38,7 +39,7 @@ const wellbeans = [
   
 
     {
-        "Id": "0004",
+        "Id": "crisis",
         "title": "Crisis",
         "image": kidneybeanimg,
         "text" :"When I am in crisis I find myself ",
@@ -47,6 +48,6 @@ const wellbeans = [
         feelings: [],
     },
 
-];
+]};
 
 export default wellbeans;

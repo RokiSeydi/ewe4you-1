@@ -5,7 +5,6 @@ import NavigationBar from "../../components/Navigation/NavigationBar";
 import { Link } from '@reach/router';
 
 class WellBeanContainer extends Component {
-
   render() {
     return (
       <>

@@ -10,25 +10,25 @@ import wellbeans from "../../data/wellbeans";
 
 class WellBean extends Component {
   state = {
-    wellbeans: null, 
+    wellbeans: wellbeans, 
     onBean: false,
     currentBean: "hello",
     currentInputText: "",
     otherBeans: []
    }
 
-   componentDidMount() {
+  componentDidMount() {
     this.getWellBeanState();
+    // this.updateBeanstoDB();
   }
 
   getWellBeanState = () => {
     firestore
-      .collection("WellBean").doc("testuid")
+      .collection("WellBean")
+      .doc("testuid")
       .get()
-      .then((doc) => {
-          this.setState({
-            wellbeans: doc.data()
-          })    
+      .then((doc) => {  
+        if (doc.data()) this.setState({ wellbeans: doc.data()});
       })
       .catch((err) => console.log(err));
   };
@@ -50,9 +50,6 @@ class WellBean extends Component {
     }
 
     shuffleBeans = (selectedBean) => {
-    console.log(selectedBean);
-    console.log(this.state.wellbeans.beans);
-
       return this.state.wellbeans.beans.filter((bean) => selectedBean.Id !== bean.Id);
     }
 
@@ -70,9 +67,8 @@ class WellBean extends Component {
           this.setState({
             currentBean: updatedBean,
             currentInputText: "",
-            wellbeans: beansArray
-          })
-          this.updateBeansInDB();
+            wellbeans: {beans: beansArray}
+          }, this.updateBeansInDB)
         }
       }else{
         let updatedBean = this.state.currentBean;
@@ -84,9 +80,8 @@ class WellBean extends Component {
         beansArray.push(this.state.otherBeans[2]);
         this.setState({
           currentBean: updatedBean,
-          wellbeans: beansArray
-        })
-        this.updateBeansInDB();
+          wellbeans: {beans: beansArray}
+        }, this.updateBeansInDB)
       }
     }
     
@@ -100,7 +95,7 @@ class WellBean extends Component {
       }
     }
 
-    updateBeansInDB = () => {   
+    updateBeansInDB = () => {
         firestore
           .collection("WellBean")
           .doc("testuid")
@@ -117,14 +112,13 @@ class WellBean extends Component {
     //       .collection("WellBean")
     //       .doc("testuid")
     //       .set({
-    //         beans: wellbeans
+    //         beans: this.state.wellbeans.beans
     //       })
-    //       .then((res) => console.log(res))
+    //       .then(this.getWellBeanState)
     //       .catch((err) => console.log(err)) 
     // }
 
   render() {
-    if(this.state.wellbeans!=null){     
     if (this.state.onBean) {
       return (
         <>
@@ -205,11 +199,6 @@ class WellBean extends Component {
         </div>
         </>
       );
-    }
-    }else{
-      return (<>
-      {/* {this.updateBeanstoDB()} */}
-      </>)
     }
   }
 }
