@@ -17,11 +17,12 @@
     }
 
     .inner {
-        height: 70%;
+        height: 80%;
         @extend %innerCard;
         background-color: $colour-dark-orange;
         border-radius: $border-radius;
         margin-bottom: 10px;
+        padding-top: 20px;
     }
 
  

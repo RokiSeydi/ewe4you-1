@@ -15,7 +15,17 @@ class NavigationBar extends Component {
   }
 
   handleNavbar = () => {
-      this.setState({ navbarOpen: !this.state.navbarOpen });
+    this.setState({ navbarOpen: !this.state.navbarOpen });
+    if (this.state.navbarOpen) {
+      document.querySelector("body").style.overflow = "initial";
+    } else {
+      window.scrollTo(0, 0);
+      document.querySelector("body").style.overflow = "hidden";
+    }
+  };
+
+  componentDidMount() {
+    document.querySelector("body").style.overflow = "initial";
   }
 
   render() { 
