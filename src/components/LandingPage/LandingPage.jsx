@@ -7,12 +7,16 @@ class LandingPage extends Component {
     return (
 
       <>
-      <NavigationBar/>
+        <NavigationBar
+          user={this.props.user}
+          signIn={this.props.signIn}
+          signOut={this.props.signOut} />
+
         <div className={styles.background}>
-            <h1>Welcome to Ewe4You</h1>
-            <h3>Teaching ewe about your mental wellbeing</h3> 
+          <h1>Welcome to Ewe4You</h1>
+          <h3>Teaching ewe about your mental wellbeing</h3>
         </div>
-        </>
+      </>
     );
   }
 }

@@ -18,7 +18,9 @@ class Routes extends Component {
   render() {
     return (
       <Router>
-        <LandingPage path="/" />
+        <LandingPage path="/" user={this.props.user}
+          signIn={this.props.signIn}
+          signOut={this.props.signOut} />
         <DashboardPage path="dashboard" />
         <TopicOverviewContainer path="topic-overview" />
         <ToolPage path="tools" />
