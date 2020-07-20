@@ -63,23 +63,43 @@ p {
         
     }
 
-    button {
-        background-color: $colour-light-green;
-        border-radius: $border-radius;
-        padding: 20px;
-        border: none;
-        width: 100px;
+    .buttons {
         display: flex;
-        margin: 0 auto; 
-        display: inline-block;
+        justify-content: center;
+        width: 45%;
+        margin: 0 auto;
+
+
+       
+        button {
+            background-color: $colour-light-green;
+            border-radius: $border-radius;
+            padding: 20px;
+            border: none;
+            width: 80px;
+            margin: 0 auto;
+            margin-top: 6px;
+            display: inline-block;
+        }
     }
-    
     button:hover {
         cursor: pointer;
     }
-
     
 }
+.affirmationCard {
+    border: 2px solid $colour-dark-orange;
+    background-color: $colour-orange;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    font-weight: bold;
+    padding: 10px;
+    height: 90%;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 20px;
+    opacity: 0.9;
+    }
 @media only screen and (max-width: 812px) {
     .header {
         overflow: scroll;
@@ -92,8 +112,15 @@ p {
     }
     .toolPage {
         padding-bottom: 10px;
-        button {
-            margin: 10px;
+        .buttons {
+            margin: 0 auto;
+            flex-direction: column;
+            align-items: center;
         }
+    }
+}
+@media only screen and (max-width: 320px) {
+    button {
+        width: 50px;
     }
 }
