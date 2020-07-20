@@ -6,8 +6,8 @@
     border-radius: $border-radius;
     padding: 10px 15px;
     display: flex;
-    // justify-content: flex-end;
-    align-items: center;
+    justify-content: center;
+    align-items: right;
     margin-top: 6px;
     width: 90%;
 
@@ -19,7 +19,7 @@
     input {
         border: none;
         border-radius: $border-radius/2;
-        padding: 4px;
+        padding-left: 4px;
         width: 100%;
         font-size: 1.5em;
     }
@@ -32,8 +32,8 @@
 
     span {
         font-size: 2.4em;
-        width: 20%;
-        padding-left: 15px;
+        width: 10%;
+        padding-left: 3%;
 
         .faPlus {
             color: green;
