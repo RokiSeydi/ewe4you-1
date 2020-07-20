@@ -27,6 +27,9 @@ class TopicOverview extends Component {
                   <Link to="/topics">
                     Go Back
                   </Link>
+                  <Link to="/wellbean">
+                    Wellbean Activity
+                  </Link>
                   <Link to="/topic-conclusion">
                     Topic Conclusion
                   </Link>
