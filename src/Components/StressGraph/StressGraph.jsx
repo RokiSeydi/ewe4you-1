@@ -10,39 +10,35 @@ class StressGraph extends Component {
   state = {  
   relationship: 1,
   work: 1,
-  life: 1
+  life: 1,
+  bodyImage: 1,
+  diet: 1
   }
 
-//   addToDatabase = () => {
-//     firestore
-//         .collection("StressGraph")
-//         .doc("Stressors")
-//         .set({ relationship: this.state.affirmations })
-//         .set({ work: this.state.work })
-//         .set({ life: this.state.life })
-//         .then((res) => console.log(res))
-//         .catch((err) => console.log(err))
-// }
+  addToDatabase = () => {
+    firestore
+        .collection("StressGraph")
+        .doc("Stressors")
+        .set({ relationship: this.state.relationship, work: this.state.work, life:this.state.life, bodyImage:this.state.bodyImage, diet:this.state.diet})
+        .then((res) => console.log(res))
+        .catch((err) => console.log(err))
+}
+
+getStressGraphResults = () => {
+  firestore
+  .collection("StressGraph")
+  .doc("Stressors")
+  .get()
+  .then((doc) => {
+      const data = doc.data();
+      this.setState({ relationship: data.relationship, work: data.work, life: data.life, bodyImage: data.bodyImage, diet: data.body});
+  })
+}
 
 
-// componentDidMount() {
-//   firestore
-//       .collection("StressGraph")
-//       .doc("Stressors")
-//       .get()
-//       .then((doc) => {
-//           const savedRelationship = doc.data().relationship;
-//           this.setState({ relationship: savedRelationship });
-//       })
-//       .then((doc) => {
-//         const savedWork = doc.data().work;
-//         this.setState({ work: savedWork });
-//       })
-//       .then((doc) => {
-//       const savedLife = doc.data().life;
-//       this.setState({ life: savedLife });
-//   })
-// }
+componentDidMount() {
+  this.getStressGraphResults();
+}
 
 // updateInput = () => {
 //   const updatedInput = [...this.state.relationship, ...this.state.work, ...this.state.life]
@@ -88,6 +84,17 @@ class StressGraph extends Component {
                     value: this.state.work,
                     color: "#6A2135",
                   },
+                  {
+                  title: "bodyImage",
+                  value: this.state.bodyImage,
+                  color: "#C13C37",
+                },
+
+                {
+                  title: "diet",
+                  value: this.state.diet,
+                  color: "#6A2135",
+                },
                 ]}
               /></div>
 

@@ -12,7 +12,7 @@ import PositiveAffirmations from "../components/PositiveAffirmations";
 import Gallery from "../containers/Gallery";
 import TopicOverviewContainer from "../containers/TopicOverviewContainer";
 import TopicConclusionContainter from "../containers/TopicConclusionContainter";
-import StressGraph from "../components/StressGraph/StressGraph";
+import StressGraph from "../components/StressGraph";
 
 class Routes extends Component {
   render() {
