@@ -1,12 +1,14 @@
 @import '../../variables.scss';
 
-
 .buttonSection{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
 
+.galleryContainer {
+  height: 100vh;
 }
 
 .gallery{
@@ -16,7 +18,7 @@
   align-items: center;
 
     .polaroidContainer{
-    height: 80vh;
+    height: 60vh;
     width: 80%;
     display: flex;
     flex-direction: row;

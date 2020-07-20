@@ -13,6 +13,7 @@ class Gallery extends Component {
     imagesFromDatabase: [],
     caption: "",
   };
+  
   componentDidMount = () => {
     this.getFileFromDatabase();
   };
@@ -137,6 +138,7 @@ class Gallery extends Component {
     this.checkFormCompleted()
     return (
       <>
+        <div className={styles.galleryContainer}>
         <NavigationBar />
         <h1>Selfie-Steem</h1>
         <h3>Upload a photo of yourself and add a comment</h3>
@@ -164,6 +166,8 @@ class Gallery extends Component {
             ))}
           </div>
         </section>
+
+        </div>
       </>
     );
   }
