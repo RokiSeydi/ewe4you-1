@@ -9,6 +9,7 @@ import TopicPage from "../containers/TopicPage";
 import MyAccount from "../components/MyAccount";
 
 import PositiveAffirmations from "../components/PositiveAffirmations";
+import StressGraph from "../components/StressGraph";
 import Gallery from "../containers/Gallery";
 import TopicOverviewContainer from "../containers/TopicOverviewContainer";
 import TopicConclusionContainter from "../containers/TopicConclusionContainter";
@@ -29,6 +30,7 @@ class Routes extends Component {
         <TopicConclusionContainter path="topic-conclusion" />
         <WellBeanContainer path="wellbean" />
         <Gallery path="gallery" />
+        <StressGraph path="stress-graph" />
       </Router>
     );
   }
