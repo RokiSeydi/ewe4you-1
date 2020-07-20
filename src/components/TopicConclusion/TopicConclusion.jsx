@@ -12,6 +12,7 @@ class TopicConclusion extends Component {
         <>
             <div className ={styles.container}>
                 <div className={styles.outer}>
+                    <p></p>
                     <div className={styles.inner}>
                         <div className={styles.h2Container}>
                             <h2>Congratulations on finishing {title}!</h2>
@@ -38,6 +39,7 @@ class TopicConclusion extends Component {
                             </Link>
                         </div>
                     </div>
+                    <br/>
                 </div>
             </div>
         </>
