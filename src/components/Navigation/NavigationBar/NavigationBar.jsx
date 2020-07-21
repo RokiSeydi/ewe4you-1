@@ -18,16 +18,6 @@ class NavigationBar extends Component {
     this.setState({ navbarOpen: !this.state.navbarOpen });
   }
 
-  getSignInOutJsx = () => {
-    const { signIn, signOut, user } = this.props;
-
-    return user ? (
-      <button onClick={signOut}>Sign Out</button>
-    ) : (
-        <button onClick={signIn}>Sign In</button>
-      );
-  };
-
   render() {
     return (
       <>
@@ -43,8 +33,7 @@ class NavigationBar extends Component {
                 <Link to="/tools"><p><span><FontAwesomeIcon icon="wrench"></FontAwesomeIcon></span>Toolbox</p></Link>
               </div>
               <div className={styles.account}>
-                {this.getSignInOutJsx()}
-                {/* <Link to="/myaccount"> <p><span><FontAwesomeIcon icon="user"></FontAwesomeIcon></span>My Account</p></Link> */}
+                <p onClick={this.props.signOut}><span><FontAwesomeIcon icon="sign-out-alt"></FontAwesomeIcon></span>Log out</p>
               </div>
             </div>
           </div>
