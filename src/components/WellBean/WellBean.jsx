@@ -193,7 +193,7 @@ class WellBean extends Component {
                 onClick={() => this.clickedBean(this.state.wellbeans.beans[3])} alt="bean"/>
                 </div>
                 <span>{this.state.wellbeans.beans[3].title}</span>
-              </div>         
+              </div>        
             </div>
           </section>
         </div>
