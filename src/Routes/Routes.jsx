@@ -3,7 +3,7 @@ import { Router } from "@reach/router";
 
 import LandingPage from "../components/LandingPage";
 
-import DashboardPage from "../containers/dashboard/DashboardPage";
+import DashboardPage from "../containers/Dashboard/DashboardPage";
 import ToolPage from "../containers/ToolPage";
 import TopicPage from "../containers/TopicPage";
 import MyAccount from "../components/MyAccount";
