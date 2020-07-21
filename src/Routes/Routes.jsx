@@ -23,17 +23,17 @@ class Routes extends Component {
         <LandingPage path="/" user={this.props.user}
           signIn={this.props.signIn}
           signOut={this.props.signOut} />
-          <PrivateRoutes path="/" signOut={this.props.signOut}>
-            <DashboardPage path="dashboard" signOut={this.props.signOut}/>
-            <TopicOverviewContainer path="topic-overview" signOut={this.props.signOut}/>
-            <ToolPage path="tools" signOut={this.props.signOut}/>
-            <TopicPage path="topics" signOut={this.props.signOut}/>
-            <PositiveAffirmations path="PositiveAffirmations" signOut={this.props.signOut}/>
-            <TopicPage path="topics" signOut={this.props.signOut}/>
-            <MyAccount path="myaccount" signOut={this.props.signOut}/>
-            <TopicConclusionContainter path="topic-conclusion" signOut={this.props.signOut}/>
-            <WellBeanContainer path="wellbean" signOut={this.props.signOut}/>
-            <Gallery path="gallery" signOut={this.props.signOut}/>
+          <PrivateRoutes path="/" signOut={this.props.signOut}> 
+            <DashboardPage path="dashboard" user={this.props.user}/>
+            <TopicOverviewContainer path="topic-overview"/>
+            <ToolPage path="tools"/>
+            <TopicPage path="topics"/>
+            <PositiveAffirmations path="PositiveAffirmations" user={this.props.user}/>
+            <TopicPage path="topics"/>
+            <MyAccount path="myaccount"/>
+            <TopicConclusionContainter path="topic-conclusion"/>
+            <WellBeanContainer path="wellbean" user={this.props.user}/>
+            <Gallery path="gallery"/>
           </PrivateRoutes>
       </Router>
     );

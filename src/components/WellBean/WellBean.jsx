@@ -18,6 +18,7 @@ class WellBean extends Component {
    }
 
   componentDidMount() {
+    console.log(this.props.user);
     this.getWellBeanState();
     // this.updateBeanstoDB();
   }
@@ -25,7 +26,7 @@ class WellBean extends Component {
   getWellBeanState = () => {
     firestore
       .collection("WellBean")
-      .doc("testuid")
+      .doc(this.props.user.uid)
       .get()
       .then((doc) => {  
         if (doc.data()) this.setState({ wellbeans: doc.data()});
@@ -98,7 +99,7 @@ class WellBean extends Component {
     updateBeansInDB = () => {
         firestore
           .collection("WellBean")
-          .doc("testuid")
+          .doc(this.props.user.uid)
           .set({
             beans: this.state.wellbeans.beans
           })

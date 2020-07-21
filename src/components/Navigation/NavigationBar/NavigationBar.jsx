@@ -12,9 +12,17 @@ import CollapseMenu from "../CollapseMenu/CollapseMenu";
 class NavigationBar extends Component {
   state = {
     navbarOpen: false
+    }
+
+stopScrolling = () => {
+  if(!this.state.navbarOpen){
+    document.body.style.overflow ="hidden";
   }
+}
+
 
   handleNavbar = () => {
+    this.stopScrolling();
     this.setState({ navbarOpen: !this.state.navbarOpen });
   }
 
@@ -41,7 +49,7 @@ class NavigationBar extends Component {
             <BurgerMenu handleNavbar={this.handleNavbar} />
           </div>
         </nav>
-        <CollapseMenu handleNavbar={this.handleNavbar} navbarState={this.state.navbarOpen} />
+        <CollapseMenu signOut={this.props.signOut} handleNavbar={this.handleNavbar} navbarState={this.state.navbarOpen} />
       </>
     );
   }

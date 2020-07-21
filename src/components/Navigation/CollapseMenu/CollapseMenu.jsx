@@ -13,7 +13,7 @@ class CollapseMenu extends Component {
             <Link to="/dashboard"><p>Dashboard</p></Link>
             <Link to="/topics"><p>Topics</p></Link>
             <Link to="/tools"><p>Toolbox</p></Link>
-            <Link to="/myaccount"><p>My Account</p></Link>
+            <p onClick={this.props.signOut}>Log out</p>
           </ul>
         </div>
       );

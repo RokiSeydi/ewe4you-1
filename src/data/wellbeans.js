@@ -13,7 +13,7 @@ const wellbeans = {beans: [
         "text" :"When I am flourishing I find myself ",
         "startUrl" :"",
         "backUrl" :"",
-        feelings: ["test1", "test2", "test3", "test4", "test5"],
+        feelings: [],
     },
    
     {
@@ -23,7 +23,7 @@ const wellbeans = {beans: [
         "text" :"When I am beginning to wilt I find myself ",
         "startUrl" :"",
         "backUrl" :"",
-        feelings: ["feeling test1", "feeling test2", "feeling test 3"],
+        feelings: [],
     },
    
 

@@ -17,7 +17,7 @@ class PrivateRoutes extends Component {
   render() {
     const { children } = this.props;
     return <>
-      {/* <NavigationBar /> */}
+      <NavigationBar signOut={this.props.signOut} />
       {children}
     </>;
   }
