@@ -21,6 +21,7 @@ class ToolCard extends Component {
       origin,
       innerColour,
       outerColour,
+      startUrl,
     } = this.props.tool;
 
     const innerStyle = {
@@ -41,7 +42,7 @@ class ToolCard extends Component {
               <div className={styles.playsection}>
               <p>{text}</p>
                 <span>
-                <Link to="/PositiveAffirmations">
+                <Link to={startUrl}>
                 <FontAwesomeIcon icon="play-circle"/>
                 <FontAwesomeIcon icon={['fab', 'play-circle']} />
                 </Link>
