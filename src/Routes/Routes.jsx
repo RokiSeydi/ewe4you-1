@@ -11,6 +11,7 @@ import Gallery from "../containers/Gallery";
 import TopicOverviewContainer from "../containers/TopicOverviewContainer";
 import ToolOverviewContainer from "../containers/ToolOverviewContainer";
 import TopicConclusionContainter from "../containers/TopicConclusionContainter";
+import WellBeanContainer from "../containers/WellBeanContainer";
 
 class Routes extends Component {
   render() {
@@ -26,6 +27,7 @@ class Routes extends Component {
         <TopicPage path="topics" />
         <MyAccount path="myaccount" />
         <TopicConclusionContainter path="topic-conclusion" />
+        <WellBeanContainer path="wellbean" />
         <Gallery path="gallery" />
       </Router>
     );

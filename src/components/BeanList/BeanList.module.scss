@@ -1,0 +1,50 @@
+@import "../../../src/variables.scss";
+
+
+.feelingContainer{
+    background-color: $colour-orange;
+    border-radius: $border-radius;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: right;
+    margin-top: 6px;
+    width: 90%;
+    
+
+    @media only screen and (max-height: 840px) {
+        padding: 4px;
+        height: 90%;
+    }
+
+    input {
+        border: none;
+        border-radius: $border-radius/2;
+        padding-left: 4px;
+        width: 100%;
+        font-size: 1.5em;
+    }
+
+    p {
+        padding: 4px;
+        width: 100%;
+        text-align: left;
+        font-size: 20px;
+    }
+
+    span {
+        font-size: 2.4em;
+        width: 10%;
+        padding-left: 3%;
+        padding-top: 1%;
+
+        .faPlus {
+            color: green;
+        }
+        
+        .faMinus {
+            color: red;
+        }
+    }
+}
+
