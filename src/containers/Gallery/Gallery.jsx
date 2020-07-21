@@ -13,7 +13,7 @@ class Gallery extends Component {
     imagesFromDatabase: [],
     caption: "",
   };
-  
+
   componentDidMount = () => {
     this.getFileFromDatabase();
   };
@@ -26,7 +26,6 @@ class Gallery extends Component {
   };
 
   uploadImage = () => {
-    // Need to make delete what we have in this.state.caption
     if (this.state.file) {
       const storage = firebase.storage().ref(this.state.storageRef);
       const upload = storage.put(this.state.file);
@@ -73,7 +72,14 @@ class Gallery extends Component {
       .set({
         imgUrls: array,
       })
-      .then(this.getFileFromDatabase())
+      .then(() => {
+        this.getFileFromDatabase();
+        this.setState({
+          file: [],
+          storageRef: "",
+          caption: "",
+        });
+      })
       .catch((err) => console.log(err));
   };
 
@@ -101,72 +107,70 @@ class Gallery extends Component {
     );
   };
 
-  // checkFormCompleted = () => {
-  //   let isCompleted = true;
-  //   for (const field in (this.state.caption) && (this.state.imagesFromDatabase)) {
-  //     if ((this.state.caption) && (this.state.imagesFromDatabase) === "") {
-  //       return
-  //       isCompleted = false
-  //   }
-  //   return isCompleted;
-  // };
-
-  // checkFormCompleted = () => {
-  //   let isCompleted = true;
-  //   for (const field in (this.state.caption) && (this.state.imagesFromDatabase)) {
-  //     if ((this.state.caption[field] === "") && (this.state.imagesFromDatabase[field] === "")) {
-  //       console.log('both have been uploaded')
-  //       return isCompleted = false;
-  //     } else {
-  //      console.log('not yet')
-  //     }
-  //   }
-  //   return isCompleted;
-  // };
-
   checkFormCompleted = () => {
     let isCompleted = true;
     if (this.state.caption === "" || this.state.file === []) {
       console.log("You forgot to upload a comment");
       isCompleted = false;
     }
+
     return isCompleted;
   };
 
+  deleteImage = (i) => {
+    const newImages = [...this.state.imagesFromDatabase];
+    newImages.splice(i, 1);
+    firestore
+      .collection("Selfie")
+      .doc("testuid")
+      .set({
+        imgUrls: newImages,
+      })
+      .then((res) => this.getFileFromDatabase())
+      .catch((err) => console.log(err));
+  };
 
   render() {
-    this.checkFormCompleted()
+    this.checkFormCompleted();
+    const activeClass = this.state.storageRef !== "" ? styles.active : "";
     return (
       <>
         <div className={styles.galleryContainer}>
-        <NavigationBar />
-        <h1>Selfie-Steem</h1>
-        <h3>Upload a photo of yourself and add a comment</h3>
-        <div className={styles.buttonSection}>
-          <label className={styles.customfileupload}>
-            <input type="file" onChange={this.handleFileChange} />
-            Select file
-          </label>
-          <Button
-            link={this.uploadComment}
-            className={styles.buttonWrapper}
-            text={"Add Comment"}
-          />
-          <Button
-            link={this.uploadImage}
-            className={styles.buttonWrapper}
-            text={"Upload"}
-            disabled={!this.checkFormCompleted()}
-          />
-        </div>
-        <section className={styles.gallery}>
-          <div className={styles.polaroidContainer}>
-            {this.state.imagesFromDatabase.map((imageObject) => (
-              <Polaroid src={imageObject.url} text={imageObject.caption} />
-            ))}
+          <NavigationBar />
+          <h1 className={styles.galleryTitle}>Selfie-Steem</h1>
+          <h3 className={styles.galleryTitle}>
+            Upload a photo of yourself and add a comment
+          </h3>
+          <div className={styles.buttonSection}>
+            <label className={`${styles.customfileupload} ${activeClass}`}>
+              <input type="file" onChange={this.handleFileChange} />
+              Select file
+            </label>
+            <Button
+              isActive={this.state.caption != ""}
+              link={this.uploadComment}
+              className={styles.buttonWrapper}
+              text={"Add Comment"}
+              caption={this.state.caption}
+            />
+            <Button
+              link={this.uploadImage}
+              className={styles.buttonWrapper}
+              text={"Upload"}
+              disabled={!this.checkFormCompleted()}
+            />
           </div>
-        </section>
-
+          <section className={styles.gallery}>
+            <div className={styles.polaroidContainer}>
+              {this.state.imagesFromDatabase.map((imageObject, index) => (
+                <Polaroid
+                  src={imageObject.url}
+                  text={imageObject.caption}
+                  delete={() => this.deleteImage(index)}
+                />
+              ))}
+            </div>
+          </section>
         </div>
       </>
     );

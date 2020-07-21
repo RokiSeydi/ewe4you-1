@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styles from './ToolOverview.module.scss';
-import Button from "../Button";
 import picture from "../../assets/placeholder.jpg";
 
 class ToolOverview extends Component {

@@ -1,6 +1,6 @@
 @import '../../variables.scss';
 
-.buttonSection{
+.buttonSection {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,23 +11,29 @@
   height: 100vh;
 }
 
-.gallery{
+.galleryTitle {
+  background-color: $colour-orange;
+
+}
+
+.gallery {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 
-    .polaroidContainer{
+  .polaroidContainer {
     height: 60vh;
-    width: 80%;
+    width: 95%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    }
-    .buttonWrapper{
-      width: 100%;
-    }
+  }
+
+  .buttonWrapper {
+    width: 100%;
+  }
 }
 
 .customfileupload {
@@ -47,13 +53,17 @@
   input[type="file"] {
     display: none;
   }
-  
+
   &:hover {
-      background-color: $colour-dark-blue;  
+    background-color: $colour-dark-blue;
+  }
+
+  &.active {
+    background-color: green;
   }
 
   *:focus {
-      outline: none;
+    outline: none;
   }
 }
 
