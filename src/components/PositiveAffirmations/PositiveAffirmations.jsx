@@ -58,6 +58,11 @@ class PositiveAffirmations extends Component {
         })
     }
 
+    showAffirmations = () => {
+        return this.state.affirmations.length > 0 ?  <section className={styles.affirmationCard}>{this.state.affirmations.map(affirmation => <p>{affirmation}</p>)}</section> : null;
+    }
+
+
     render() {
 
         return (
@@ -71,11 +76,13 @@ class PositiveAffirmations extends Component {
                 <section className={styles.toolPage}>
                     <p>Please add 3 - 5 affirmations about yourself or your life.</p>
                     <input type="text" onInput={(e) => this.getUserInput(e)} />
+                    <div className={styles.buttons}>
                     <button onClick={this.updateAffirmations}>Add</button>
                     <button onClick={this.deleteAffirmations}>Delete</button>
                     <button onClick={this.addToDatabase}>Save</button>
-                    {this.state.affirmations.map(affirmation => <p>{affirmation}</p>)}
+                    </div>
                 </section>
+                 {this.showAffirmations()}
             </>
 
         );
