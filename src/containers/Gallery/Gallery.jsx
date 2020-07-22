@@ -45,7 +45,7 @@ class Gallery extends Component {
           alert("file uploaded");
           this.getDownloadURL(this.state.storageRef);
         }
-      );
+      ).catch(err => console.log(err));
     } else {
       alert("No file chosen");
     }

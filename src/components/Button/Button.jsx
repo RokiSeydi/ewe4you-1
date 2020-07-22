@@ -8,5 +8,5 @@ class Button extends Component {
     return <button className={`${styles.button} ${activeClass}`} onClick={this.props.link} disabled={this.props.disabled}>{this.props.text}</button>;
   }
 }
- 
+
 export default Button;
