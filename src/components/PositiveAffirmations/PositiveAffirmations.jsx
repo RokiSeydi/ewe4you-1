@@ -14,7 +14,7 @@ class PositiveAffirmations extends Component {
             .collection("affirmations")
             .doc(this.props.user.uid)
             .set({ affirmations: this.state.affirmations })
-            .then((res) => console.log(res))
+            .then((res) => console.log(res), alert(`Your affirmations have been saved.`))
             .catch((err) => console.log(err))
     }
 
@@ -24,9 +24,12 @@ class PositiveAffirmations extends Component {
             .doc(this.props.user.uid)
             .get()
             .then((doc) => {
-                const savedAffirmations = doc.data().affirmations;
-                this.setState({ affirmations: savedAffirmations });
+                if(doc.data()) { 
+                    const savedAffirmations = doc.data().affirmations;
+                    this.setState({ affirmations: savedAffirmations })
+                };
             })
+            .catch((err) => console.log(err));
     }
 
     getUserInput = (e) => {

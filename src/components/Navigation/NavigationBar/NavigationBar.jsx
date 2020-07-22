@@ -15,8 +15,11 @@ class NavigationBar extends Component {
     }
 
 stopScrolling = () => {
+  console.log("nav bar is " + this.state.navbarOpen);
   if(!this.state.navbarOpen){
-    document.body.style.overflow ="hidden";
+    document.body.style.overflow = "hidden"
+  }else {
+    document.body.style.overflow = "visible"
   }
 }
 

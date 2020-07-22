@@ -1,3 +1,5 @@
+@import "../../../variables.scss";
+
 .collapseMenu {
     position: fixed;
     top: 4.5rem;
@@ -7,17 +9,32 @@
     z-index: 1;
     height: calc(100vh - 60px);
     top: 60px;
+
     .navLinks {
         list-style-type: none;
         padding: 2rem 1rem 2rem 2rem;
-        & p {
+
+        p {
             font-size: 1.4rem;
             line-height: 2;
             color: #dfe6e9;
             text-transform: uppercase;
             cursor: pointer;
+            text-decoration: none;
+
+            a {
+                color: #dfe6e9;
+                text-decoration: none;
+            }
+
             &:hover {
+                background-color: $colour-dark-blue;
+                border-radius: $border-radius;
                 color: #fdcb6e;
+
+                a {
+                    color: #fdcb6e;
+                }
             }
         }
     }

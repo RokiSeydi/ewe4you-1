@@ -10,10 +10,10 @@ class CollapseMenu extends Component {
       return (
         <div className={styles.collapseMenu}>
           <ul className={styles.navLinks}>
-            <Link to="/dashboard"><p>Dashboard</p></Link>
-            <Link to="/topics"><p>Topics</p></Link>
-            <Link to="/tools"><p>Toolbox</p></Link>
-            <p onClick={this.props.signOut}>Log out</p>
+          <p onClick={this.props.handleNavbar}><Link to="/dashboard">Dashboard</Link></p>
+          <p onClick={this.props.handleNavbar}><Link to="/topics">Topics</Link></p>
+          <p onClick={this.props.handleNavbar}> <Link to="/tools">Toolbox</Link></p>
+          <p onClick={this.props.signOut}>Log out</p>
           </ul>
         </div>
       );
