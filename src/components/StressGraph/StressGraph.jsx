@@ -13,8 +13,7 @@ class StressGraph extends Component {
       work: 1,
       life: 1,
       bodyImage: 1,
-      diet: 1,
-  
+      diet: 1, 
     },
     value: ""
   }
@@ -25,15 +24,6 @@ class StressGraph extends Component {
     return graphUpdate;
   }
 
-
-
-  // 1. create an object in state (graph)
-  // 2. we need to create a function that says for each value (stressor) add 1
-  // 3. we need to make sure that the database knows that it needs to add 1, so in .set we put the function we wrote for the add 1
-  // 4. getstressgraphresults stays mostly the same, we just need to make sure that with write the this.set state like state 
-  // 5. lets not forget that the handle change needs to be triggered to, so we need tohave a set state that passes the value as an event listener
-
-  // this is sending data to the database for each specific value as seen in state
   addToDatabase = (e) => {
     e.preventDefault()
     firestore
@@ -44,7 +34,6 @@ class StressGraph extends Component {
         .catch((err) => console.log(err))
 }
 
-  //this is setting the state in accordance with what is in the database
   getStressGraphResults = () => {
     firestore
     .collection("StressGraph")
