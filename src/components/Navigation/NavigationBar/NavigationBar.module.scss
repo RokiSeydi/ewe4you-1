@@ -1,4 +1,5 @@
 @import "../../../variables.scss";
+
 nav {
     height: $nav-height;
     display: flex;
@@ -6,129 +7,132 @@ nav {
     flex-direction: row;
     align-items: center;
     background-color: $colour-blue;
-
-    .account {
-        color: $colour-sky;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        text-decoration: none;
-        width: 50%;
-
-        a {
-            text-decoration: none;
-            align-items: center;
-            color: white;
-
-            &:hover {
-                background-color: $colour-dark-blue;
-                border-radius: $border-radius;
-
-                p span {
-                    color: white;
-                    padding: 10px;
-                    font-size: 20px;
-                }
-            }
-        }
-
-        p {
-            padding: 10px;
-            font-size: 20px;
-            padding-right: 40px;
-
-            span {
-                color: $colour-dark-blue;
-                padding: 10px;
-                font-size: 20px;
-            }
-
-            &:hover {
-                background-color: $colour-dark-blue;
-                border-radius: $border-radius;
-
-                span {
-                    color: white;
-                }
-            }
-        }
-    }
-
+    padding: 0px;
+    margin: 0px;
+    
     img {
-        height: $nav-height;
+        height: $nav-height/1.2;
         width: auto;
+        padding: 0px;
+        margin-left: 10px;
+
+        &:hover {
+            height: $nav-height;
+        }
     }
 
-    .links {
-        margin-left: 10px;
-        color: $colour-sky;
+    .FlexContainer {
         display: flex;
-        align-items: center;
-        justify-content: flex-start;
         width: 100%;
-
-        a {
-            text-decoration: none;
-            color: white;
-
-            &:hover {
-                background-color: $colour-dark-blue;
-                border-radius: $border-radius;
-
-                p span {
-                    color: white;
-                    padding: 10px;
-                    font-size: 20px;
+    
+        .NavLinks {
+            width: 100%;
+            display: flex;
+            
+            p {
+                color: #dfe6e9;
+                font-weight: 600;
+                border-bottom: 1px solid transparent;
+                transition: all 300ms linear 0s;
+                cursor: pointer;
+                text-transform: uppercase;
+                
+                
+                &:hover {
+                    color: #fdcb6e;
                 }
             }
-        }
+            
+            .links {
+                margin-left: 10px;
+                color: $colour-sky;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                width: 75%;
+                
+                
+                a {
+                    text-decoration: none;
+                    color: white;
+                    padding: 10px;
+                    
+                    &:hover {
+                        background-color: $colour-dark-blue;
+                        border-radius: $border-radius;
+                        p span {
+                            color: white;
+                        }
+                    }
+                }
+                p {
+                    padding: 0px;
+                    font-size: 20px;
+                    text-decoration: none;
+                }
+                p span {
+                    color: $colour-dark-blue;
+                    font-size: 20px;
+                    padding-right: 5px;
+                }
+            }
 
-        p {
-            padding: 10px;
-            font-size: 20px;
-            text-decoration: none;
-        }
 
-        p span {
-            color: $colour-dark-blue;
-            padding: 10px;
-            font-size: 20px;
+            .account {
+                color: $colour-sky;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                width: 35%;
+                padding-right: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    padding: 10px;
+
+                    &:hover {
+                        background-color: $colour-dark-blue;
+                        border-radius: $border-radius;
+
+                        p span {
+                            color: white;
+                        }
+                    }
+                }
+                
+                p {
+                    padding: 10px;
+                    font-size: 20px;
+                    
+                    &:hover {
+                        background-color: $colour-dark-blue;
+                        border-radius: $border-radius;
+
+                        span{
+                            color: white;
+                        }
+                    }
+                }
+                
+                p span {
+                    color: $colour-dark-blue;
+                    font-size: 20px;
+                    padding-right: 5px;
+                }
+            }
+
+            @media (max-width: $tablet-break-point) {
+                display: none;
+            }
         }
     }
-}
 
-.FlexContainer {
-    display: flex;
-    margin: auto;
-    padding: 0 2rem;
-    width: 100%;
-}
-
-.NavLinks {
-    width: 100%;
-    display: flex;
-
-    & p {
-        color: #dfe6e9;
-        text-transform: uppercase;
-        font-weight: 600;
-        border-bottom: 1px solid transparent;
-        margin: 0 1.5rem;
-        transition: all 300ms linear 0s;
-        cursor: pointer;
-        &:hover {
-            color: #fdcb6e;
+    .BurgerWrapper {
+        @media (min-width: 769px) {
+            margin: auto 0;
+            display: none;
         }
     }
 
-    @media (max-width: 768px) {
-        display: none;
-    }
-}
-
-.BurgerWrapper {
-    @media (min-width: 768px) {
-        margin: auto 0;
-        display: none;
-    }
 }

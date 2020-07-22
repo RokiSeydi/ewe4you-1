@@ -3,11 +3,11 @@
 const tools = [
     {
         "Id": "0001",
-        "title": "Slow Breathing",
+        "title": "Positive Affirmations",
         "image": "",
-        "text" :"Exercise to breathe deeply for 60 seconds.",
-        "origin": "Locked",
-        "startUrl" :"",
+        "text" :"Exercise to create a more positive image of yourself",
+        "origin": "Unlocked",
+        "startUrl" :"/PositiveAffirmations",
         "backUrl" :"",
         "innerColour" : "#3DAEDC",
         "outerColour" : "#87CEEB",

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styles from "./NavigationBar.module.scss";
 
-import logo from "../../../assets/logo.jpg";
+import logo from "../../../assets/sheepLogo.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { Link } from '@reach/router';
