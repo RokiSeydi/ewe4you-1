@@ -16,26 +16,28 @@ class TopicOverview extends Component {
           <div className={styles.outer}>
                 <h1>{title}</h1>  
             <div className={styles.inner}>
-              <div>
+              <div className={styles.img}>
                 <img src={picture} alt={title}/>
               </div>
-              <div>
+              <div className={styles.text}>
                 <p>{text}</p>
-                  <Link to="">
-                    Start Topic
-                  </Link>
-                  <Link to="/topics">
-                    Go Back
-                  </Link>
-                  <Link to="/wellbean">
-                    Wellbean Activity
-                  </Link>
-                  <Link to="/topic-conclusion">
-                    Topic Conclusion
-                  </Link>
-                </div>
+              </div>
+              <div className={styles.links}>
+                <Link to="">
+                  Start Topic
+                </Link>
+                <Link to="/topics">
+                  Go Back
+                </Link>
+                <Link to="/wellbean">
+                  Wellbean Activity
+                </Link>
+                <Link to="/topic-conclusion">
+                  Topic Conclusion
+                </Link>
+              </div>
             </div>
-                <br/>
+            <br/>
           </div>
         </div>
       </>

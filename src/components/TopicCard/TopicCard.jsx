@@ -26,7 +26,7 @@ class TopicCard extends Component {
 
     return ( 
         <section className={styles.Topics} style={outerStyle}>
-            <div >
+            <div className={styles.title}>
               <h2>{title}</h2>
             </div>
             <div style={innerStyle} className={styles.inner}>
