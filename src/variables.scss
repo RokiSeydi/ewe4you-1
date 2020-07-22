@@ -36,41 +36,40 @@ $mobile-break-point: 426px;
 $tablet-break-point: 769px;
 
 %card {
-    max-height: 500px;
-    max-width: 320px;
-    min-width: 300px;
-    min-height: 300px;
+    width: 320px;
+    height: 400px;
     border-radius: 30px;
     box-shadow: $box-shadow;
-    background-color: white;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin: 0 $margin-single*2;
 
 
-  }
-  %innerCard {
-    // max-height: 308px;
-    // min-height: 308px;
-    // max-width: 267px;
-    // min-width: 267px;
-    margin: 0 auto;
-    height: 70%;
-    width: 90%;
-  }
+    %innerCard {
+      height: 70%;
+      width: 90%;
+      overflow-y: auto;
 
-  %expandedCard {
-    max-height: 779px;
-    max-width: 1177px;
-    border-radius: 30px;
-    box-shadow: $box-shadow;
-  }
-
-  %innerExpandedCard {
-    max-height: 497px;
-    max-width: 818px;
-    border-radius: 30px;
-  }
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
   
+    %expandedCard {
+      max-height: 779px;
+      max-width: 1177px;
+      border-radius: 30px;
+      box-shadow: $box-shadow;
+    }
   
+    %innerExpandedCard {
+      max-height: 497px;
+      max-width: 818px;
+      border-radius: 30px;
+    }
+}
+  
+@media only screen and (min-width: $tablet-break-point) {
+
+}

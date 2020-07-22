@@ -57,22 +57,5 @@ render() {
   )
 }
 }
-// class CardCarousel extends Component {
-// getCard = () => {
-//   const {cardType} = this.props;
-//  if (cardType === 'tools') {
-//  return <ToolCard />
-//  }
-//  if (cardType === 'topics') {
-//  return <TopicCard />
-//  }
-// }
-//   render () {
-//     return (
-//       <Carousel>
-        
-//       </Carousel>
-//     )
-//   }
-// }
+
 export default CardCarousel

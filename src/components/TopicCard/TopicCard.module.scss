@@ -2,28 +2,26 @@
 
 .Topics {
     @extend %card;
-    background-color: $colour-orange;
+    // background-color: $colour-orange;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    height: 100vh;
+    justify-content: space-between;
     margin-bottom: 10px;
+    margin-top: 10px;
 
     .title {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 30%;
-        padding: 20px;
+        padding: 5px;
     }
 
     .inner {
-        height: 80%;
         @extend %innerCard;
-        background-color: $colour-dark-orange;
         border-radius: $border-radius;
         margin-bottom: 10px;
-        padding-top: 20px;
+        padding: 5px;
     }
 
  
@@ -36,27 +34,22 @@
 @media only screen and (min-width: $tablet-break-point) {
 
     .Topics {
-        background-color: $colour-orange;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
-        height: 100vh;
-        
+        height: 500px;
+        width: 380px;
     
         .title {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 30%;
-            padding: 20px;
+            padding-left: 5px;
+            padding-right: 5px;
         }
     
-        .inner {
-            height: 70%;
-            background-color: $colour-dark-orange;
-            border-radius: $border-radius;
-            margin-bottom: 10px;
-        }
+        // .inner {
+            
+        // }
     
      
         .heading {
