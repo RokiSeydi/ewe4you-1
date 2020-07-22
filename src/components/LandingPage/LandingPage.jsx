@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styles from './LandingPage.module.scss';
-import GoogleButton from 'react-google-button';
+import GoogleButton from "react-google-button/dist/react-google-button"
 
 import firebase from "../../firebase";
 import { navigate } from "@reach/router";
