@@ -8,7 +8,7 @@
     border: none;
     padding: 20px;
     margin: 20px;
-    font-size: $font-size-h3;
+    font-size: 90%;
     
     &:hover {
         background-color: $colour-dark-blue;  
@@ -16,6 +16,10 @@
 
     *:focus {
         outline: none;
+    }
+
+    @media only screen and (max-width: 400px) {
+        width: 180px;
     }
 }
 

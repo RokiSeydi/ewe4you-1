@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styles from './TopicOverview.module.scss';
+import Button from '../../components/Button/Button';
 import { Link } from '@reach/router';
 
 class TopicOverview extends Component {
@@ -22,17 +23,18 @@ class TopicOverview extends Component {
               <div>
                 <p>{text}</p>
                   <Link to="">
-                    Start Topic
+                    <Button text={'start topic'}/>
                   </Link>
                   <Link to="/topics">
-                    Go Back
+                    <Button text={'Go Back'}/>
                   </Link>
                   <Link to="/wellbean">
-                    Wellbean Activity
+                    <Button text={'Wellbean Activity'}/>
                   </Link>
                   <Link to="/topic-conclusion">
-                    Topic Conclusion
+                    <Button text={'Topic Conclusion'}/>
                   </Link>
+                 
                 </div>
             </div>
                 <br/>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styles from './TopicConclusion.module.scss';
+import Button from '../../components/Button/Button';
 import { Link } from '@reach/router';
 
 class TopicConclusion extends Component {
@@ -27,16 +28,16 @@ class TopicConclusion extends Component {
                                 <li>topic content</li>
                             </ul>
                         </div>
-                        <div className={styles.buttons}>
-                            <Link to="/topic-overview">
-                                To Beginning
-                            </Link>
-                            <Link to="/dashboard">
-                                Dashboard
-                            </Link>
-                            <Link to="/tools">
-                                Unlocked tools
-                            </Link>
+                        <div className={styles.button}>
+                        <Link to="/topic-overview">
+                           <Button text={'Beginning'}/>
+                        </Link>
+                        <Link to="/dashboard">
+                            <Button text={'Dashboard'}/>
+                        </Link>
+                        <Link to="/tools">
+                           <Button text={'Unlocked Tools'}/>
+                        </Link>
                         </div>
                     </div>
                     <br/>
@@ -48,3 +49,12 @@ class TopicConclusion extends Component {
 }
 
 export default TopicConclusion;
+// <Link to="/topic-overview">
+// To Beginning
+// </Link>
+// <Link to="/dashboard">
+//     Dashboard
+// </Link>
+// <Link to="/tools">
+//     Unlocked tools
+// </Link>

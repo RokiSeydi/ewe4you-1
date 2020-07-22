@@ -3,6 +3,7 @@ import TopicConclusion from "../../components/TopicConclusion";
 import styles from "./TopicConclusionContainter.module.scss";
 import NavigationBar from "../../components/Navigation/NavigationBar";
 
+
 import topics from "../../data/topics";
 
 class TopicConclusionContainter extends Component {

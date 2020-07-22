@@ -16,12 +16,12 @@ class WellBeanContainer extends Component {
                   <h1>{"Well Bean"}</h1>  
               <div className={styles.inner}>
                   <WellBean />
-                <div >
+                  <div >
                     <Link to="/topic-overview">
                       <Button text={"Overview"}/>
                     </Link>
                     <Link to="/topic-conclusion">
-                      <Button text={"Conclusion"}/>
+                      <Button text={"Topic Conclusion"}/>
                     </Link>
                   </div>
               </div>

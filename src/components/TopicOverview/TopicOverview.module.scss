@@ -46,21 +46,21 @@
 
 
 
-    a {
-        display: inline-block;
-        color: black;
-        background-color: $colour-blue;
-        border-radius: $border-radius;
-        border: none;
-        padding: 20px;
-        margin: 20px;
-        width: 25%;
-        font-size: $font-size-h4;
+    // a {
+    //     display: inline-block;
+    //     color: black;
+    //     background-color: $colour-blue;
+    //     border-radius: $border-radius;
+    //     border: none;
+    //     padding: 20px;
+    //     margin: 20px;
+    //     width: 25%;
+    //     font-size: $font-size-h4;
         
-        &:hover {
-            background-color: $colour-dark-blue;  
-        }
-    }
+    //     &:hover {
+    //         background-color: $colour-dark-blue;  
+    //     }
+    // }
 }
 
 
