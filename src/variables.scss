@@ -67,5 +67,26 @@ $nav-height: 60px;
     max-width: 818px;
     border-radius: 30px;
   }
-  
-  
+
+  %button {
+    color: black;
+    background-color: $colour-blue;
+    border-radius: $border-radius;
+    width: 30%;
+    border: none;
+    padding: 20px;
+    margin: 20px;
+    font-size: $font-size-h3;
+    
+    &:hover {
+        background-color: $colour-dark-blue;  
+    }
+
+    *:focus {
+        outline: none;
+    }
+}
+
+    *:focus {
+        outline: none;
+}

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import WellBean from "../../components/WellBean";
 import styles from "./WellBeanContainer.module.scss";
 import NavigationBar from "../../components/Navigation/NavigationBar";
+import Button from "../../components/Button/Button";
 import { Link } from '@reach/router';
 
 class WellBeanContainer extends Component {
@@ -15,12 +16,12 @@ class WellBeanContainer extends Component {
                   <h1>{"Well Bean"}</h1>  
               <div className={styles.inner}>
                   <WellBean />
-                <div className={styles.buttonContainer}>
+                <div >
                     <Link to="/topic-overview">
-                      Go Back
+                      <Button text={"Overview"}/>
                     </Link>
                     <Link to="/topic-conclusion">
-                      Topic Conclusion
+                      <Button text={"Conclusion"}/>
                     </Link>
                   </div>
               </div>

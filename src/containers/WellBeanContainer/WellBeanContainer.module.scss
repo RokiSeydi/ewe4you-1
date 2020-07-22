@@ -60,26 +60,26 @@
 
 
     .buttonContainer{
-        width: 100%;
+        @extend %button;
         height: 15%;
         margin-top: 10px;
-        
-        a {
-            display: inline-block;
-            color: black;
-            background-color: $colour-blue;
-            border-radius: $border-radius;
-            border: none;
-            padding: 20px;
-            margin: 20px;
-            width: 30%;
-            font-size: 1em;
+    }
+        // button {
+        //     display: inline-block;
+        //     color: black;
+        //     border-radius: $border-radius;
+        //     border: none;
+        //     padding: 20px;
+        //     margin: 20px;
+        //     width: 30%;
+        //     font-size: 1em;
             
-            &:hover {
-                background-color: $colour-dark-blue;  
-            }
-        }
-   
+        //     &:hover {
+        //         background-color: $colour-dark-blue;  
+        //     }
+        // }
+    
+    
         @media only screen and (max-width: 768px) {
             flex-direction: column;
             display: flex;
@@ -88,14 +88,14 @@
             margin-top: 10px;
             margin-bottom: 10px;
 
-            a {
-                width: 75%;
+            button {
+                width: 50vw;
                 padding: 20px;
-                margin: 10px;
+                margin: 8px;
             }
         }
        
     }
-}
+
 
 
