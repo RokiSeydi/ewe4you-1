@@ -34,6 +34,7 @@ class Gallery extends Component {
         (snapshot) => {
           let percentage =
             (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            console.log(percentage);
         },
 
         (err) => {
@@ -147,7 +148,7 @@ class Gallery extends Component {
               Select file
             </label>
             <Button
-              isActive={this.state.caption != ""}
+              isActive={this.state.caption !== ""}
               link={this.uploadComment}
               className={styles.buttonWrapper}
               text={"Add Comment"}
