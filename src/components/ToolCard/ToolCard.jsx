@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faTachometerAlt, faComments, faWrench, faUser, faPlayCircle } from '@fortawesome/free-solid-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons';
+import { Link } from "@reach/router";
 
 library.add(faTachometerAlt, faComments, faWrench, faUser, fab, faPlayCircle)
 
@@ -38,10 +39,10 @@ class ToolCard extends Component {
         </div>
         <div className={styles.playsection}>
           <p>{text}</p>
-          <a href={toolsOverview}>
+          <Link to={toolsOverview}>
             <FontAwesomeIcon icon="play-circle" />
             <FontAwesomeIcon icon={["fab", "play-circle"]} />
-          </a>
+          </Link >
           <p>{origin}</p>
         </div>
       </section>
