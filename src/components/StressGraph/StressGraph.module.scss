@@ -43,12 +43,13 @@
                 flex-direction: column;
                 float: left;
                 p {
-                    font-size: $font-size-p * 1.0;
+                    font-size: $font-size-p * 0.6;
                     padding: 0px;
+                    text-align: justify;
                 }
             }
             form {
-                font-size: $font-size-p * 0.8;
+                font-size: $font-size-p * 0.6;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -56,11 +57,36 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    width: 70%;
+                    width: 60%;
                     margin-top: 10px;
                 }
                 input.btn {
                     margin-top: 10px;
+                }
+                .relationship {
+                    background-color: #72C9CF;
+                    border-radius: 20%;
+                    padding: 3px;
+                }
+                .work {
+                    background-color: #B4C740;
+                    border-radius: 20%;
+                    padding: 3px;
+                }
+                .life {
+                    background-color: #f5b700;
+                    border-radius: 20%;
+                    padding: 3px;
+                }
+                .diet {
+                    background-color: #fb6376;
+                    border-radius: 20%;
+                    padding: 3px;
+                }
+                .bodyImage {
+                    background-color: #a7abdd;
+                    border-radius: 20%;
+                    padding: 3px;
                 }
             }
         }
@@ -81,14 +107,18 @@
         @media screen and (min-width: 768px) {
             .inner {
                 flex-direction: row;
-                .inputContainer p {
-                    font-size: $font-size-p * 1.5;
-                }
-                form {
-                    font-size: $font-size-p * 1.1;
-                    input.btn {
-                        margin-top: 15px;
-                        font-size: 18px;
+                .inputContainer {
+                    width: 50%;
+                    p {
+                        font-size: $font-size-p * 1.0;
+                        margin-bottom: 8px;
+                    }
+                    form {
+                        font-size: $font-size-p * 1.0;
+                        input.btn {
+                            margin-top: 15px;
+                            font-size: 18px;
+                        }
                     }
                 }
             }

@@ -72,32 +72,35 @@ class StressGraph extends Component {
               <h2>Living Stress Graph</h2>
            
               <div className={styles.graph}><PieChart
+              labelStyle={{fontSize:"10px"}}
+              label={({ dataEntry }) => dataEntry.value}
+              labelPosition={75}
                 data={[
                   {
                     title: "Life",
                     value: this.state.graph.life,
-                    color: "#E38627",
+                    color: "#f5b700",
                   },
                   {
                     title: "Relationship",
                     value: this.state.graph.relationship,
-                    color: "#C13C37",
+                    color: "#72C9CF",
                   },
                   {
                     title: "Work",
                     value: this.state.graph.work,
-                    color: "#6A2135",
+                    color: "#B4C740",
                   },
                   {
                   title: "bodyImage",
                   value: this.state.graph.bodyImage,
-                  color: "#c13224",
+                  color: "#a7abdd",
                 },
 
                 {
                   title: "diet",
                   value: this.state.graph.diet,
-                  color: "#c13d57",
+                  color: "#fb6376",
                 },
                 ]}
               /></div>
@@ -105,34 +108,34 @@ class StressGraph extends Component {
           
               <div className={styles.inputContainer}>
 
-              <p>What causes you the most stress?</p>
+              <p>Add what causes you the most stress, and see in realtime what others have selected:</p>
                 <form className={styles.form} onSubmit={this.addToDatabase}>
                   <div>
-                    <label for="relationship">Relationship</label>
+                    <label for="relationship" className={styles.relationship}>Relationship</label>
                     <input type="radio" value="relationship" id="relationship"
                    onChange={this.handleChange} name="stressor" />
                   </div>
 
                   <div>
-                    <label for="work">Work</label>
+                    <label for="work" className={styles.work}>Work</label>
                     <input type="radio" value="work" id="work"
                     onChange={this.handleChange} name="stressor"/>
                   </div>
 
                   <div>
-                    <label for="life">Life</label>
+                    <label for="life" className={styles.life}>Life</label>
                     <input type="radio" value="life" id="life"
                     onChange={this.handleChange} name="stressor"/>
                   </div>
 
                   <div>
-                    <label for="bodyImage">Body Image</label>
+                    <label for="bodyImage" className={styles.bodyImage}>Body Image</label>
                     <input type="radio" value="bodyImage" id="bodyImage"
                     onChange={this.handleChange} name="stressor"/>
                   </div>
 
                   <div>
-                    <label for="diet">Diet</label>
+                    <label for="diet" className={styles.diet}>Diet</label>
                     <input type="radio" value="diet" id="diet"
                     onChange={this.handleChange} name="stressor"/>
                   </div>

@@ -29,6 +29,9 @@ class TopicOverview extends Component {
                 <Link to="/topics">
                   Go Back
                 </Link>
+                <Link to="/stress-graph">
+                  Living Stress Graph
+                </Link>
                 <Link to="/wellbean">
                   Wellbean Activity
                 </Link>
