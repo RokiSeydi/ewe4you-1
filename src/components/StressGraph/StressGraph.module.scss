@@ -9,7 +9,7 @@
             padding: $padding-single;
             h2 {
                 padding: 5px;
-                font-size: $font-size-h3;
+                font-size: $font-size-h3*0.7;
                 margin-bottom: 10px;
                 position: absolute;
                 top: 10px;
@@ -72,8 +72,27 @@
             margin-bottom: 5px;
         }
         
+        @media screen and (min-width: 400px) {
+            .container h2 {
+                font-size: $font-size-h3*0.9;
+            }
+        }
+        
         @media screen and (min-width: 768px) {
             .inner {
                 flex-direction: row;
+                .inputContainer p {
+                    font-size: $font-size-p * 1.5;
+                }
+                form {
+                    font-size: $font-size-p * 1.1;
+                    input.btn {
+                        margin-top: 15px;
+                        font-size: 18px;
+                    }
+                }
+            }
+            .container h2 {
+                font-size: $font-size-h3*2;
             }
         }
