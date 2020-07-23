@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import styles from "./Gallery.module.scss";
 import Polaroid from "../../components/Polaroid";
-import NavigationBar from "../../components/Navigation/NavigationBar";
 import Button from "../../components/Button/";
 import firebase from "../../firebase";
 import { firestore } from "../../firebase";
@@ -137,7 +136,6 @@ class Gallery extends Component {
     return (
       <>
         <div className={styles.galleryContainer}>
-          <NavigationBar />
           <h1 className={styles.galleryTitle}>Selfie-Steem</h1>
           <h3 className={styles.galleryTitle}>
             Upload a photo of yourself and add a comment

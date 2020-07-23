@@ -1,23 +1,34 @@
 .background {
-    min-width: 100%;
-    min-height: 100%;
+    width: 100vw;
+    height: 100vh;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    h1 {
-        font-size: 40px;
-        margin: 20px;
+    .titles{
+        height:50%;
+
+        h1 {
+            font-size: 40px;
+            margin: 19px;
+        }
+
+        h3 {
+            font-size: 20px;
+            margin: 5px;
+        }
     }
 
-    h3 {
-        font-size: 20px;
-        margin: 5px;
+    .buttons{
+        height:70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
-@media only screen and (min-width: 321px) {
+@media only screen and (min-width: 400px) {
     .background {
         min-width: 100%;
         min-height: 100%;
@@ -33,27 +44,77 @@
         h3 {
             font-size: 30px;
         }
+
     }
 }
 
 @media only screen and (min-width: 769px) {
     .background {
-        min-width: 100%;
-        min-height: 100%;
+        width: 100vw;
+        height: 100vh;
     
         display: flex;
         flex-direction: column;
         align-items: center;
-   
-        h1 {
-            font-size: 100px;
-            margin: 20px;
+        justify-content: space-evenly;
+
+        .titles{
+            height: 30%;
+
+            h1 {
+                font-size: 80px;
+                margin: 19px;
+            }
+    
+            h3 {
+                font-size: 40px;
+                margin: 5px;
+            }
         }
 
-        h3 {
-            font-size: 40px;
-            margin: 5px;
+        .buttons{
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
+
+    }
+      
+}
+
+@media only screen and (min-width: 1024px) {
+    .background {
+        width: 100vw;
+        height: 100vh;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .titles{
+            height: 50%;
+
+            h1 {
+                font-size: 120px;
+                margin: 19px;
+            }
+    
+            h3 {
+                font-size: 40px;
+                margin: 5px;
+            }
+
+        }
+
+        .buttons{
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
     }
       
 }

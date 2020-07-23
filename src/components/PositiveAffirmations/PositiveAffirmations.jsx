@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import styles from "./PositiveAffirmations.module.scss";
-import NavigationBar from "../../components/Navigation/NavigationBar";
 import { firestore } from "../../firebase.js";
 
 class PositiveAffirmations extends Component {
@@ -13,21 +12,24 @@ class PositiveAffirmations extends Component {
     addToDatabase = () => {
         firestore
             .collection("affirmations")
-            .doc("testuid")
+            .doc(this.props.user.uid)
             .set({ affirmations: this.state.affirmations })
-            .then((res) => console.log(res))
+            .then((res) => console.log(res), alert(`Your affirmations have been saved.`))
             .catch((err) => console.log(err))
     }
 
     componentDidMount() {
         firestore
             .collection("affirmations")
-            .doc("testuid")
+            .doc(this.props.user.uid)
             .get()
             .then((doc) => {
-                const savedAffirmations = doc.data().affirmations;
-                this.setState({ affirmations: savedAffirmations });
+                if(doc.data()) { 
+                    const savedAffirmations = doc.data().affirmations;
+                    this.setState({ affirmations: savedAffirmations })
+                };
             })
+            .catch((err) => console.log(err));
     }
 
     getUserInput = (e) => {
@@ -67,7 +69,6 @@ class PositiveAffirmations extends Component {
 
         return (
             <>
-                <NavigationBar />
                 <section className={styles.header}>.
             <h1>Positive Affirmations</h1>
                     {this.state.showIntructions || this.state.affirmations.length > 2 ? <p className={styles.showInstructionsStyle}> Great! Now that you've got these positive affirmations, repeat these 3 times to yourself in a mirror
