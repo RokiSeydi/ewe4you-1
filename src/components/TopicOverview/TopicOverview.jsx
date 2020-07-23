@@ -22,6 +22,8 @@ class TopicOverview extends Component {
               </div>
               <div className={styles.text}>
                 <p>{text}</p>
+              </div>
+              <div className={styles.buttons}>
                   <Link to="">
                     <Button text={'Start Topic'}/>
                   </Link>
