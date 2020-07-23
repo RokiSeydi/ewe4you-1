@@ -5,7 +5,7 @@ const topics = [
         "Id": "0001",
         "title": "Stress",
         "image": img,
-        "text" :"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem rerum eveniet temporibus adipisci magni placeat aperiam doloremque porro ullam deserunt.",
+        "text" :"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem rerum eveniet temporibus adipisci magni placeat aperiam doloremque porro ullam deserunt. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem rerum eveniet temporibus adipisci magni placeat aperiam doloremque porro ullam deserunt.",
         "startUrl" :"",
         "backUrl" :"",
         "innerColour" : "#3DAEDC",
@@ -14,7 +14,7 @@ const topics = [
    
     {
         "Id": "0002",
-        "title": "Emotions (Anger, fear, sadness, grief)",
+        "title": "Emotions",
         "image": " ",
         "text" :"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem rerum eveniet temporibus adipisci magni placeat aperiam doloremque porro ullam deserunt.",
         "startUrl" :"",
@@ -50,7 +50,7 @@ const topics = [
 
     {
         "Id": "0005",
-        "title": "Healthy relationships (Romantic, friendships, family)",
+        "title": "Healthy relationships",
         "image": " ",
         "text" :"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem rerum eveniet temporibus adipisci magni placeat aperiam doloremque porro ullam deserunt.",
         "startUrl" :"",

@@ -1,21 +1,57 @@
 @import "../../variables.scss";
+
 .body {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     border: 1px solid black;
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin-top: 100px;
-    line-height: 30px;
+    // line-height: 30px;
     background-color: $colour-blue;
-    font-size: large;
     opacity: 0.9;
+
+    h1 {
+        
+        font-size: $font-size-h3;
+    }
+    
+    a {
+        color: red;
+        text-decoration: none;
+        // padding: 10px;
+        font-size: $font-size-h4;
+    }
+    
+    a:hover {
+        color: $colour-dark-orange;
+    }
 }
 
-a:link {
-    color: red;
-    text-decoration: none;
-    padding: 10px;
+@media only screen and (min-width: $mobile-break-point) {
+
+    .body {
+
+        h1 {
+            font-size: $font-size-h2;
+        }
+        
+        a {
+            font-size: $font-size-h3;
+        }
+    }
 }
 
-a:hover {
-    color: $colour-dark-orange;
+@media only screen and (min-width: $tablet-break-point) {
+
+    .body {
+
+        h1 {
+            font-size: $font-size-h1
+        }
+
+        a {
+            font-size: $font-size-h2;
+        }
+    }
 }
