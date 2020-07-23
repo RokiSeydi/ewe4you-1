@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import styles from "./TopicCard.module.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "@reach/router";
 
 class TopicCard extends Component {
 
@@ -14,6 +16,7 @@ class TopicCard extends Component {
       text,
       innerColour,
       outerColour,
+      topicOverview,
     } = this.props.topic;
 
     const innerStyle = {
@@ -34,6 +37,12 @@ class TopicCard extends Component {
                 {this.contentLimit(text)}
               </p>
             </div>
+              <div className={styles.link}>
+                <Link to={topicOverview}>
+                <FontAwesomeIcon icon="play-circle" />
+                <FontAwesomeIcon icon={["fab", "play-circle"]} />
+                </Link >
+              </div>
         </section>
      );
   }

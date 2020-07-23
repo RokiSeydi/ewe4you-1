@@ -19,7 +19,7 @@ class PositiveAffirmations extends Component {
     }
 
     componentDidMount() {
-        if(this.props.user){
+        if (this.props.user) {
             firestore
             .collection("affirmations")
             .doc(this.props.user.uid)

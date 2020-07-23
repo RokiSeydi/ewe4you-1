@@ -11,7 +11,7 @@ const tools = [
         "backUrl": "/tools",
         "innerColour": "#3DAEDC",
         "outerColour": "#87CEEB",
-        "toolsOverview": "/PositiveAffirmations"
+        "toolsOverview": "/affirmations-overview"
     },
 
     {
@@ -24,7 +24,7 @@ const tools = [
         "backUrl": "/tools",
         "innerColour": "#FFEE93",
         "outerColour": "#FCF5C7",
-        "toolsOverview": "/tool-overview"
+        "toolsOverview": "/selfie-overview"
     },
 
 
@@ -38,6 +38,7 @@ const tools = [
         "backUrl": "",
         "innerColour": "#6E6E6E",
         "outerColour": "#B5B5B5",
+        "toolsOverview": ""
     },
 
 
@@ -51,6 +52,7 @@ const tools = [
         "backUrl": "",
         "innerColour": "#6E6E6E",
         "outerColour": "#B5B5B5",
+        "toolsOverview": ""
     },
 
 
@@ -64,6 +66,7 @@ const tools = [
         "backUrl": "",
         "innerColour": "#6E6E6E",
         "outerColour": "#B5B5B5",
+        "toolsOverview": ""
     },
 
 
@@ -77,6 +80,7 @@ const tools = [
         "backUrl": "",
         "innerColour": "#6E6E6E",
         "outerColour": "#B5B5B5",
+        "toolsOverview": ""
     },
 
     {
@@ -89,6 +93,7 @@ const tools = [
         "backUrl": "",
         "innerColour": "#6E6E6E",
         "outerColour": "#B5B5B5",
+        "toolsOverview": ""
     },
 
     {
@@ -101,6 +106,7 @@ const tools = [
         "backUrl": "",
         "innerColour": "#6E6E6E",
         "outerColour": "#B5B5B5",
+        "toolsOverview": ""
     },
 
     {
@@ -113,6 +119,7 @@ const tools = [
         "backUrl": "",
         "innerColour": "#6E6E6E",
         "outerColour": "#B5B5B5",
+        "toolsOverview": ""
     },
 
     {
@@ -125,6 +132,7 @@ const tools = [
         "backUrl": "",
         "innerColour": "#6E6E6E",
         "outerColour": "#B5B5B5",
+        "toolsOverview": ""
     },
 
     {
@@ -137,6 +145,7 @@ const tools = [
         "backUrl": "",
         "innerColour": "#6E6E6E",
         "outerColour": "#B5B5B5",
+        "toolsOverview": ""
     },
 
     {
@@ -149,6 +158,7 @@ const tools = [
         "backUrl": "",
         "innerColour": "#6E6E6E",
         "outerColour": "#B5B5B5",
+        "toolsOverview": ""
     },
 
 ];
