@@ -1,23 +1,32 @@
 import React, { Component } from 'react';
 import styles from './TopicOverview.module.scss';
-import { Link } from '@reach/router';
+import { Link } from '@reach/router'
+import picture from "../../assets/stress.png"
 
 class TopicOverview extends Component {
   render() {
     const {
       title,
-      image,
       text,
+      innerColour, 
+      outerColour
     } = this.props.topic;
+
+    const innerStyle = {
+      backgroundColor: innerColour
+    };
+    const outerStyle = {
+      backgroundColor: outerColour
+    };
 
     return (
       <>
         <div className ={styles.container}>
-          <div className={styles.outer}>
+          <div className={styles.outer}  style={outerStyle}>
                 <h1>{title}</h1>  
-            <div className={styles.inner}>
+            <div className={styles.inner} style={innerStyle}>
               <div className={styles.img}>
-                <img src={image} alt={title}/>
+                <img src={picture} alt={title}/>
               </div>
               <div className={styles.text}>
                 <p>{text}</p>

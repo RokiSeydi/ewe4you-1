@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styles from "./NavigationBar.module.scss";
 
-import logo from "../../../assets/logo.jpg";
+import logo from "../../../assets/sheepLogo.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { Link } from '@reach/router';
@@ -10,51 +10,50 @@ import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import CollapseMenu from "../CollapseMenu/CollapseMenu";
 
 class NavigationBar extends Component {
-    state = {
-      navbarOpen: false
+  state = {
+    navbarOpen: false
+    }
+
+stopScrolling = () => {
+  console.log("nav bar is " + this.state.navbarOpen);
+  if(!this.state.navbarOpen){
+    document.body.style.overflow = "hidden"
+  }else {
+    document.body.style.overflow = "visible"
   }
+}
+
 
   handleNavbar = () => {
+    this.stopScrolling();
     this.setState({ navbarOpen: !this.state.navbarOpen });
-    if (this.state.navbarOpen) {
-      document.querySelector("body").style.overflow = "initial";
-    } else {
-      window.scrollTo(0, 0);
-      document.querySelector("body").style.overflow = "hidden";
-    }
-  };
-
-  componentDidMount() {
-    document.querySelector("body").style.overflow = "initial";
   }
 
-  render() { 
-   return (
-   <>        
-    <nav>
-        <a href="/">
-          <img src={logo} alt="sheep logo"/>
-        </a>
+  render() {
+    return (
+      <>
+        <nav>
+          <img src={logo} alt="sheep logo" />
           <div className={styles.FlexContainer}>
-              <div className={styles.NavLinks}>
-                  <div className={styles.links}>
-                    <Link to="/dashboard"><p><span><FontAwesomeIcon icon="tachometer-alt"></FontAwesomeIcon></span>Dashboard</p></Link>
-                    <Link to="/topics"><p><span><FontAwesomeIcon icon="comments"></FontAwesomeIcon></span>Topics</p></Link>
-                    <Link to="/tools"><p><span><FontAwesomeIcon icon="wrench"></FontAwesomeIcon></span>Toolbox</p></Link>
-                  </div>
-                  <div className={styles.account}>
-                    <Link to="/myaccount"> <p><span><FontAwesomeIcon icon="user"></FontAwesomeIcon></span>My Account</p></Link>
-                  </div> 
-              </div>  
-          </div> 
-          <div className={styles.BurgerWrapper}>
-          <BurgerMenu handleNavbar={this.handleNavbar}/>       
+            <div className={styles.NavLinks}>
+              <div className={styles.links}>
+                <Link to="/dashboard"><p><span><FontAwesomeIcon icon="tachometer-alt"></FontAwesomeIcon></span>Dashboard</p></Link>
+                <Link to="/topics"><p><span><FontAwesomeIcon icon="comments"></FontAwesomeIcon></span>Topics</p></Link>
+                <Link to="/tools"><p><span><FontAwesomeIcon icon="wrench"></FontAwesomeIcon></span>Toolbox</p></Link>
+              </div>
+              <div className={styles.account}>
+                <p onClick={this.props.signOut}><span><FontAwesomeIcon icon="sign-out-alt"></FontAwesomeIcon></span>Log out</p>
+              </div>
+            </div>
           </div>
-    </nav>
-          <CollapseMenu handleNavbar={this.handleNavbar} navbarState={this.state.navbarOpen}/> 
-    </>
+          <div className={styles.BurgerWrapper}>
+            <BurgerMenu handleNavbar={this.handleNavbar} />
+          </div>
+        </nav>
+        <CollapseMenu signOut={this.props.signOut} handleNavbar={this.handleNavbar} navbarState={this.state.navbarOpen} />
+      </>
     );
   }
 }
-  
+
 export default NavigationBar;

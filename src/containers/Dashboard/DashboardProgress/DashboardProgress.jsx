@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styles from "./DashboardProgress.module.scss";
+// import {firestore} from "../../../firebase"
 
 class DashboardProgress extends Component {
 

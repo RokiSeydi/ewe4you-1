@@ -11,10 +11,10 @@ nav {
     margin: 0px;
     
     img {
-        height: $nav-height;
+        height: $nav-height/1.2;
         width: auto;
         padding: 0px;
-        margin: 0px;
+        margin-left: 10px;
     }
 
     .FlexContainer {
@@ -61,6 +61,7 @@ nav {
                         }
                     }
                 }
+
                 p {
                     padding: 0px;
                     font-size: 20px;
@@ -78,6 +79,7 @@ nav {
                 color: $colour-sky;
                 display: flex;
                 justify-content: flex-end;
+                align-items: center;
                 width: 35%;
                 padding-right: 20px;
 
@@ -85,10 +87,12 @@ nav {
                     text-decoration: none;
                     color: white;
                     padding: 10px;
+                    border-radius: $border-radius;
 
                     &:hover {
                         background-color: $colour-dark-blue;
                         border-radius: $border-radius;
+
                         p span {
                             color: white;
                         }
@@ -96,8 +100,17 @@ nav {
                 }
                 
                 p {
-                    padding: 0px;
+                    padding: 10px;
                     font-size: 20px;
+                    
+                    &:hover {
+                        background-color: $colour-dark-blue;
+                        border-radius: $border-radius;
+
+                        span{
+                            color: white;
+                        }
+                    }
                 }
                 
                 p span {

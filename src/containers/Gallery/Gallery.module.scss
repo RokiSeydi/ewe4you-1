@@ -1,21 +1,72 @@
+@import '../../variables.scss';
 
-.gallery{
+.buttonSection {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.galleryContainer {
+  height: 100%;
+}
+
+.galleryTitle {
+  background-color: $colour-orange;
+
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 
-    .polaroidContainer{
-    height: 80vh;
-    width: 80%;
+  .polaroidContainer {
+    height: 60vh;
+    width: 95%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    }
+  }
 
-    div.buttonWrapper{
-      width: 100%;
-    }
+  .buttonWrapper {
+    width: 100%;
+  }
+}
+
+.customfileupload {
+  color: black;
+  background-color: $colour-blue;
+  border-radius: $border-radius;
+  width: 250px;
+  border: none;
+  padding: 20px;
+  padding-left: 65px;
+  padding-right: 65px;
+  margin: 20px;
+  font-size: $font-size-h4;
+  cursor: pointer;
+  box-shadow: $box-shadow;
+
+  input[type="file"] {
+    display: none;
+  }
+
+  &:hover {
+    background-color: $colour-dark-blue;
+  }
+
+  &.active {
+    background-color: green;
+  }
+
+  *:focus {
+    outline: none;
+  }
+}
+
+*:focus {
+  outline: none;
 }
