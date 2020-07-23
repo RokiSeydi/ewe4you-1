@@ -68,7 +68,7 @@ class Gallery extends Component {
     const array = [...this.state.imagesFromDatabase, newImageObject];
     firestore
       .collection("Selfie")
-      .doc("testuid")
+      .doc(this.props.user.uid)
       .set({
         imgUrls: array,
       })
@@ -84,7 +84,7 @@ class Gallery extends Component {
   };
 
   getFileFromDatabase = () => {
-    const docRef = firestore.collection("Selfie").doc("testuid");
+    const docRef = firestore.collection("Selfie").doc(this.props.user.uid);
 
     docRef
       .get()
@@ -99,18 +99,13 @@ class Gallery extends Component {
   };
 
   uploadComment = () => {
-    console.log(this.state.caption);
     let userCaption = prompt("Please enter your caption");
-    console.log(userCaption);
-    this.setState({ caption: userCaption }, () =>
-      console.log(this.state.caption)
-    );
+    this.setState({ caption: userCaption });
   };
 
   checkFormCompleted = () => {
     let isCompleted = true;
     if (this.state.caption === "" || this.state.file === []) {
-      console.log("You forgot to upload a comment");
       isCompleted = false;
     }
 
@@ -122,7 +117,7 @@ class Gallery extends Component {
     newImages.splice(i, 1);
     firestore
       .collection("Selfie")
-      .doc("testuid")
+      .doc(this.props.user.uid)
       .set({
         imgUrls: newImages,
       })

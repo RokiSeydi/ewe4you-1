@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styles from './ToolOverview.module.scss';
 import picture from "../../assets/placeholder.jpg";
+import { Link } from '@reach/router';
 
 class ToolOverview extends Component {
   render() {
@@ -12,7 +13,6 @@ class ToolOverview extends Component {
       innerColour, 
       outerColour
     } = this.props.tool;
-    console.log(this.props.tool);
 
     const innerStyle = {
       backgroundColor: innerColour
@@ -32,7 +32,7 @@ class ToolOverview extends Component {
               </div>
               <div>
                 <p>{text}</p>
-                <a href={startUrl} className={styles.links}>Start Tool</a>
+                <Link to={startUrl}><p className={styles.links}>Start Tool</p></Link>
                       
                 <a href={backUrl} className={styles.links}>Go Back</a>
                 </div>
