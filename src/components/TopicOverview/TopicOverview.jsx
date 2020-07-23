@@ -39,6 +39,9 @@ class TopicOverview extends Component {
                   <Link to="/topics">
                     <Button text={'Go Back'}/>
                   </Link>
+                  <Link to="/stress-graph">
+                    <Button text={'Living Stress Graph'}/>
+                  </Link>
                   <Link to="/wellbean">
                     <Button text={'Wellbean Activity'}/>
                   </Link>

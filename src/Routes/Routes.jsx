@@ -8,6 +8,7 @@ import MyAccount from "../components/MyAccount";
 import tools from "../data/tools";
 
 import PositiveAffirmations from "../components/PositiveAffirmations";
+import StressGraph from "../components/StressGraph";
 import Gallery from "../containers/Gallery";
 import TopicOverviewContainer from "../containers/TopicOverviewContainer";
 import ToolOverviewContainer from "../containers/ToolOverviewContainer";
@@ -35,6 +36,7 @@ class Routes extends Component {
             <MyAccount path="myaccount"/>
             <TopicConclusionContainer path="topic-conclusion"/>
             <WellBeanContainer path="wellbean" user={this.props.user}/>
+            <StressGraph path="stress-graph" />
             <Gallery path="gallery" user={this.props.user}/>
           </PrivateRoutes>
       </Router>
