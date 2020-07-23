@@ -11,6 +11,8 @@ class App extends Component {
     user: null,
   };
 
+//using this to test firebase
+
   componentDidMount() {
     this.getUser();
   }
