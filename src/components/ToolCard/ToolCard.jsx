@@ -43,7 +43,7 @@ class ToolCard extends Component {
           <Link to={toolsOverview}>
             <FontAwesomeIcon className={styles.playbutton} icon="play-circle" />
           </Link >: null}
-          <p>{origin}</p>
+          {origin==="Locked" ? <p className={styles.lockedText}>{origin}</p> : null }
         </div>
       </section>
     );
