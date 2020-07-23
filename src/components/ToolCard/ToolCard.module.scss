@@ -34,6 +34,7 @@
         &.playsection {
             margin-top: 20px;
             font-size: 50px;
+            margin-bottom: 5px;
 
             .playbutton{
                 color: #0dba86;
@@ -43,6 +44,9 @@
                 }
             }
 
+            .lockedText {
+                font-weight: bolder;
+            }
         }
     }
 }

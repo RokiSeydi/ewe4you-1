@@ -3,8 +3,6 @@ import styles from "./StressGraph.module.scss";
 import { PieChart } from "react-minimal-pie-chart";
 import { firestore } from "../../firebase.js";
 
-import NavigationBar from "../../components/Navigation/NavigationBar";
-
 class StressGraph extends Component {
    
   state = {  
@@ -65,7 +63,6 @@ class StressGraph extends Component {
   
     return (
       <>
-      <NavigationBar/>
         <div className={styles.container}>
           <div className={styles.outer}>
             <div className={styles.inner}>
