@@ -25,7 +25,7 @@ class Routes extends Component {
           <PrivateRoutes path="/" signOut={this.props.signOut}> 
             <DashboardPage path="dashboard" user={this.props.user}/>
             <TopicOverviewContainer path="topic-overview"/>
-            <ToolOverviewContainer path="tool-overview"/>
+            <ToolOverviewContainer path="tool-overview" user={this.props.user}/>
             <ToolPage path="tools"/>
             <TopicPage path="topics"/>
             <PositiveAffirmations path="PositiveAffirmations" user={this.props.user}/>
@@ -33,7 +33,7 @@ class Routes extends Component {
             <MyAccount path="myaccount"/>
             <TopicConclusionContainter path="topic-conclusion"/>
             <WellBeanContainer path="wellbean" user={this.props.user}/>
-            <Gallery path="gallery"/>
+            <Gallery path="gallery" user={this.props.user}/>
           </PrivateRoutes>
       </Router>
     );
