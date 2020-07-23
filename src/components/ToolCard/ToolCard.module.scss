@@ -1,4 +1,5 @@
 @import "../../variables.scss";
+
 .Tools {
     @extend %card;
     display: flex;
@@ -6,26 +7,42 @@
     justify-content: center;
     margin: 0 30px;
     margin-bottom: 10px;
+
     .inner {
         @extend %innerCard;
         text-align: justify;
         padding: 0px 10px;
         border-radius: $border-radius;
         min-height: unset;
+        overflow-y: hidden;
+
         p {
             height: 200px;
         }
     }
+
     .heading {
         font-size: $font-size-card-title/2;
+
         h2 {
             padding: 20px;
         }
     }
+
     div {
+
         &.playsection {
             margin-top: 20px;
             font-size: 50px;
+
+            .playbutton{
+                color: #0dba86;
+
+                &:hover {
+                    color: white;
+                }
+            }
+
         }
     }
 }

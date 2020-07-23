@@ -39,10 +39,10 @@ class ToolCard extends Component {
         </div>
         <div className={styles.playsection}>
           <p>{text}</p>
+          {origin==="Unlocked" ? 
           <Link to={toolsOverview}>
-            <FontAwesomeIcon icon="play-circle" />
-            <FontAwesomeIcon icon={["fab", "play-circle"]} />
-          </Link >
+            <FontAwesomeIcon className={styles.playbutton} icon="play-circle" />
+          </Link >: null}
           <p>{origin}</p>
         </div>
       </section>

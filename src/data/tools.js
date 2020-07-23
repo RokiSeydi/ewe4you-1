@@ -19,7 +19,7 @@ const tools = [
         "title": "Selfie steem",
         "image": " ",
         "text": "Take/upload a picture of yourself and leave a comment on it.",
-        "origin": "Unocked",
+        "origin": "Unlocked",
         "startUrl": "/gallery",
         "backUrl": "/tools",
         "innerColour": "#FFEE93",

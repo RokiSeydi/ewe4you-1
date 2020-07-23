@@ -39,8 +39,7 @@ class TopicCard extends Component {
             </div>
               <div className={styles.link}>
                 <Link to={topicOverview}>
-                <FontAwesomeIcon icon="play-circle" />
-                <FontAwesomeIcon icon={["fab", "play-circle"]} />
+                  <FontAwesomeIcon className={styles.playbutton} icon="play-circle" />
                 </Link >
               </div>
         </section>
