@@ -1,20 +1,20 @@
 import React, { Component } from "react";
 import TopicConclusion from "../../components/TopicConclusion";
-import styles from "./TopicConclusionContainter.module.scss";
+import styles from "./TopicConclusionContainer.module.scss";
 import NavigationBar from "../../components/Navigation/NavigationBar";
 
 import topics from "../../data/topics";
 
-class TopicConclusionContainter extends Component {
+class TopicConclusionContainer extends Component {
   render() {
     return (
       <>
         <NavigationBar />
         <div className={styles.Flexed}>
-          <TopicConclusion topic={topics[0]} />
+          <TopicConclusion topic={topics[1]} />
         </div>
       </>
     );
   }
 }
-export default TopicConclusionContainter;
+export default TopicConclusionContainer;
