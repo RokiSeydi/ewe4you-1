@@ -65,7 +65,6 @@ class StressGraph extends Component {
   
     return (
       <>
-      <NavigationBar/>
         <div className={styles.container}>
           <div className={styles.outer}>
             <div className={styles.inner}>
