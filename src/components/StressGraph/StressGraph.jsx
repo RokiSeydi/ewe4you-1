@@ -72,7 +72,7 @@ class StressGraph extends Component {
               <h2>Living Stress Graph</h2>
            
               <div className={styles.graph}><PieChart
-              labelStyle={{fontSize:"10px"}}
+              labelStyle={{fontSize:"6px" }}
               label={({ dataEntry }) => dataEntry.value}
               labelPosition={75}
                 data={[
