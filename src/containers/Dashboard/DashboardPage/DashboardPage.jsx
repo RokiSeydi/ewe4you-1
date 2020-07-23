@@ -25,12 +25,12 @@ componentDidMount() {
           <h1>{`Hi ${this.props.user?.displayName}! Welcome to your dashboard view`}</h1>
           <div className={styles.dashboardView}>
             <section className={styles.updateSection}>
-              <DashboardUpdate strTitle="Test Title 1" strText="this is the test text for the component" />
-              <DashboardUpdate strTitle="Test Title 2" strText="this is the test text for the component" />
-              <DashboardUpdate strTitle="Test Title 3" strText="this is the test text for the component" />
+              <DashboardUpdate strTitle="Your feedback matters" strText="We really value your feedback, this helps us improve the quality of our app." strUrl = "https://www.surveymonkey.co.uk"/>
+              <DashboardUpdate strTitle="New tool unlocked!" strText="Congratulations!  Open your toolbox to discover your new tool!"/>
+              <DashboardUpdate strTitle="A new topic has been added!" strText="Check out your Topic Page to uncover a recently added topic!" />
             </section>
             <section className={styles.progressSection}>
-              <DashboardProgress strProgress="Progress" strPercentage="100%" />
+              <DashboardProgress strProgress="Progress" strPercentage="Check out your progress on your topics below" />
             </section>
           </div>
         </div>

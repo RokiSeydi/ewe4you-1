@@ -8,14 +8,82 @@
     padding: $padding-single*2;
     height: 100%;
     width: 80%;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-h3 {
-    font-size: $font-size-h3;
-    padding: $padding-single;
-}
+    ::-webkit-scrollbar {
+        width: 15px;
+        border-radius: 5px;
+      }
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 5px;
+      }
+      
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: darkgrey;
+        border-radius: 5px;
+      }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: darkgrey;
+        border-radius: 5px;
+      }
+    
+    h3 {
+        font-size: $font-size-h3;
+        padding: $padding-single;
+    }
+    
+    p {
+        font-size: $font-size-p;
+        padding: $padding-single;
+    }
 
-p {
-    font-size: $font-size-p;
-    padding: $padding-single;
+    ul {
+        height: 85%;
+        width: 90%;
+        
+        @media only screen and (min-width: $mobile-break-point){
+            overflow-y: auto;
+        }
+    }
+
+    .progressLine {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        padding-top: 15px;
+
+        p {
+            width: 30%;
+        }
+
+        .progressDiv {
+            width: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+        }
+        @media only screen and (max-width: $mobile-break-point){
+            flex-direction: column;
+
+            p {
+                width: 100%; 
+            }
+
+            .progressDiv {
+                width: 100%;
+            }
+        }
+
+
+    }
 }
