@@ -29,4 +29,9 @@ code {
 a{
   text-decoration: none;
 }
- 
+
+@media only screen and (max-width: 426px) {
+  .rec-arrow {
+    display: none;
+  }
+}

@@ -1,0 +1,23 @@
+@import "../../../src/variables.scss";
+
+.smallButton {
+    background-color: $colour-orange;
+    border-radius: $border-radius;
+    width: 250px;
+    border: none;
+    padding: 20px;
+    margin: 20px;
+    font-size: 90%;
+    
+    &:hover {
+        background-color: $colour-dark-blue;  
+    }
+
+    *:focus {
+        outline: none;
+    }
+
+    @media only screen and (max-width: 400px) {
+        width: 180px;
+    }
+}

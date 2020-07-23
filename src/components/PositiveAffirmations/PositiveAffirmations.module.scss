@@ -66,17 +66,17 @@ p {
     .buttons {
         display: flex;
         justify-content: center;
-        width: 45%;
+        width: 50%;
         margin: 0 auto;
 
 
        
         button {
-            background-color: $colour-light-green;
+            background-color: $colour-blue;
             border-radius: $border-radius;
-            padding: 20px;
+            padding: 15px;
             border: none;
-            width: 80px;
+            width: 120px;
             margin: 0 auto;
             margin-top: 6px;
             display: inline-block;
@@ -84,6 +84,7 @@ p {
     }
     button:hover {
         cursor: pointer;
+        background-color: $colour-dark-blue;
     }
     
 }

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import styles from "./PositiveAffirmations.module.scss";
 import NavigationBar from "../../components/Navigation/NavigationBar";
+import SmallButton from "../../components/SmallButton/SmallButton";
+import Button from "../../components/Button";
 import { firestore } from "../../firebase.js";
 
 class PositiveAffirmations extends Component {
@@ -68,7 +70,7 @@ class PositiveAffirmations extends Component {
         return (
             <>
                 <NavigationBar />
-                <section className={styles.header}>.
+                <section className={styles.header}>
             <h1>Positive Affirmations</h1>
                     {this.state.showIntructions || this.state.affirmations.length > 2 ? <p className={styles.showInstructionsStyle}> Great! Now that you've got these positive affirmations, repeat these 3 times to yourself in a mirror
                You will help create a more positive narrative about yourself if you do this regularly. It will also help to create a more flexible and healthy view of yourself. </p> : ""}
@@ -77,9 +79,9 @@ class PositiveAffirmations extends Component {
                     <p>Please add 3 - 5 affirmations about yourself or your life.</p>
                     <input type="text" onInput={(e) => this.getUserInput(e)} />
                     <div className={styles.buttons}>
-                    <button onClick={this.updateAffirmations}>Add</button>
-                    <button onClick={this.deleteAffirmations}>Delete</button>
-                    <button onClick={this.addToDatabase}>Save</button>
+                        <button onClick={this.updateAffirmations}>Add</button>
+                        <button onClick={this.deleteAffirmations}>Delete</button>
+                        <button onClick={this.addToDatabase}>Save</button>
                     </div>
                 </section>
                  {this.showAffirmations()}

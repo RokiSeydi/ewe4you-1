@@ -6,4 +6,9 @@
     justify-content: center;
     align-items: center;
     height: calc(100vh - #{$nav-height});
+
+    @media only screen and (max-width: 768px) {
+        height: unset;
+        padding-top: 10px;
+    }
 } 

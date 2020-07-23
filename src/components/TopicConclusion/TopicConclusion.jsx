@@ -13,7 +13,7 @@ class TopicConclusion extends Component {
         <>
             <div className ={styles.container}>
                 <div className={styles.outer}>
-                        <br/>  
+                    <p></p>
                     <div className={styles.inner}>
                         <div className={styles.h2Container}>
                             <h2>Congratulations on finishing {title}!</h2>

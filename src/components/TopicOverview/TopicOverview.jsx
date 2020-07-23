@@ -17,13 +17,13 @@ class TopicOverview extends Component {
           <div className={styles.outer}>
                 <h1>{title}</h1>  
             <div className={styles.inner}>
-              <div>
+              <div className={styles.img}>
                 <img src={image} alt={title}/>
               </div>
-              <div>
+              <div className={styles.text}>
                 <p>{text}</p>
                   <Link to="">
-                    <Button text={'start topic'}/>
+                    <Button text={'Start Topic'}/>
                   </Link>
                   <Link to="/topics">
                     <Button text={'Go Back'}/>
@@ -37,7 +37,7 @@ class TopicOverview extends Component {
                  
                 </div>
             </div>
-                <br/>
+            <br/>
           </div>
         </div>
       </>
