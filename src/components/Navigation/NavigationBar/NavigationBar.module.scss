@@ -15,10 +15,6 @@ nav {
         width: auto;
         padding: 0px;
         margin-left: 10px;
-
-        &:hover {
-            height: $nav-height;
-        }
     }
 
     .FlexContainer {
@@ -65,6 +61,7 @@ nav {
                         }
                     }
                 }
+
                 p {
                     padding: 0px;
                     font-size: 20px;
@@ -90,6 +87,7 @@ nav {
                     text-decoration: none;
                     color: white;
                     padding: 10px;
+                    border-radius: $border-radius;
 
                     &:hover {
                         background-color: $colour-dark-blue;

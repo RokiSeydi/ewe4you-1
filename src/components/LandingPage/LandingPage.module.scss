@@ -7,7 +7,8 @@
     align-items: center;
 
     .titles{
-        height:30%;
+        height:50%;
+
         h1 {
             font-size: 40px;
             margin: 19px;
@@ -27,7 +28,7 @@
     }
 }
 
-@media only screen and (min-width: 321px) {
+@media only screen and (min-width: 400px) {
     .background {
         min-width: 100%;
         min-height: 100%;
@@ -43,6 +44,7 @@
         h3 {
             font-size: 30px;
         }
+
     }
 }
 
@@ -104,13 +106,6 @@
                 margin: 5px;
             }
 
-            // @media only screen and (min-height: 800px) {
-
-            //     h1 {
-            //         font-size: 80px;
-            //         margin: 19px;
-            //     }
-            // }
         }
 
         .buttons{

@@ -33,9 +33,7 @@ stopScrolling = () => {
     return (
       <>
         <nav>
-          <a href="/">
-            <img src={logo} alt="sheep logo" />
-          </a>
+          <img src={logo} alt="sheep logo" />
           <div className={styles.FlexContainer}>
             <div className={styles.NavLinks}>
               <div className={styles.links}>
