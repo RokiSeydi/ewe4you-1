@@ -19,7 +19,8 @@ class PositiveAffirmations extends Component {
     }
 
     componentDidMount() {
-        firestore
+        if (this.props.user) {
+            firestore
             .collection("affirmations")
             .doc(this.props.user.uid)
             .get()
@@ -30,6 +31,7 @@ class PositiveAffirmations extends Component {
                 };
             })
             .catch((err) => console.log(err));
+        }
     }
 
     getUserInput = (e) => {
