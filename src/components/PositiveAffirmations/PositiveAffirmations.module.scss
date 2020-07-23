@@ -65,25 +65,27 @@ p {
 
     .buttons {
         display: flex;
-        justify-content: center;
-        width: 45%;
+        justify-content: space-evenly;
+        width: 50%;
         margin: 0 auto;
 
 
        
         button {
-            background-color: $colour-light-green;
+            background-color: $colour-blue;
             border-radius: $border-radius;
-            padding: 20px;
+            box-shadow: $box-shadow;
+            padding: 15px;
             border: none;
-            width: 80px;
-            margin: 0 auto;
+            width: 120px;
+            margin: 0, auto;
             margin-top: 6px;
             display: inline-block;
         }
     }
     button:hover {
         cursor: pointer;
+        background-color: $colour-dark-blue;
     }
     
 }
@@ -113,14 +115,22 @@ p {
     .toolPage {
         padding-bottom: 10px;
         .buttons {
-            margin: 0 auto;
+            // 
             flex-direction: column;
             align-items: center;
+            justify-content: center;
+            margin: 0, auto;
         }
     }
 }
-@media only screen and (max-width: 320px) {
-    button {
-        width: 50px;
+@media only screen and (max-width: $tablet-break-point) {
+    .buttons {
+        margin: 20px;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .buttons {
+        display: flex;
+        justify-content: space-around;
     }
 }

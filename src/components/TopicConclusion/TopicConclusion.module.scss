@@ -60,26 +60,40 @@
                 }
             }
             
-            .buttons {
-                height: 30%;
+            .button {
                 display: flex;
-                flex-direction: column;
+                flex-direction: colum;
                 align-items: center;
                 justify-content: space-evenly;
 
-                a {
-                    color: black;
-                    background-color: $colour-blue;
-                    border-radius: $border-radius;
-                    border: none;
-                    font-size: $font-size-p;
-                    width: fit-content;
-                    margin-bottom: 10px;
+    // a {
+    //     display: inline-block;
+    //     color: black;
+    //     background-color: $colour-blue;
+    //     border-radius: $border-radius;
+    //     border: none;
+    //     padding: 20px;
+    //     margin: 20px;
+    //     width: 25%;
+    //     font-size: $font-size-h4;
+        
+    //     &:hover {
+    //         background-color: $colour-dark-blue;  
+    //     }
+    // }
+                // a {
+                //     color: black;
+                //     background-color: $colour-blue;
+                //     border-radius: $border-radius;
+                //     border: none;
+                //     font-size: $font-size-p;
+                //     width: fit-content;
+                //     margin-bottom: 10px;
                     
-                    &:hover {
-                        background-color: $colour-dark-blue;  
-                    }
-                }
+                //     &:hover {
+                //         background-color: $colour-dark-blue;  
+                //     }
+                // }
             }
         
         }
@@ -191,6 +205,22 @@
                 }
             }
         }
+    }
+    
+    .button {
+        width: 100%;
+        height: 20%;
+        display: flex;
+        justify-content: space-evenly;
+
+    }
+    
+
+}
+@media only screen and (max-width: 1000px) {
+    .button {
+        width: 50%;
+        flex-direction: column;
     }
 }
 
