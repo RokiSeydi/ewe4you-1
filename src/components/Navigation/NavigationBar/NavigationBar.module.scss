@@ -47,15 +47,19 @@ nav {
                 justify-content: flex-start;
                 width: 75%;
                 
-                
                 a {
                     text-decoration: none;
                     color: white;
                     padding: 10px;
+
+                    p {
+                        border-radius: 0px;  
+                    }
                     
                     &:hover {
                         background-color: $colour-dark-blue;
                         border-radius: $border-radius;
+
                         p span {
                             color: white;
                         }
@@ -67,6 +71,7 @@ nav {
                     font-size: 20px;
                     text-decoration: none;
                 }
+
                 p span {
                     color: $colour-dark-blue;
                     font-size: 20px;
@@ -87,7 +92,11 @@ nav {
                     text-decoration: none;
                     color: white;
                     padding: 10px;
-                    border-radius: $border-radius;
+
+                    p {
+                        border-radius: $border-radius;
+                        
+                    }
 
                     &:hover {
                         background-color: $colour-dark-blue;
@@ -102,6 +111,7 @@ nav {
                 p {
                     padding: 10px;
                     font-size: 20px;
+                    border-radius: $border-radius;
                     
                     &:hover {
                         background-color: $colour-dark-blue;

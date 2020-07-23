@@ -21,13 +21,19 @@
         @extend %innerCard;
         border-radius: $border-radius;
         margin-bottom: 10px;
-        padding: 5px;
-
-        
+        padding: 5px;       
     }
 
     .link{
         font-size: 50px;
+
+        .playbutton{
+            color: #0dba86;
+
+            &:hover {
+                color: white;
+            }
+        }
     }
     .heading {
         font-size: $font-size-card-title;
