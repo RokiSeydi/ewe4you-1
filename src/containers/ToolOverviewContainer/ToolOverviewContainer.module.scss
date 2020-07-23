@@ -1,0 +1,15 @@
+@import '../../variables.scss';
+
+.Flexed {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+@media only screen and (min-width: $tablet-break-point){
+  .Flexed {
+    height: calc(100vh - #{$nav-height});
+  }
+}

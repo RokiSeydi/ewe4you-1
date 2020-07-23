@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import styles from './TopicOverview.module.scss';
-import { Link } from '@reach/router';
+import { Link } from '@reach/router'
+import picture from "../../assets/stress.png"
 
 class TopicOverview extends Component {
   render() {
     const {
       title,
-      image,
       text,
     } = this.props.topic;
 
@@ -17,7 +17,7 @@ class TopicOverview extends Component {
                 <h1>{title}</h1>  
             <div className={styles.inner}>
               <div className={styles.img}>
-                <img src={image} alt={title}/>
+                <img src={picture} alt={title}/>
               </div>
               <div className={styles.text}>
                 <p>{text}</p>

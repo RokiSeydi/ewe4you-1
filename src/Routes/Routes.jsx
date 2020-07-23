@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { Router } from "@reach/router";
-
 import LandingPage from "../components/LandingPage";
-
 import DashboardPage from "../containers/Dashboard/DashboardPage";
 import ToolPage from "../containers/ToolPage";
 import TopicPage from "../containers/TopicPage";
@@ -11,6 +9,7 @@ import MyAccount from "../components/MyAccount";
 import PositiveAffirmations from "../components/PositiveAffirmations";
 import Gallery from "../containers/Gallery";
 import TopicOverviewContainer from "../containers/TopicOverviewContainer";
+import ToolOverviewContainer from "../containers/ToolOverviewContainer";
 import TopicConclusionContainter from "../containers/TopicConclusionContainter";
 import WellBeanContainer from "../containers/WellBeanContainer";
 import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
@@ -26,6 +25,7 @@ class Routes extends Component {
           <PrivateRoutes path="/" signOut={this.props.signOut}> 
             <DashboardPage path="dashboard" user={this.props.user}/>
             <TopicOverviewContainer path="topic-overview"/>
+            <ToolOverviewContainer path="tool-overview"/>
             <ToolPage path="tools"/>
             <TopicPage path="topics"/>
             <PositiveAffirmations path="PositiveAffirmations" user={this.props.user}/>
