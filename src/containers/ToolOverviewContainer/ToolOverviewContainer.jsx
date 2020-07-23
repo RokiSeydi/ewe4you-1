@@ -8,7 +8,7 @@ class ToolOverviewContainer extends Component {
     return (
       <>
         <div className={styles.Flexed}>
-          <ToolOverview tool={tool[1]}/>
+          <ToolOverview tool={tool[1]} user={this.props.user}/>
         </div>
       </>
     );
