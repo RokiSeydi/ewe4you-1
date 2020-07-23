@@ -26,12 +26,8 @@ class Routes extends Component {
           <PrivateRoutes path="/" signOut={this.props.signOut}> 
             <DashboardPage path="dashboard" user={this.props.user}/>
             <TopicOverviewContainer path="topic-overview"/>
-<<<<<<< HEAD
             <ToolOverviewContainer path="affirmations-overview" tool={tools[0]} />
             <ToolOverviewContainer path="selfie-overview" tool={tools[1]} />
-=======
-            <ToolOverviewContainer path="tool-overview" user={this.props.user}/>
->>>>>>> 0d4ce2f80ad5b08fb2dc0611f7a3a079894fa89e
             <ToolPage path="tools"/>
             <TopicPage path="topics"/>
             <PositiveAffirmations path="PositiveAffirmations" user={this.props.user}/>

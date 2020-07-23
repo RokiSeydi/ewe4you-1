@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import styles from "./TopicCard.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faTachometerAlt, faComments, faWrench, faUser, faPlayCircle } from '@fortawesome/free-solid-svg-icons'
-import { fab } from '@fortawesome/free-brands-svg-icons';
 import { Link } from "@reach/router";
 
 class TopicCard extends Component {

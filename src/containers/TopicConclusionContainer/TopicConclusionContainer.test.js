@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import TopicConclusionContainter from './TopicConclusionContainter';
+import TopicConclusionContainer from './TopicConclusionContainer';
 
 
 test('should render', () => {
-    expect(render( < TopicConclusionContainter / > )).toBeTruthy();
+    expect(render( < TopicConclusionContainer / > )).toBeTruthy();
 });
