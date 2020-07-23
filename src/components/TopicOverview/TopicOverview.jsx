@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styles from './TopicOverview.module.scss';
-import { Link } from '@reach/router'
+import Button from '../../components/Button/Button';
+import { Link } from '@reach/router';
 import picture from "../../assets/stress.png"
 
 class TopicOverview extends Component {
@@ -31,23 +32,24 @@ class TopicOverview extends Component {
               <div className={styles.text}>
                 <p>{text}</p>
               </div>
-              <div className={styles.links}>
-                <Link to="">
-                  Start Topic
-                </Link>
-                <Link to="/topics">
-                  Go Back
-                </Link>
-                <Link to="/stress-graph">
-                  Living Stress Graph
-                </Link>
-                <Link to="/wellbean">
-                  Wellbean Activity
-                </Link>
-                <Link to="/topic-conclusion">
-                  Topic Conclusion
-                </Link>
-              </div>
+              <div className={styles.buttons}>
+                  <Link to="">
+                    <Button text={'Start Topic'}/>
+                  </Link>
+                  <Link to="/topics">
+                    <Button text={'Go Back'}/>
+                  </Link>
+                  <Link to="/stress-graph">
+                    <Button text={'Living Stress Graph'}/>
+                  </Link>
+                  <Link to="/wellbean">
+                    <Button text={'Wellbean Activity'}/>
+                  </Link>
+                  <Link to="/topic-conclusion">
+                    <Button text={'Topic Conclusion'}/>
+                  </Link>
+                 
+                </div>
             </div>
             <br/>
           </div>

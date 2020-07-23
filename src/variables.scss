@@ -51,6 +51,33 @@ $tablet-break-point: 769px;
       width: 90%;
       overflow-y: auto;
 
+  %innerExpandedCard {
+    max-height: 497px;
+    max-width: 818px;
+    border-radius: 30px;
+  }
+
+  %button {
+    color: black;
+    background-color: $colour-blue;
+    border-radius: $border-radius;
+    width: 30%;
+    border: none;
+    padding: 20px;
+    margin: 20px;
+    font-size: $font-size-h3;
+    
+    &:hover {
+        background-color: $colour-dark-blue;  
+    }
+
+    *:focus {
+        outline: none;
+    }
+}
+
+    *:focus {
+        outline: none;
       &::-webkit-scrollbar {
         display: none;
       }
@@ -68,8 +95,5 @@ $tablet-break-point: 769px;
       max-width: 818px;
       border-radius: 30px;
     }
-}
-  
-@media only screen and (min-width: $tablet-break-point) {
-
+    }
 }

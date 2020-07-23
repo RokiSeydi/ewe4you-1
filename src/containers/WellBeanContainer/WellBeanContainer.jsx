@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import WellBean from "../../components/WellBean";
 import styles from "./WellBeanContainer.module.scss";
+import Button from "../../components/Button/Button";
 import { Link } from '@reach/router';
 
 class WellBeanContainer extends Component {
@@ -16,10 +17,10 @@ class WellBeanContainer extends Component {
                   <WellBean user={this.props.user}/>
                 <div className={styles.buttonContainer}>
                     <Link to="/topic-overview">
-                      Go Back
+                      <Button text={"Overview"}/>
                     </Link>
                     <Link to="/topic-conclusion">
-                      Topic Conclusion
+                      <Button text={"Topic Conclusion"}/>
                     </Link>
                   </div>
               </div>
