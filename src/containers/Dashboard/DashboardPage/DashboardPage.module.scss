@@ -2,7 +2,7 @@
 
 .backgroundDiv {
     margin: 0;
-    height: calc(100vh - #{$nav-height});
+    height: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -53,6 +53,7 @@
 
     .backgroundDiv {
         justify-content: center;
+        height: calc(100vh - #{$nav-height});
 
         h1 {
             font-size: 3em;
