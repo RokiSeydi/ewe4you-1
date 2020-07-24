@@ -19,8 +19,6 @@ componentDidMount() {
 
     return (
       <>
-      {/* {console.log(firebase.auth().currentUser?.displayName)} */}
-        {/* <NavigationBar signOut={this.props.signOut} /> */}
         <div className={styles.backgroundDiv}>
           <h1>{`Hi ${this.props.user?.displayName}! Welcome to your dashboard view`}</h1>
           <div className={styles.dashboardView}>
