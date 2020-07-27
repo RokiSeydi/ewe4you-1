@@ -60,7 +60,7 @@ class StressGraph extends Component {
   }
 
   render() { 
-  
+
     return (
       <>
         <div className={styles.container}>
@@ -136,8 +136,10 @@ class StressGraph extends Component {
                     <input type="radio" value="diet" id="diet"
                     onChange={this.handleChange} name="stressor"/>
                   </div>
-
-                  <input type="submit" disabled={this.state.value ? false : true} className={styles.btn}/>
+                  <div className={styles.btnflex}>
+                  <input type="submit" disabled={this.state.value ? false : true} className={styles.btn}/>  
+                  <p  className={styles.btn}><a href="/topic-overview">Go Back</a></p>
+                  </div>
                 </form>
 
               </div>

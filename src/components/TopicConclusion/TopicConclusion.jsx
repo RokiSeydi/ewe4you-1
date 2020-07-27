@@ -7,14 +7,23 @@ class TopicConclusion extends Component {
     render() {
         const {
         title,
+        innerColour, 
+        outerColour
         } = this.props.topic;
+
+        const innerStyle = {
+            backgroundColor: innerColour
+          };
+          const outerStyle = {
+            backgroundColor: outerColour
+          };
 
         return (
         <>
             <div className ={styles.container}>
-                <div className={styles.outer}>
+                <div className={styles.outer} style={outerStyle}>
                     <p></p>
-                    <div className={styles.inner}>
+                    <div className={styles.inner} style={innerStyle}>
                         <div className={styles.h2Container}>
                             <h2>Congratulations on finishing {title}!</h2>
                         </div>
