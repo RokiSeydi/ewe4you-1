@@ -20,11 +20,11 @@ import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
 class Routes extends Component {
   render() {
     return (
-      <Router>
+       <Router>
         <LandingPage path="/" user={this.props.user}
           signIn={this.props.signIn}
           signOut={this.props.signOut} />
-          <PrivateRoutes path="/" signOut={this.props.signOut}> 
+          <PrivateRoutes user={this.props.user} path="/" signOut={this.props.signOut}>
             <DashboardPage path="dashboard" user={this.props.user}/>
             <TopicOverviewContainer path="topic-overview"/>
             <ToolOverviewContainer path="affirmations-overview" tool={tools[0]} />
