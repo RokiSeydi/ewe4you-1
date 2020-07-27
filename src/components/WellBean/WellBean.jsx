@@ -18,9 +18,9 @@ class WellBean extends Component {
    }
 
   componentDidMount() {
-    console.log(this.props.user);
+
     this.getWellBeanState();
-    // this.updateBeanstoDB();
+
   }
 
   getWellBeanState = () => {
@@ -107,17 +107,6 @@ class WellBean extends Component {
           .catch((err) => console.log(err)) 
     }
     
-    // updateBeanstoDB = () => {
-    //   console.log("this has happened");
-    //     firestore
-    //       .collection("WellBean")
-    //       .doc("testuid")
-    //       .set({
-    //         beans: this.state.wellbeans.beans
-    //       })
-    //       .then(this.getWellBeanState)
-    //       .catch((err) => console.log(err)) 
-    // }
 
   render() {
     if (this.state.onBean) {
