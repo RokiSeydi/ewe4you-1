@@ -6,6 +6,7 @@ import NavigationBar from "../components/Navigation/NavigationBar";
 
 
 class PrivateRoutes extends Component {
+
   componentDidMount() {
     firebase.auth().onAuthStateChanged((user) => {
       if (!user) {
@@ -18,7 +19,7 @@ class PrivateRoutes extends Component {
     const { children } = this.props;
     return <>
       <NavigationBar signOut={this.props.signOut} />
-      {children}
+      {this.props.user ? children : <p>Loading...</p>}
     </>;
   }
 }
