@@ -18,7 +18,6 @@ class LandingPage extends Component {
     return (
 
       <>
-      {console.log("page loaded")}
         <div className={styles.background}>
           <div className={styles.titles}>
             <h1>Welcome to Ewe4You</h1>

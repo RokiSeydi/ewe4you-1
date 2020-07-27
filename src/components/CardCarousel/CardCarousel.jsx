@@ -44,8 +44,7 @@ class CardCarousel extends Component {
     window.removeEventListener("resize", this.handleResize);
   }
   render() {
-    console.log(window.innerWidth);
-    console.log(this.state);
+   
     return (
       <div className={styles.cardcarousel}>
         <Carousel itemsToShow={this.state.cards}>{this.getCards()}</Carousel>
