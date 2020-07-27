@@ -49,12 +49,3 @@ class TopicConclusion extends Component {
 }
 
 export default TopicConclusion;
-// <Link to="/topic-overview">
-// To Beginning
-// </Link>
-// <Link to="/dashboard">
-//     Dashboard
-// </Link>
-// <Link to="/tools">
-//     Unlocked tools
-// </Link>
