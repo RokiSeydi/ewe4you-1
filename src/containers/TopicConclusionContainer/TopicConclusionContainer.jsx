@@ -10,7 +10,7 @@ class TopicConclusionContainer extends Component {
       <>
     
         <div className={styles.Flexed}>
-          <TopicConclusion topic={topics[1]} />
+          <TopicConclusion topic={topics[0]} />
         </div>
       </>
     );

@@ -31,7 +31,7 @@ class Routes extends Component {
             <ToolOverviewContainer path="selfie-overview" tool={tools[1]} />
             <ToolPage path="tools"/>
             <TopicPage path="topics"/>
-            <PositiveAffirmations path="PositiveAffirmations" user={this.props.user}/>
+            <PositiveAffirmations path="positive-affirmations" user={this.props.user}/>
             <TopicPage path="topics"/>
             <MyAccount path="myaccount"/>
             <TopicConclusionContainer path="topic-conclusion"/>
