@@ -33,9 +33,11 @@ class Gallery extends Component {
         (snapshot) => {
           let percentage =
             (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            console.log(percentage);
         },
 
         (err) => {
+          console.error(err);
           alert("upload failed");
         },
 
